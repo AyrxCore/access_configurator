@@ -1,2 +1,38 @@
-<h1>ACCESS CONFIGURATOR by DEMEURE RHONE-ALPES</h1>
-<div>Choisissez votre modèle de maison :</div>
+{% extends 'AdminLTE/AdminLTE_base.html.twig' %}
+
+{% block body %}
+
+<body class="skin-blue">
+
+    <div class="wrapper">
+
+        <header class="main-header">
+            <a href="{{ path('home') }}">ACCESS CONFIGURATOR by DEMEURE RHONE-ALPES</a>
+        </header>
+
+        <div class="content-wrapper">
+            <h1>Choisissez votre modèle de maison :</h1>
+            <div class="box box-primary">
+                <div class="box-header">YES</div>
+                <div class="box-body">NO</div>
+            </div>
+        </div>
+
+
+        <aside class="main-sidebar">
+            <section class="sidebar">
+                <ul class="sidebar-menu tree">
+                    <li class="header">ETAPES</li>
+                    <li>Modèle</li>
+                    <li>Superficie</li>
+                    <li>Options</li>
+                    <li>Total</li>
+                </ul>
+            </section>
+        </aside>
+
+    </div>
+
+</body>
+
+{% endblock %}
