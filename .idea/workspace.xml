@@ -2,197 +2,50 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="39c33b01-c24a-465a-919c-14925a63cc26" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/templates/AdminLTE/AdminLTE_base.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/access_configurator.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/access_configurator.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/HomeController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/favicon-32x32.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/favicon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/theme/AdminLTE/dist/css/AdminLTE.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/theme/AdminLTE/dist/css/AdminLTE.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/theme/AdminLTE/dist/css/AdminLTE.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/theme/AdminLTE/dist/css/AdminLTE.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/symfony.lock" beforeDir="false" afterPath="$PROJECT_DIR$/symfony.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/AdminLTE/AdminLTE_base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/AdminLTE/AdminLTE_base.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/home.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/home.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_files.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/autoload_files.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_static.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/autoload_static.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/vendor/composer/installed.json" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/installed.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/doctrine/doctrine-bundle/Command/DoctrineCommand.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/doctrine/doctrine-bundle/Command/DoctrineCommand.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/doctrine/doctrine-bundle/Command/Proxy/CollectionRegionDoctrineCommand.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/doctrine/doctrine-bundle/Command/Proxy/CollectionRegionDoctrineCommand.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/doctrine/doctrine-bundle/Command/Proxy/EntityRegionCacheDoctrineCommand.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/doctrine/doctrine-bundle/Command/Proxy/EntityRegionCacheDoctrineCommand.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/doctrine/doctrine-bundle/Command/Proxy/QueryRegionCacheDoctrineCommand.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/doctrine/doctrine-bundle/Command/Proxy/QueryRegionCacheDoctrineCommand.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/doctrine/doctrine-bundle/ConnectionFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/doctrine/doctrine-bundle/ConnectionFactory.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/doctrine/doctrine-bundle/Controller/ProfilerController.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/doctrine/doctrine-bundle/Controller/ProfilerController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/doctrine/doctrine-bundle/DataCollector/DoctrineDataCollector.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/doctrine/doctrine-bundle/DataCollector/DoctrineDataCollector.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/doctrine/doctrine-bundle/DependencyInjection/Compiler/DoctrineOrmMappingsPass.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/doctrine/doctrine-bundle/DependencyInjection/Compiler/DoctrineOrmMappingsPass.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/doctrine/doctrine-bundle/DependencyInjection/Compiler/EntityListenerPass.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/doctrine/doctrine-bundle/DependencyInjection/Compiler/EntityListenerPass.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/doctrine/doctrine-bundle/DependencyInjection/Compiler/ServiceRepositoryCompilerPass.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/doctrine/doctrine-bundle/DependencyInjection/Compiler/ServiceRepositoryCompilerPass.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/doctrine/doctrine-bundle/DependencyInjection/Configuration.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/doctrine/doctrine-bundle/DependencyInjection/Configuration.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/doctrine/doctrine-bundle/DependencyInjection/DoctrineExtension.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/doctrine/doctrine-bundle/DependencyInjection/DoctrineExtension.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/doctrine/doctrine-bundle/DoctrineBundle.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/doctrine/doctrine-bundle/DoctrineBundle.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/doctrine/doctrine-bundle/Mapping/ClassMetadataCollection.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/doctrine/doctrine-bundle/Mapping/ClassMetadataCollection.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/doctrine/doctrine-bundle/Mapping/ContainerAwareEntityListenerResolver.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/doctrine/doctrine-bundle/Mapping/ContainerAwareEntityListenerResolver.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/doctrine/doctrine-bundle/Registry.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/doctrine/doctrine-bundle/Registry.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/doctrine/doctrine-bundle/Repository/ContainerRepositoryFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/doctrine/doctrine-bundle/Repository/ContainerRepositoryFactory.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/doctrine/doctrine-bundle/Resources/config/dbal.xml" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/doctrine/doctrine-bundle/Resources/config/dbal.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/doctrine/doctrine-bundle/Resources/config/messenger.xml" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/doctrine/doctrine-bundle/Resources/config/messenger.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/doctrine/doctrine-bundle/Resources/config/orm.xml" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/doctrine/doctrine-bundle/Resources/config/orm.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/doctrine/doctrine-bundle/Resources/config/schema/doctrine-1.0.xsd" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/doctrine/doctrine-bundle/Resources/config/schema/doctrine-1.0.xsd" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/doctrine/doctrine-bundle/Resources/views/Collector/db.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/doctrine/doctrine-bundle/Resources/views/Collector/db.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/doctrine/doctrine-bundle/Twig/DoctrineExtension.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/doctrine/doctrine-bundle/Twig/DoctrineExtension.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/doctrine/doctrine-bundle/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/doctrine/doctrine-bundle/composer.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/vendor/ocramius/package-versions/src/PackageVersions/Versions.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/ocramius/package-versions/src/PackageVersions/Versions.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/ocramius/proxy-manager/CHANGELOG.md" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/ocramius/proxy-manager/CHANGELOG.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/ocramius/proxy-manager/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/ocramius/proxy-manager/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/ocramius/proxy-manager/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/ocramius/proxy-manager/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/ocramius/proxy-manager/doc-template/default.twig" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/ocramius/proxy-manager/doc-template/default.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/ocramius/proxy-manager/proxy-manager.svg" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/ocramius/proxy-manager/proxy-manager.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/ocramius/proxy-manager/src/ProxyManager/Autoloader/Autoloader.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/ocramius/proxy-manager/src/ProxyManager/Autoloader/Autoloader.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/ocramius/proxy-manager/src/ProxyManager/Autoloader/AutoloaderInterface.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/ocramius/proxy-manager/src/ProxyManager/Autoloader/AutoloaderInterface.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/ocramius/proxy-manager/src/ProxyManager/Configuration.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/ocramius/proxy-manager/src/ProxyManager/Configuration.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/ocramius/proxy-manager/src/ProxyManager/Exception/DisabledMethodException.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/ocramius/proxy-manager/src/ProxyManager/Exception/DisabledMethodException.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/ocramius/proxy-manager/src/ProxyManager/Exception/ExceptionInterface.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/ocramius/proxy-manager/src/ProxyManager/Exception/ExceptionInterface.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/ocramius/proxy-manager/src/ProxyManager/Exception/FileNotWritableException.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/ocramius/proxy-manager/src/ProxyManager/Exception/FileNotWritableException.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/ocramius/proxy-manager/src/ProxyManager/Exception/InvalidProxiedClassException.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/ocramius/proxy-manager/src/ProxyManager/Exception/InvalidProxiedClassException.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/ocramius/proxy-manager/src/ProxyManager/Exception/InvalidProxyDirectoryException.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/ocramius/proxy-manager/src/ProxyManager/Exception/InvalidProxyDirectoryException.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/ocramius/proxy-manager/src/ProxyManager/Exception/UnsupportedProxiedClassException.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/ocramius/proxy-manager/src/ProxyManager/Exception/UnsupportedProxiedClassException.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/ocramius/proxy-manager/src/ProxyManager/Factory/AbstractBaseFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/ocramius/proxy-manager/src/ProxyManager/Factory/AbstractBaseFactory.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/ocramius/proxy-manager/src/ProxyManager/Factory/AccessInterceptorScopeLocalizerFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/ocramius/proxy-manager/src/ProxyManager/Factory/AccessInterceptorScopeLocalizerFactory.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/ocramius/proxy-manager/src/ProxyManager/Factory/AccessInterceptorValueHolderFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/ocramius/proxy-manager/src/ProxyManager/Factory/AccessInterceptorValueHolderFactory.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/ocramius/proxy-manager/src/ProxyManager/Factory/LazyLoadingGhostFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/ocramius/proxy-manager/src/ProxyManager/Factory/LazyLoadingGhostFactory.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/ocramius/proxy-manager/src/ProxyManager/Factory/LazyLoadingValueHolderFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/ocramius/proxy-manager/src/ProxyManager/Factory/LazyLoadingValueHolderFactory.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/ocramius/proxy-manager/src/ProxyManager/Factory/NullObjectFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/ocramius/proxy-manager/src/ProxyManager/Factory/NullObjectFactory.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/ocramius/proxy-manager/src/ProxyManager/Factory/RemoteObject/Adapter/BaseAdapter.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/ocramius/proxy-manager/src/ProxyManager/Factory/RemoteObject/Adapter/BaseAdapter.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/ocramius/proxy-manager/src/ProxyManager/Factory/RemoteObject/Adapter/JsonRpc.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/ocramius/proxy-manager/src/ProxyManager/Factory/RemoteObject/Adapter/JsonRpc.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/ocramius/proxy-manager/src/ProxyManager/Factory/RemoteObject/Adapter/Soap.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/ocramius/proxy-manager/src/ProxyManager/Factory/RemoteObject/Adapter/Soap.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/ocramius/proxy-manager/src/ProxyManager/Factory/RemoteObject/Adapter/XmlRpc.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/ocramius/proxy-manager/src/ProxyManager/Factory/RemoteObject/Adapter/XmlRpc.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/ocramius/proxy-manager/src/ProxyManager/Factory/RemoteObject/AdapterInterface.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/ocramius/proxy-manager/src/ProxyManager/Factory/RemoteObject/AdapterInterface.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/ocramius/proxy-manager/src/ProxyManager/Factory/RemoteObjectFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/ocramius/proxy-manager/src/ProxyManager/Factory/RemoteObjectFactory.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/ocramius/proxy-manager/src/ProxyManager/FileLocator/FileLocator.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/ocramius/proxy-manager/src/ProxyManager/FileLocator/FileLocator.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/ocramius/proxy-manager/src/ProxyManager/FileLocator/FileLocatorInterface.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/ocramius/proxy-manager/src/ProxyManager/FileLocator/FileLocatorInterface.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/ocramius/proxy-manager/src/ProxyManager/Generator/ClassGenerator.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/ocramius/proxy-manager/src/ProxyManager/Generator/ClassGenerator.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/ocramius/proxy-manager/src/ProxyManager/Generator/MagicMethodGenerator.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/ocramius/proxy-manager/src/ProxyManager/Generator/MagicMethodGenerator.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/ocramius/proxy-manager/src/ProxyManager/Generator/MethodGenerator.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/ocramius/proxy-manager/src/ProxyManager/Generator/MethodGenerator.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/ocramius/proxy-manager/src/ProxyManager/Generator/Util/ClassGeneratorUtils.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/ocramius/proxy-manager/src/ProxyManager/Generator/Util/ClassGeneratorUtils.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/ocramius/proxy-manager/src/ProxyManager/Generator/Util/ProxiedMethodReturnExpression.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/ocramius/proxy-manager/src/ProxyManager/Generator/Util/ProxiedMethodReturnExpression.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/ocramius/proxy-manager/src/ProxyManager/Generator/Util/UniqueIdentifierGenerator.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/ocramius/proxy-manager/src/ProxyManager/Generator/Util/UniqueIdentifierGenerator.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/ocramius/proxy-manager/src/ProxyManager/GeneratorStrategy/BaseGeneratorStrategy.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/ocramius/proxy-manager/src/ProxyManager/GeneratorStrategy/BaseGeneratorStrategy.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/ocramius/proxy-manager/src/ProxyManager/GeneratorStrategy/EvaluatingGeneratorStrategy.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/ocramius/proxy-manager/src/ProxyManager/GeneratorStrategy/EvaluatingGeneratorStrategy.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/ocramius/proxy-manager/src/ProxyManager/GeneratorStrategy/FileWriterGeneratorStrategy.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/ocramius/proxy-manager/src/ProxyManager/GeneratorStrategy/FileWriterGeneratorStrategy.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/ocramius/proxy-manager/src/ProxyManager/GeneratorStrategy/GeneratorStrategyInterface.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/ocramius/proxy-manager/src/ProxyManager/GeneratorStrategy/GeneratorStrategyInterface.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/ocramius/proxy-manager/src/ProxyManager/Inflector/ClassNameInflector.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/ocramius/proxy-manager/src/ProxyManager/Inflector/ClassNameInflector.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/ocramius/proxy-manager/src/ProxyManager/Inflector/ClassNameInflectorInterface.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/ocramius/proxy-manager/src/ProxyManager/Inflector/ClassNameInflectorInterface.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/ocramius/proxy-manager/src/ProxyManager/Inflector/Util/ParameterEncoder.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/ocramius/proxy-manager/src/ProxyManager/Inflector/Util/ParameterEncoder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/ocramius/proxy-manager/src/ProxyManager/Inflector/Util/ParameterHasher.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/ocramius/proxy-manager/src/ProxyManager/Inflector/Util/ParameterHasher.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/ocramius/proxy-manager/src/ProxyManager/Proxy/AccessInterceptorInterface.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/ocramius/proxy-manager/src/ProxyManager/Proxy/AccessInterceptorInterface.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/ocramius/proxy-manager/src/ProxyManager/Proxy/AccessInterceptorValueHolderInterface.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/ocramius/proxy-manager/src/ProxyManager/Proxy/AccessInterceptorValueHolderInterface.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/ocramius/proxy-manager/src/ProxyManager/Proxy/Exception/RemoteObjectException.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/ocramius/proxy-manager/src/ProxyManager/Proxy/Exception/RemoteObjectException.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/ocramius/proxy-manager/src/ProxyManager/Proxy/FallbackValueHolderInterface.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/ocramius/proxy-manager/src/ProxyManager/Proxy/FallbackValueHolderInterface.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/ocramius/proxy-manager/src/ProxyManager/Proxy/GhostObjectInterface.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/ocramius/proxy-manager/src/ProxyManager/Proxy/GhostObjectInterface.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/ocramius/proxy-manager/src/ProxyManager/Proxy/LazyLoadingInterface.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/ocramius/proxy-manager/src/ProxyManager/Proxy/LazyLoadingInterface.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/ocramius/proxy-manager/src/ProxyManager/Proxy/NullObjectInterface.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/ocramius/proxy-manager/src/ProxyManager/Proxy/NullObjectInterface.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/ocramius/proxy-manager/src/ProxyManager/Proxy/ProxyInterface.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/ocramius/proxy-manager/src/ProxyManager/Proxy/ProxyInterface.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/ocramius/proxy-manager/src/ProxyManager/Proxy/RemoteObjectInterface.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/ocramius/proxy-manager/src/ProxyManager/Proxy/RemoteObjectInterface.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/ocramius/proxy-manager/src/ProxyManager/Proxy/SmartReferenceInterface.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/ocramius/proxy-manager/src/ProxyManager/Proxy/SmartReferenceInterface.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/ocramius/proxy-manager/src/ProxyManager/Proxy/ValueHolderInterface.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/ocramius/proxy-manager/src/ProxyManager/Proxy/ValueHolderInterface.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/ocramius/proxy-manager/src/ProxyManager/Proxy/VirtualProxyInterface.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/ocramius/proxy-manager/src/ProxyManager/Proxy/VirtualProxyInterface.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/ocramius/proxy-manager/src/ProxyManager/ProxyGenerator/AccessInterceptor/MethodGenerator/MagicWakeup.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/ocramius/proxy-manager/src/ProxyManager/ProxyGenerator/AccessInterceptor/MethodGenerator/MagicWakeup.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/ocramius/proxy-manager/src/ProxyManager/ProxyGenerator/AccessInterceptor/MethodGenerator/SetMethodPrefixInterceptor.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/ocramius/proxy-manager/src/ProxyManager/ProxyGenerator/AccessInterceptor/MethodGenerator/SetMethodPrefixInterceptor.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/ocramius/proxy-manager/src/ProxyManager/ProxyGenerator/AccessInterceptor/MethodGenerator/SetMethodSuffixInterceptor.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/ocramius/proxy-manager/src/ProxyManager/ProxyGenerator/AccessInterceptor/MethodGenerator/SetMethodSuffixInterceptor.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/ocramius/proxy-manager/src/ProxyManager/ProxyGenerator/AccessInterceptor/PropertyGenerator/MethodPrefixInterceptors.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/ocramius/proxy-manager/src/ProxyManager/ProxyGenerator/AccessInterceptor/PropertyGenerator/MethodPrefixInterceptors.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/ocramius/proxy-manager/src/ProxyManager/ProxyGenerator/AccessInterceptor/PropertyGenerator/MethodSuffixInterceptors.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/ocramius/proxy-manager/src/ProxyManager/ProxyGenerator/AccessInterceptor/PropertyGenerator/MethodSuffixInterceptors.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/ocramius/proxy-manager/src/ProxyManager/ProxyGenerator/AccessInterceptorScopeLocalizer/MethodGenerator/BindProxyProperties.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/ocramius/proxy-manager/src/ProxyManager/ProxyGenerator/AccessInterceptorScopeLocalizer/MethodGenerator/BindProxyProperties.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/ocramius/proxy-manager/src/ProxyManager/ProxyGenerator/AccessInterceptorScopeLocalizer/MethodGenerator/InterceptedMethod.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/ocramius/proxy-manager/src/ProxyManager/ProxyGenerator/AccessInterceptorScopeLocalizer/MethodGenerator/InterceptedMethod.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/ocramius/proxy-manager/src/ProxyManager/ProxyGenerator/AccessInterceptorScopeLocalizer/MethodGenerator/MagicClone.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/ocramius/proxy-manager/src/ProxyManager/ProxyGenerator/AccessInterceptorScopeLocalizer/MethodGenerator/MagicClone.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/ocramius/proxy-manager/src/ProxyManager/ProxyGenerator/AccessInterceptorScopeLocalizer/MethodGenerator/MagicGet.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/ocramius/proxy-manager/src/ProxyManager/ProxyGenerator/AccessInterceptorScopeLocalizer/MethodGenerator/MagicGet.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/ocramius/proxy-manager/src/ProxyManager/ProxyGenerator/AccessInterceptorScopeLocalizer/MethodGenerator/MagicIsset.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/ocramius/proxy-manager/src/ProxyManager/ProxyGenerator/AccessInterceptorScopeLocalizer/MethodGenerator/MagicIsset.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/ocramius/proxy-manager/src/ProxyManager/ProxyGenerator/AccessInterceptorScopeLocalizer/MethodGenerator/MagicSet.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/ocramius/proxy-manager/src/ProxyManager/ProxyGenerator/AccessInterceptorScopeLocalizer/MethodGenerator/MagicSet.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/ocramius/proxy-manager/src/ProxyManager/ProxyGenerator/AccessInterceptorScopeLocalizer/MethodGenerator/MagicSleep.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/ocramius/proxy-manager/src/ProxyManager/ProxyGenerator/AccessInterceptorScopeLocalizer/MethodGenerator/MagicSleep.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/ocramius/proxy-manager/src/ProxyManager/ProxyGenerator/AccessInterceptorScopeLocalizer/MethodGenerator/MagicUnset.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/ocramius/proxy-manager/src/ProxyManager/ProxyGenerator/AccessInterceptorScopeLocalizer/MethodGenerator/MagicUnset.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/ocramius/proxy-manager/src/ProxyManager/ProxyGenerator/AccessInterceptorScopeLocalizer/MethodGenerator/StaticProxyConstructor.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/ocramius/proxy-manager/src/ProxyManager/ProxyGenerator/AccessInterceptorScopeLocalizer/MethodGenerator/StaticProxyConstructor.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/ocramius/proxy-manager/src/ProxyManager/ProxyGenerator/AccessInterceptorScopeLocalizer/MethodGenerator/Util/InterceptorGenerator.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/ocramius/proxy-manager/src/ProxyManager/ProxyGenerator/AccessInterceptorScopeLocalizer/MethodGenerator/Util/InterceptorGenerator.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/ocramius/proxy-manager/src/ProxyManager/ProxyGenerator/AccessInterceptorScopeLocalizerGenerator.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/ocramius/proxy-manager/src/ProxyManager/ProxyGenerator/AccessInterceptorScopeLocalizerGenerator.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/ocramius/proxy-manager/src/ProxyManager/ProxyGenerator/AccessInterceptorValueHolder/MethodGenerator/InterceptedMethod.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/ocramius/proxy-manager/src/ProxyManager/ProxyGenerator/AccessInterceptorValueHolder/MethodGenerator/InterceptedMethod.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/ocramius/proxy-manager/src/ProxyManager/ProxyGenerator/AccessInterceptorValueHolder/MethodGenerator/MagicClone.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/ocramius/proxy-manager/src/ProxyManager/ProxyGenerator/AccessInterceptorValueHolder/MethodGenerator/MagicClone.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/ocramius/proxy-manager/src/ProxyManager/ProxyGenerator/AccessInterceptorValueHolder/MethodGenerator/MagicGet.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/ocramius/proxy-manager/src/ProxyManager/ProxyGenerator/AccessInterceptorValueHolder/MethodGenerator/MagicGet.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/ocramius/proxy-manager/src/ProxyManager/ProxyGenerator/AccessInterceptorValueHolder/MethodGenerator/MagicIsset.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/ocramius/proxy-manager/src/ProxyManager/ProxyGenerator/AccessInterceptorValueHolder/MethodGenerator/MagicIsset.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/ocramius/proxy-manager/src/ProxyManager/ProxyGenerator/AccessInterceptorValueHolder/MethodGenerator/MagicSet.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/ocramius/proxy-manager/src/ProxyManager/ProxyGenerator/AccessInterceptorValueHolder/MethodGenerator/MagicSet.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/ocramius/proxy-manager/src/ProxyManager/ProxyGenerator/AccessInterceptorValueHolder/MethodGenerator/MagicUnset.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/ocramius/proxy-manager/src/ProxyManager/ProxyGenerator/AccessInterceptorValueHolder/MethodGenerator/MagicUnset.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/ocramius/proxy-manager/src/ProxyManager/ProxyGenerator/AccessInterceptorValueHolder/MethodGenerator/StaticProxyConstructor.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/ocramius/proxy-manager/src/ProxyManager/ProxyGenerator/AccessInterceptorValueHolder/MethodGenerator/StaticProxyConstructor.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/ocramius/proxy-manager/src/ProxyManager/ProxyGenerator/AccessInterceptorValueHolder/MethodGenerator/Util/InterceptorGenerator.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/ocramius/proxy-manager/src/ProxyManager/ProxyGenerator/AccessInterceptorValueHolder/MethodGenerator/Util/InterceptorGenerator.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/ocramius/proxy-manager/src/ProxyManager/ProxyGenerator/AccessInterceptorValueHolderGenerator.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/ocramius/proxy-manager/src/ProxyManager/ProxyGenerator/AccessInterceptorValueHolderGenerator.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/ocramius/proxy-manager/src/ProxyManager/ProxyGenerator/Assertion/CanProxyAssertion.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/ocramius/proxy-manager/src/ProxyManager/ProxyGenerator/Assertion/CanProxyAssertion.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/ocramius/proxy-manager/src/ProxyManager/ProxyGenerator/LazyLoading/MethodGenerator/StaticProxyConstructor.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/ocramius/proxy-manager/src/ProxyManager/ProxyGenerator/LazyLoading/MethodGenerator/StaticProxyConstructor.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/ocramius/proxy-manager/src/ProxyManager/ProxyGenerator/LazyLoadingGhost/MethodGenerator/CallInitializer.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/ocramius/proxy-manager/src/ProxyManager/ProxyGenerator/LazyLoadingGhost/MethodGenerator/CallInitializer.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/ocramius/proxy-manager/src/ProxyManager/ProxyGenerator/LazyLoadingGhost/MethodGenerator/GetProxyInitializer.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/ocramius/proxy-manager/src/ProxyManager/ProxyGenerator/LazyLoadingGhost/MethodGenerator/GetProxyInitializer.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/ocramius/proxy-manager/src/ProxyManager/ProxyGenerator/LazyLoadingGhost/MethodGenerator/InitializeProxy.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/ocramius/proxy-manager/src/ProxyManager/ProxyGenerator/LazyLoadingGhost/MethodGenerator/InitializeProxy.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/ocramius/proxy-manager/src/ProxyManager/ProxyGenerator/LazyLoadingGhost/MethodGenerator/IsProxyInitialized.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/ocramius/proxy-manager/src/ProxyManager/ProxyGenerator/LazyLoadingGhost/MethodGenerator/IsProxyInitialized.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/ocramius/proxy-manager/src/ProxyManager/ProxyGenerator/LazyLoadingGhost/MethodGenerator/MagicClone.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/ocramius/proxy-manager/src/ProxyManager/ProxyGenerator/LazyLoadingGhost/MethodGenerator/MagicClone.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/ocramius/proxy-manager/src/ProxyManager/ProxyGenerator/LazyLoadingGhost/MethodGenerator/MagicGet.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/ocramius/proxy-manager/src/ProxyManager/ProxyGenerator/LazyLoadingGhost/MethodGenerator/MagicGet.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/ocramius/proxy-manager/src/ProxyManager/ProxyGenerator/LazyLoadingGhost/MethodGenerator/MagicIsset.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/ocramius/proxy-manager/src/ProxyManager/ProxyGenerator/LazyLoadingGhost/MethodGenerator/MagicIsset.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/ocramius/proxy-manager/src/ProxyManager/ProxyGenerator/LazyLoadingGhost/MethodGenerator/MagicSet.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/ocramius/proxy-manager/src/ProxyManager/ProxyGenerator/LazyLoadingGhost/MethodGenerator/MagicSet.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/ocramius/proxy-manager/src/ProxyManager/ProxyGenerator/LazyLoadingGhost/MethodGenerator/MagicSleep.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/ocramius/proxy-manager/src/ProxyManager/ProxyGenerator/LazyLoadingGhost/MethodGenerator/MagicSleep.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/ocramius/proxy-manager/src/ProxyManager/ProxyGenerator/LazyLoadingGhost/MethodGenerator/MagicUnset.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/ocramius/proxy-manager/src/ProxyManager/ProxyGenerator/LazyLoadingGhost/MethodGenerator/MagicUnset.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/ocramius/proxy-manager/src/ProxyManager/ProxyGenerator/LazyLoadingGhost/MethodGenerator/SetProxyInitializer.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/ocramius/proxy-manager/src/ProxyManager/ProxyGenerator/LazyLoadingGhost/MethodGenerator/SetProxyInitializer.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/ocramius/proxy-manager/src/ProxyManager/ProxyGenerator/LazyLoadingGhost/PropertyGenerator/InitializationTracker.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/ocramius/proxy-manager/src/ProxyManager/ProxyGenerator/LazyLoadingGhost/PropertyGenerator/InitializationTracker.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/ocramius/proxy-manager/src/ProxyManager/ProxyGenerator/LazyLoadingGhost/PropertyGenerator/InitializerProperty.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/ocramius/proxy-manager/src/ProxyManager/ProxyGenerator/LazyLoadingGhost/PropertyGenerator/InitializerProperty.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/ocramius/proxy-manager/src/ProxyManager/ProxyGenerator/LazyLoadingGhost/PropertyGenerator/PrivatePropertiesMap.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/ocramius/proxy-manager/src/ProxyManager/ProxyGenerator/LazyLoadingGhost/PropertyGenerator/PrivatePropertiesMap.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/ocramius/proxy-manager/src/ProxyManager/ProxyGenerator/LazyLoadingGhost/PropertyGenerator/ProtectedPropertiesMap.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/ocramius/proxy-manager/src/ProxyManager/ProxyGenerator/LazyLoadingGhost/PropertyGenerator/ProtectedPropertiesMap.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/ocramius/proxy-manager/src/ProxyManager/ProxyGenerator/LazyLoadingGhostGenerator.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/ocramius/proxy-manager/src/ProxyManager/ProxyGenerator/LazyLoadingGhostGenerator.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/ocramius/proxy-manager/src/ProxyManager/ProxyGenerator/LazyLoadingValueHolder/MethodGenerator/GetProxyInitializer.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/ocramius/proxy-manager/src/ProxyManager/ProxyGenerator/LazyLoadingValueHolder/MethodGenerator/GetProxyInitializer.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/ocramius/proxy-manager/src/ProxyManager/ProxyGenerator/LazyLoadingValueHolder/MethodGenerator/InitializeProxy.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/ocramius/proxy-manager/src/ProxyManager/ProxyGenerator/LazyLoadingValueHolder/MethodGenerator/InitializeProxy.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/ocramius/proxy-manager/src/ProxyManager/ProxyGenerator/LazyLoadingValueHolder/MethodGenerator/IsProxyInitialized.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/ocramius/proxy-manager/src/ProxyManager/ProxyGenerator/LazyLoadingValueHolder/MethodGenerator/IsProxyInitialized.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/ocramius/proxy-manager/src/ProxyManager/ProxyGenerator/LazyLoadingValueHolder/MethodGenerator/LazyLoadingMethodInterceptor.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/ocramius/proxy-manager/src/ProxyManager/ProxyGenerator/LazyLoadingValueHolder/MethodGenerator/LazyLoadingMethodInterceptor.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/ocramius/proxy-manager/src/ProxyManager/ProxyGenerator/LazyLoadingValueHolder/MethodGenerator/MagicClone.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/ocramius/proxy-manager/src/ProxyManager/ProxyGenerator/LazyLoadingValueHolder/MethodGenerator/MagicClone.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/ocramius/proxy-manager/src/ProxyManager/ProxyGenerator/LazyLoadingValueHolder/MethodGenerator/MagicGet.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/ocramius/proxy-manager/src/ProxyManager/ProxyGenerator/LazyLoadingValueHolder/MethodGenerator/MagicGet.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/ocramius/proxy-manager/src/ProxyManager/ProxyGenerator/LazyLoadingValueHolder/MethodGenerator/MagicIsset.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/ocramius/proxy-manager/src/ProxyManager/ProxyGenerator/LazyLoadingValueHolder/MethodGenerator/MagicIsset.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/ocramius/proxy-manager/src/ProxyManager/ProxyGenerator/LazyLoadingValueHolder/MethodGenerator/MagicSet.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/ocramius/proxy-manager/src/ProxyManager/ProxyGenerator/LazyLoadingValueHolder/MethodGenerator/MagicSet.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/ocramius/proxy-manager/src/ProxyManager/ProxyGenerator/LazyLoadingValueHolder/MethodGenerator/MagicSleep.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/ocramius/proxy-manager/src/ProxyManager/ProxyGenerator/LazyLoadingValueHolder/MethodGenerator/MagicSleep.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/ocramius/proxy-manager/src/ProxyManager/ProxyGenerator/LazyLoadingValueHolder/MethodGenerator/MagicUnset.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/ocramius/proxy-manager/src/ProxyManager/ProxyGenerator/LazyLoadingValueHolder/MethodGenerator/MagicUnset.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/ocramius/proxy-manager/src/ProxyManager/ProxyGenerator/LazyLoadingValueHolder/MethodGenerator/SetProxyInitializer.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/ocramius/proxy-manager/src/ProxyManager/ProxyGenerator/LazyLoadingValueHolder/MethodGenerator/SetProxyInitializer.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/ocramius/proxy-manager/src/ProxyManager/ProxyGenerator/LazyLoadingValueHolder/PropertyGenerator/InitializerProperty.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/ocramius/proxy-manager/src/ProxyManager/ProxyGenerator/LazyLoadingValueHolder/PropertyGenerator/InitializerProperty.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/ocramius/proxy-manager/src/ProxyManager/ProxyGenerator/LazyLoadingValueHolder/PropertyGenerator/ValueHolderProperty.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/ocramius/proxy-manager/src/ProxyManager/ProxyGenerator/LazyLoadingValueHolder/PropertyGenerator/ValueHolderProperty.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/ocramius/proxy-manager/src/ProxyManager/ProxyGenerator/LazyLoadingValueHolderGenerator.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/ocramius/proxy-manager/src/ProxyManager/ProxyGenerator/LazyLoadingValueHolderGenerator.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/ocramius/proxy-manager/src/ProxyManager/ProxyGenerator/NullObject/MethodGenerator/NullObjectMethodInterceptor.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/ocramius/proxy-manager/src/ProxyManager/ProxyGenerator/NullObject/MethodGenerator/NullObjectMethodInterceptor.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/ocramius/proxy-manager/src/ProxyManager/ProxyGenerator/NullObject/MethodGenerator/StaticProxyConstructor.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/ocramius/proxy-manager/src/ProxyManager/ProxyGenerator/NullObject/MethodGenerator/StaticProxyConstructor.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/ocramius/proxy-manager/src/ProxyManager/ProxyGenerator/NullObjectGenerator.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/ocramius/proxy-manager/src/ProxyManager/ProxyGenerator/NullObjectGenerator.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/ocramius/proxy-manager/src/ProxyManager/ProxyGenerator/PropertyGenerator/PublicPropertiesMap.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/ocramius/proxy-manager/src/ProxyManager/ProxyGenerator/PropertyGenerator/PublicPropertiesMap.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/ocramius/proxy-manager/src/ProxyManager/ProxyGenerator/ProxyGeneratorInterface.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/ocramius/proxy-manager/src/ProxyManager/ProxyGenerator/ProxyGeneratorInterface.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/ocramius/proxy-manager/src/ProxyManager/ProxyGenerator/RemoteObject/MethodGenerator/MagicGet.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/ocramius/proxy-manager/src/ProxyManager/ProxyGenerator/RemoteObject/MethodGenerator/MagicGet.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/ocramius/proxy-manager/src/ProxyManager/ProxyGenerator/RemoteObject/MethodGenerator/MagicIsset.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/ocramius/proxy-manager/src/ProxyManager/ProxyGenerator/RemoteObject/MethodGenerator/MagicIsset.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/ocramius/proxy-manager/src/ProxyManager/ProxyGenerator/RemoteObject/MethodGenerator/MagicSet.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/ocramius/proxy-manager/src/ProxyManager/ProxyGenerator/RemoteObject/MethodGenerator/MagicSet.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/ocramius/proxy-manager/src/ProxyManager/ProxyGenerator/RemoteObject/MethodGenerator/MagicUnset.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/ocramius/proxy-manager/src/ProxyManager/ProxyGenerator/RemoteObject/MethodGenerator/MagicUnset.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/ocramius/proxy-manager/src/ProxyManager/ProxyGenerator/RemoteObject/MethodGenerator/RemoteObjectMethod.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/ocramius/proxy-manager/src/ProxyManager/ProxyGenerator/RemoteObject/MethodGenerator/RemoteObjectMethod.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/ocramius/proxy-manager/src/ProxyManager/ProxyGenerator/RemoteObject/MethodGenerator/StaticProxyConstructor.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/ocramius/proxy-manager/src/ProxyManager/ProxyGenerator/RemoteObject/MethodGenerator/StaticProxyConstructor.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/ocramius/proxy-manager/src/ProxyManager/ProxyGenerator/RemoteObject/PropertyGenerator/AdapterProperty.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/ocramius/proxy-manager/src/ProxyManager/ProxyGenerator/RemoteObject/PropertyGenerator/AdapterProperty.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/ocramius/proxy-manager/src/ProxyManager/ProxyGenerator/RemoteObjectGenerator.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/ocramius/proxy-manager/src/ProxyManager/ProxyGenerator/RemoteObjectGenerator.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/ocramius/proxy-manager/src/ProxyManager/ProxyGenerator/Util/GetMethodIfExists.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/ocramius/proxy-manager/src/ProxyManager/ProxyGenerator/Util/GetMethodIfExists.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/ocramius/proxy-manager/src/ProxyManager/ProxyGenerator/Util/Properties.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/ocramius/proxy-manager/src/ProxyManager/ProxyGenerator/Util/Properties.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/ocramius/proxy-manager/src/ProxyManager/ProxyGenerator/Util/ProxiedMethodsFilter.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/ocramius/proxy-manager/src/ProxyManager/ProxyGenerator/Util/ProxiedMethodsFilter.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/ocramius/proxy-manager/src/ProxyManager/ProxyGenerator/Util/PublicScopeSimulator.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/ocramius/proxy-manager/src/ProxyManager/ProxyGenerator/Util/PublicScopeSimulator.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/ocramius/proxy-manager/src/ProxyManager/ProxyGenerator/Util/UnsetPropertiesGenerator.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/ocramius/proxy-manager/src/ProxyManager/ProxyGenerator/Util/UnsetPropertiesGenerator.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/ocramius/proxy-manager/src/ProxyManager/ProxyGenerator/ValueHolder/MethodGenerator/Constructor.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/ocramius/proxy-manager/src/ProxyManager/ProxyGenerator/ValueHolder/MethodGenerator/Constructor.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/ocramius/proxy-manager/src/ProxyManager/ProxyGenerator/ValueHolder/MethodGenerator/GetWrappedValueHolderValue.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/ocramius/proxy-manager/src/ProxyManager/ProxyGenerator/ValueHolder/MethodGenerator/GetWrappedValueHolderValue.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/ocramius/proxy-manager/src/ProxyManager/ProxyGenerator/ValueHolder/MethodGenerator/MagicSleep.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/ocramius/proxy-manager/src/ProxyManager/ProxyGenerator/ValueHolder/MethodGenerator/MagicSleep.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/ocramius/proxy-manager/src/ProxyManager/Signature/ClassSignatureGenerator.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/ocramius/proxy-manager/src/ProxyManager/Signature/ClassSignatureGenerator.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/ocramius/proxy-manager/src/ProxyManager/Signature/ClassSignatureGeneratorInterface.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/ocramius/proxy-manager/src/ProxyManager/Signature/ClassSignatureGeneratorInterface.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/ocramius/proxy-manager/src/ProxyManager/Signature/Exception/ExceptionInterface.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/ocramius/proxy-manager/src/ProxyManager/Signature/Exception/ExceptionInterface.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/ocramius/proxy-manager/src/ProxyManager/Signature/Exception/InvalidSignatureException.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/ocramius/proxy-manager/src/ProxyManager/Signature/Exception/InvalidSignatureException.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/ocramius/proxy-manager/src/ProxyManager/Signature/Exception/MissingSignatureException.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/ocramius/proxy-manager/src/ProxyManager/Signature/Exception/MissingSignatureException.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/ocramius/proxy-manager/src/ProxyManager/Signature/SignatureChecker.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/ocramius/proxy-manager/src/ProxyManager/Signature/SignatureChecker.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/ocramius/proxy-manager/src/ProxyManager/Signature/SignatureCheckerInterface.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/ocramius/proxy-manager/src/ProxyManager/Signature/SignatureCheckerInterface.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/ocramius/proxy-manager/src/ProxyManager/Signature/SignatureGenerator.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/ocramius/proxy-manager/src/ProxyManager/Signature/SignatureGenerator.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/ocramius/proxy-manager/src/ProxyManager/Signature/SignatureGeneratorInterface.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/ocramius/proxy-manager/src/ProxyManager/Signature/SignatureGeneratorInterface.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/ocramius/proxy-manager/src/ProxyManager/Stub/EmptyClassStub.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/ocramius/proxy-manager/src/ProxyManager/Stub/EmptyClassStub.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/ocramius/proxy-manager/src/ProxyManager/Version.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/ocramius/proxy-manager/src/ProxyManager/Version.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/contracts/CHANGELOG.md" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/contracts/CHANGELOG.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/contracts/Cache/CacheTrait.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/contracts/Cache/CacheTrait.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/contracts/LICENSE" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/contracts/LICENSE" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/contracts/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/contracts/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/contracts/Service/ServiceLocatorTrait.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/contracts/Service/ServiceLocatorTrait.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/contracts/Service/ServiceSubscriberInterface.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/contracts/Service/ServiceSubscriberInterface.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/contracts/Service/ServiceSubscriberTrait.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/contracts/Service/ServiceSubscriberTrait.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/contracts/Tests/Cache/CacheTraitTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/contracts/Tests/Cache/CacheTraitTest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/contracts/Tests/Service/ServiceLocatorTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/contracts/Tests/Service/ServiceLocatorTest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/contracts/Tests/Service/ServiceSubscriberTraitTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/contracts/Tests/Service/ServiceSubscriberTraitTest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/contracts/Tests/Translation/TranslatorTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/contracts/Tests/Translation/TranslatorTest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/contracts/Translation/TranslatorInterface.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/contracts/Translation/TranslatorInterface.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/contracts/Translation/TranslatorTrait.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/contracts/Translation/TranslatorTrait.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/contracts/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/contracts/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/twig/twig/.travis.yml" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/twig/twig/.travis.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/twig/twig/CHANGELOG" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/twig/twig/CHANGELOG" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/twig/twig/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/twig/twig/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/twig/twig/doc/deprecated.rst" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/twig/twig/doc/deprecated.rst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/twig/twig/doc/filters/index.rst" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/twig/twig/doc/filters/index.rst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/twig/twig/doc/filters/join.rst" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/twig/twig/doc/filters/join.rst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/twig/twig/doc/tags/index.rst" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/twig/twig/doc/tags/index.rst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/twig/twig/doc/templates.rst" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/twig/twig/doc/templates.rst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/twig/twig/src/Environment.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/twig/twig/src/Environment.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/twig/twig/src/ExpressionParser.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/twig/twig/src/ExpressionParser.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/twig/twig/src/Extension/CoreExtension.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/twig/twig/src/Extension/CoreExtension.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/twig/twig/src/Extension/DebugExtension.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/twig/twig/src/Extension/DebugExtension.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/twig/twig/src/Lexer.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/twig/twig/src/Lexer.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/twig/twig/src/Node/Expression/NameExpression.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/twig/twig/src/Node/Expression/NameExpression.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/twig/twig/src/Node/MacroNode.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/twig/twig/src/Node/MacroNode.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/twig/twig/src/Node/Node.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/twig/twig/src/Node/Node.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/twig/twig/src/Node/SetNode.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/twig/twig/src/Node/SetNode.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/twig/twig/src/Node/SpacelessNode.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/twig/twig/src/Node/SpacelessNode.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/twig/twig/src/NodeTraverser.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/twig/twig/src/NodeTraverser.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/twig/twig/src/NodeVisitor/AbstractNodeVisitor.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/twig/twig/src/NodeVisitor/AbstractNodeVisitor.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/twig/twig/src/NodeVisitor/NodeVisitorInterface.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/twig/twig/src/NodeVisitor/NodeVisitorInterface.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/twig/twig/src/Template.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/twig/twig/src/Template.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/twig/twig/src/TemplateWrapper.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/twig/twig/src/TemplateWrapper.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/twig/twig/src/Token.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/twig/twig/src/Token.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/twig/twig/src/TokenParser/ForTokenParser.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/twig/twig/src/TokenParser/ForTokenParser.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/twig/twig/test/Twig/Tests/Fixtures/tags/for/condition.test" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/twig/twig/test/Twig/Tests/Node/MacroTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/twig/twig/test/Twig/Tests/Node/MacroTest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/twig/twig/test/Twig/Tests/Node/SetTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/twig/twig/test/Twig/Tests/Node/SetTest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/twig/twig/test/Twig/Tests/Node/SpacelessTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/twig/twig/test/Twig/Tests/Node/SpacelessTest.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -208,13 +61,38 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Controller/HomeController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="80">
-              <caret line="5" column="46" lean-forward="true" selection-start-line="5" selection-start-column="46" selection-end-line="5" selection-end-column="46" />
+            <state relative-caret-position="160">
+              <caret line="10" column="1" selection-start-line="10" selection-start-column="1" selection-end-line="10" selection-end-column="1" />
               <folding>
-                <element signature="e#346#362#1#PHP" expanded="true" />
+                <element signature="e#34#99#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/AdminLTE/AdminLTE_base.html.twig">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="544">
+              <caret line="34" column="53" selection-start-line="34" selection-start-column="53" selection-end-line="34" selection-end-column="53" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/templates/home.html.twig">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="636">
+              <caret line="99" column="72" lean-forward="true" selection-start-line="99" selection-start-column="72" selection-end-line="99" selection-end-column="72" />
+              <folding>
+                <element signature="e#12#44#0#Twig" expanded="true" />
+                <element signature="e#32211#32232#0#HTML" expanded="true" />
+                <element signature="e#4082#4103#0#HTML" expanded="true" />
+                <element signature="e#4687#4708#0#HTML" expanded="true" />
+                <element signature="e#60031#60037#0#HTML" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -226,9 +104,19 @@
     <findStrings>
       <find>asset</find>
       <find>fn</find>
+      <find>sidebar</find>
+      <find>content</find>
+      <find>content:&quot;\f0c9&quot;</find>
+      <find>treeview menu-open</find>
+      <find>slide</find>
+      <find>sidebar-menu</find>
+      <find>slideUp</find>
+      <find>content-header</find>
+      <find>connect</find>
     </findStrings>
     <dirStrings>
       <dir>C:\wamp\www\access_configurator</dir>
+      <dir>C:\wamp\www\access_configurator\public\theme\AdminLTE</dir>
     </dirStrings>
   </component>
   <component name="Git.Settings">
@@ -242,6 +130,8 @@
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/composer.json" />
         <option value="$PROJECT_DIR$/src/Controller/HomeController.php" />
+        <option value="$PROJECT_DIR$/public/theme/AdminLTE/dist/css/AdminLTE.css" />
+        <option value="$PROJECT_DIR$/public/theme/AdminLTE/dist/css/AdminLTE.min.css" />
         <option value="$PROJECT_DIR$/templates/AdminLTE/AdminLTE_base.html.twig" />
         <option value="$PROJECT_DIR$/templates/home.html.twig" />
       </list>
@@ -351,13 +241,14 @@
       <path value="$PROJECT_DIR$/vendor/easycorp/easy-log-handler" />
       <path value="$PROJECT_DIR$/vendor/facebook/webdriver" />
       <path value="$PROJECT_DIR$/vendor/almasaeed2010/adminlte" />
+      <path value="$PROJECT_DIR$/vendor/symfony/apache-pack" />
     </include_path>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="2041" />
-    <option name="y" value="25" />
-    <option name="width" value="1400" />
-    <option name="height" value="1000" />
+    <option name="x" value="240" />
+    <option name="y" value="130" />
+    <option name="width" value="1440" />
+    <option name="height" value="780" />
   </component>
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -383,6 +274,12 @@
               <item name="access_configurator" type="b2602c69:ProjectViewProjectNode" />
               <item name="access_configurator" type="462c0819:PsiDirectoryNode" />
               <item name="public" type="462c0819:PsiDirectoryNode" />
+              <item name="images" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="access_configurator" type="b2602c69:ProjectViewProjectNode" />
+              <item name="access_configurator" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
               <item name="theme" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -403,6 +300,15 @@
             <path>
               <item name="access_configurator" type="b2602c69:ProjectViewProjectNode" />
               <item name="access_configurator" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
+              <item name="theme" type="462c0819:PsiDirectoryNode" />
+              <item name="AdminLTE" type="462c0819:PsiDirectoryNode" />
+              <item name="dist" type="462c0819:PsiDirectoryNode" />
+              <item name="css" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="access_configurator" type="b2602c69:ProjectViewProjectNode" />
+              <item name="access_configurator" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -410,6 +316,17 @@
               <item name="access_configurator" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="Controller" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="access_configurator" type="b2602c69:ProjectViewProjectNode" />
+              <item name="access_configurator" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="access_configurator" type="b2602c69:ProjectViewProjectNode" />
+              <item name="access_configurator" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="AdminLTE" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -422,6 +339,7 @@
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="add_unversioned_files" value="$PROJECT_DIR$/public/theme/AdminLTE/dist/css/AdminLTE.min.css&#10;C:/wamp/www/access_configurator/public/theme/AdminLTE/dist/css/AdminLTE.css" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="preferences.keymap" />
@@ -454,17 +372,18 @@
       <workItem from="1557489132225" duration="34000" />
       <workItem from="1557746318451" duration="1815000" />
       <workItem from="1557830673398" duration="4915000" />
+      <workItem from="1557916546011" duration="4869000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="9735000" />
+    <option name="totallyTimeSpent" value="14604000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1912" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.16257995" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1641791" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -523,30 +442,65 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/AdminLTE/AdminLTE_base.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="608">
-          <caret line="38" column="84" selection-start-line="38" selection-start-column="84" selection-end-line="38" selection-end-column="84" />
-        </state>
-      </provider>
+    <entry file="file://$PROJECT_DIR$/templates/base.html.twig">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/home.html.twig">
+    <entry file="file://$PROJECT_DIR$/public/theme/AdminLTE/dist/css/AdminLTE.min.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="512">
-          <caret line="32" lean-forward="true" selection-start-line="32" selection-end-line="32" />
-          <folding>
-            <element signature="e#12#44#0#Twig" expanded="true" />
-            <element signature="e#167#171#0#Twig" expanded="true" />
-          </folding>
+        <state relative-caret-position="96">
+          <caret line="6" column="3992" selection-start-line="6" selection-start-column="3992" selection-end-line="6" selection-end-column="3992" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Controller/HomeController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="80">
-          <caret line="5" column="46" lean-forward="true" selection-start-line="5" selection-start-column="46" selection-end-line="5" selection-end-column="46" />
+        <state relative-caret-position="160">
+          <caret line="10" column="1" selection-start-line="10" selection-start-column="1" selection-end-line="10" selection-end-column="1" />
           <folding>
-            <element signature="e#346#362#1#PHP" expanded="true" />
+            <element signature="e#34#99#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/AdminLTE/AdminLTE_base.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="544">
+          <caret line="34" column="53" selection-start-line="34" selection-start-column="53" selection-end-line="34" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/theme/AdminLTE/dist/img/avatar.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/theme/AdminLTE/dist/img/avatar2.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/theme/AdminLTE/dist/img/avatar3.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/theme/AdminLTE/dist/img/avatar04.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/theme/AdminLTE/dist/img/avatar5.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/theme/AdminLTE/dist/css/AdminLTE.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="281">
+          <caret line="4856" column="8" selection-start-line="4856" selection-start-column="1" selection-end-line="4856" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/home.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="636">
+          <caret line="99" column="72" lean-forward="true" selection-start-line="99" selection-start-column="72" selection-end-line="99" selection-end-column="72" />
+          <folding>
+            <element signature="e#12#44#0#Twig" expanded="true" />
+            <element signature="e#32211#32232#0#HTML" expanded="true" />
+            <element signature="e#4082#4103#0#HTML" expanded="true" />
+            <element signature="e#4687#4708#0#HTML" expanded="true" />
+            <element signature="e#60031#60037#0#HTML" expanded="true" />
           </folding>
         </state>
       </provider>
