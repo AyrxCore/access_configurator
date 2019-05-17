@@ -17,58 +17,102 @@ class HouseModel
     private $id;
 
     /**
-     * @ORM\Column(type="string", length=255)
+     * @ORM\Column(type="string", length=255, nullable=true)
      */
     private $name;
 
     /**
-     * @ORM\Column(type="integer")
+     * @ORM\Column(type="integer", nullable=true)
      */
     private $price;
 
     /**
-     * @ORM\Column(type="string", length=255)
+     * @ORM\Column(type="string", length=255, nullable=true)
      */
     private $img;
-
-    public function getId(): ?int
+    
+    /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     */
+    private $description;
+    
+    /**
+     * @return mixed
+     */
+    public function getId()
     {
         return $this->id;
     }
-
-    public function getName(): ?string
+    
+    /**
+     * @return mixed
+     */
+    public function getName()
     {
         return $this->name;
     }
-
-    public function setName(string $name): self
+    
+    /**
+     * @param mixed $name
+     * @return HouseModel
+     */
+    public function setName($name)
     {
         $this->name = $name;
-
         return $this;
     }
-
-    public function getPrice(): ?int
+    
+    /**
+     * @return mixed
+     */
+    public function getPrice()
     {
         return $this->price;
     }
-
-    public function setPrice(int $price): self
+    
+    /**
+     * @param mixed $price
+     * @return HouseModel
+     */
+    public function setPrice($price)
     {
         $this->price = $price;
-
         return $this;
     }
-
-    public function getImg(): ?string
+    
+    /**
+     * @return mixed
+     */
+    public function getImg()
     {
         return $this->img;
     }
-
-    public function setImg(string $img): self
+    
+    /**
+     * @param mixed $img
+     * @return HouseModel
+     */
+    public function setImg($img)
     {
         $this->img = $img;
-
+        return $this;
+    }
+    
+    /**
+     * @return mixed
+     */
+    public function getDescription()
+    {
+        return $this->description;
+    }
+    
+    /**
+     * @param mixed $description
+     * @return HouseModel
+     */
+    public function setDescription($description)
+    {
+        $this->description = $description;
         return $this;
     }
 }

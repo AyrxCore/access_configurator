@@ -51,6 +51,7 @@ class HouseModelRepository extends ServiceEntityRepository
     public function findAllQuery()
     {
         return $this->createQueryBuilder('all')
+            ->from(HouseModel::class,'all')
             ->getQuery()
             ->getResult();
     }
