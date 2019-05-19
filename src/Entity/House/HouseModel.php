@@ -5,6 +5,7 @@ namespace App\Entity\House;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
+ * @ORM\Table(name="house_model")
  * @ORM\Entity(repositoryClass="App\Repository\HouseModelRepository")
  */
 class HouseModel

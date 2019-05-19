@@ -2,15 +2,624 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="39c33b01-c24a-465a-919c-14925a63cc26" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/size.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/symfony2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/symfony2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Entity/House/HouseSize.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Repository/HouseSizeRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/services.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/services.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/bundles.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/bundles.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/routes.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/routes.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/routes/dev/web_profiler.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/routes/dev/web_profiler.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/.htaccess" beforeDir="false" afterPath="$PROJECT_DIR$/public/.htaccess" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Controller/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/HomeController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Entity/House/HouseModel.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/House/HouseModel.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Repository/HouseModelRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repository/HouseModelRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/symfony.lock" beforeDir="false" afterPath="$PROJECT_DIR$/symfony.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/home.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/home.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/size.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/size.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/alert-circled.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/alert-circled.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/alert.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/alert.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/android-add-contact.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/android-add-contact.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/android-add.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/android-add.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/android-alarm.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/android-alarm.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/android-archive.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/android-archive.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/android-arrow-back.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/android-arrow-back.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/android-arrow-down-left.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/android-arrow-down-left.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/android-arrow-down-right.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/android-arrow-down-right.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/android-arrow-up-left.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/android-arrow-up-left.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/android-arrow-up-right.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/android-arrow-up-right.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/android-battery.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/android-battery.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/android-book.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/android-book.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/android-calendar.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/android-calendar.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/android-call.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/android-call.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/android-camera.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/android-camera.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/android-chat.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/android-chat.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/android-checkmark.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/android-checkmark.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/android-clock.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/android-clock.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/android-close.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/android-close.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/android-contact.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/android-contact.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/android-contacts.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/android-contacts.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/android-data.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/android-data.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/android-developer.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/android-developer.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/android-display.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/android-display.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/android-download.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/android-download.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/android-dropdown.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/android-dropdown.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/android-earth.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/android-earth.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/android-folder.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/android-folder.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/android-forums.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/android-forums.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/android-friends.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/android-friends.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/android-hand.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/android-hand.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/android-image.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/android-image.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/android-inbox.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/android-inbox.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/android-information.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/android-information.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/android-keypad.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/android-keypad.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/android-lightbulb.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/android-lightbulb.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/android-locate.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/android-locate.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/android-location.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/android-location.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/android-mail.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/android-mail.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/android-microphone.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/android-microphone.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/android-mixer.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/android-mixer.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/android-more.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/android-more.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/android-note.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/android-note.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/android-playstore.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/android-playstore.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/android-printer.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/android-printer.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/android-promotion.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/android-promotion.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/android-reminder.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/android-reminder.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/android-remove.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/android-remove.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/android-search.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/android-search.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/android-send.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/android-send.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/android-settings.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/android-settings.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/android-share.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/android-share.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/android-social-user.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/android-social-user.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/android-social.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/android-social.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/android-sort.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/android-sort.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/android-star.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/android-star.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/android-stopwatch.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/android-stopwatch.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/android-storage.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/android-storage.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/android-system-back.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/android-system-back.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/android-system-home.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/android-system-home.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/android-system-windows.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/android-system-windows.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/android-timer.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/android-timer.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/android-trash.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/android-trash.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/android-volume.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/android-volume.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/android-wifi.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/android-wifi.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/archive.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/archive.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/arrow-down-a.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/arrow-down-a.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/arrow-down-b.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/arrow-down-b.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/arrow-down-c.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/arrow-down-c.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/arrow-expand.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/arrow-expand.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/arrow-graph-down-left.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/arrow-graph-down-left.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/arrow-graph-down-right.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/arrow-graph-down-right.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/arrow-graph-up-left.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/arrow-graph-up-left.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/arrow-graph-up-right.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/arrow-graph-up-right.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/arrow-left-a.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/arrow-left-a.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/arrow-left-b.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/arrow-left-b.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/arrow-left-c.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/arrow-left-c.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/arrow-move.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/arrow-move.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/arrow-resize.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/arrow-resize.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/arrow-return-left.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/arrow-return-left.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/arrow-return-right.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/arrow-return-right.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/arrow-right-a.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/arrow-right-a.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/arrow-right-b.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/arrow-right-b.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/arrow-right-c.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/arrow-right-c.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/arrow-shrink.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/arrow-shrink.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/arrow-swap.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/arrow-swap.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/arrow-up-a.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/arrow-up-a.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/arrow-up-b.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/arrow-up-b.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/arrow-up-c.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/arrow-up-c.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/at.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/at.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/bag.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/bag.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/battery-charging.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/battery-charging.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/battery-empty.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/battery-empty.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/battery-full.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/battery-full.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/battery-half.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/battery-half.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/battery-low.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/battery-low.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/beaker.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/beaker.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/beer.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/beer.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/bluetooth.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/bluetooth.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/bookmark.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/bookmark.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/briefcase.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/briefcase.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/bug.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/bug.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/calculator.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/calculator.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/calendar.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/calendar.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/camera.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/camera.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/card.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/card.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/chatbox-working.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/chatbox-working.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/chatbox.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/chatbox.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/chatboxes.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/chatboxes.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/chatbubble-working.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/chatbubble-working.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/chatbubble.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/chatbubble.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/chatbubbles.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/chatbubbles.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/checkmark-circled.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/checkmark-circled.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/checkmark-round.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/checkmark-round.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/checkmark.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/checkmark.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/chevron-down.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/chevron-down.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/chevron-left.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/chevron-left.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/chevron-right.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/chevron-right.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/chevron-up.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/chevron-up.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/clipboard.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/clipboard.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/clock.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/clock.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/close-circled.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/close-circled.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/close-round.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/close-round.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/close.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/close.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/cloud.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/cloud.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/code-download.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/code-download.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/code-working.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/code-working.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/code.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/code.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/coffee.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/coffee.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/compass.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/compass.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/compose.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/compose.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/connection-bars.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/connection-bars.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/contrast.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/contrast.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/disc.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/disc.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/document-text.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/document-text.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/document.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/document.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/drag.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/drag.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/earth.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/earth.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/edit.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/edit.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/egg.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/egg.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/eject.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/eject.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/email.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/email.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/eye-disabled.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/eye-disabled.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/eye.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/eye.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/female.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/female.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/filing.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/filing.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/film-marker.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/film-marker.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/flag.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/flag.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/flash-off.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/flash-off.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/flash.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/flash.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/flask.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/flask.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/folder.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/folder.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/fork-repo.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/fork-repo.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/fork.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/fork.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/forward.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/forward.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/game-controller-a.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/game-controller-a.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/game-controller-b.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/game-controller-b.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/gear-a.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/gear-a.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/gear-b.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/gear-b.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/grid.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/grid.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/hammer.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/hammer.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/headphone.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/headphone.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/heart.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/heart.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/help-buoy.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/help-buoy.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/help-circled.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/help-circled.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/help.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/help.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/home.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/home.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/icecream.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/icecream.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/icon-social-google-plus-outline.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/icon-social-google-plus-outline.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/icon-social-google-plus.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/icon-social-google-plus.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/image.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/image.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/images.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/images.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/information-circled.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/information-circled.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/information.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/information.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ionic.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ionic.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-alarm-outline.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-alarm-outline.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-alarm.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-alarm.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-albums-outline.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-albums-outline.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-albums.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-albums.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-arrow-back.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-arrow-back.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-arrow-down.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-arrow-down.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-arrow-forward.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-arrow-forward.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-arrow-left.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-arrow-left.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-arrow-right.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-arrow-right.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-arrow-thin-down.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-arrow-thin-down.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-arrow-thin-left.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-arrow-thin-left.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-arrow-thin-right.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-arrow-thin-right.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-arrow-thin-up.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-arrow-thin-up.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-arrow-up.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-arrow-up.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-at-outline.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-at-outline.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-at.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-at.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-bell-outline.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-bell-outline.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-bell.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-bell.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-bolt-outline.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-bolt-outline.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-bolt.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-bolt.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-bookmarks-outline.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-bookmarks-outline.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-bookmarks.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-bookmarks.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-box-outline.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-box-outline.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-box.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-box.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-briefcase-outline.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-briefcase-outline.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-briefcase.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-briefcase.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-browsers-outline.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-browsers-outline.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-browsers.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-browsers.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-calculator-outline.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-calculator-outline.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-calculator.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-calculator.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-calendar-outline.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-calendar-outline.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-calendar.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-calendar.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-camera-outline.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-camera-outline.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-camera.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-camera.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-cart-outline.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-cart-outline.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-cart.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-cart.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-chatboxes-outline.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-chatboxes-outline.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-chatboxes.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-chatboxes.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-chatbubble-outline.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-chatbubble-outline.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-chatbubble.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-chatbubble.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-checkmark-empty.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-checkmark-empty.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-checkmark-outline.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-checkmark-outline.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-checkmark.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-checkmark.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-circle-filled.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-circle-filled.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-circle-outline.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-circle-outline.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-clock-outline.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-clock-outline.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-clock.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-clock.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-close-empty.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-close-empty.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-close-outline.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-close-outline.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-close.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-close.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-cloud-download-outline.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-cloud-download-outline.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-cloud-download.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-cloud-download.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-cloud-outline.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-cloud-outline.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-cloud-upload-outline.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-cloud-upload-outline.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-cloud-upload.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-cloud-upload.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-cloud.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-cloud.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-cloudy-night-outline.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-cloudy-night-outline.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-cloudy-night.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-cloudy-night.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-cloudy-outline.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-cloudy-outline.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-cloudy.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-cloudy.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-cog-outline.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-cog-outline.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-cog.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-cog.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-compose-outline.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-compose-outline.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-compose.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-compose.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-contact-outline.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-contact-outline.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-contact.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-contact.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-copy-outline.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-copy-outline.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-copy.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-copy.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-download-outline.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-download-outline.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-download.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-download.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-drag.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-drag.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-email-outline.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-email-outline.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-email.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-email.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-eye-outline.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-eye-outline.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-eye.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-eye.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-fastforward-outline.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-fastforward-outline.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-fastforward.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-fastforward.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-filing-outline.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-filing-outline.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-filing.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-filing.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-film-outline.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-film-outline.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-film.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-film.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-flag-outline.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-flag-outline.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-flag.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-flag.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-folder-outline.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-folder-outline.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-folder.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-folder.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-gear-outline.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-gear-outline.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-gear.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-gear.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-glasses-outline.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-glasses-outline.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-glasses.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-glasses.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-heart-outline.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-heart-outline.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-heart.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-heart.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-help-empty.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-help-empty.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-help-outline.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-help-outline.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-help.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-help.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-infinite-outline.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-infinite-outline.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-infinite.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-infinite.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-information-empty.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-information-empty.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-information-outline.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-information-outline.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-information.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-information.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-ionic-outline.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-ionic-outline.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-keypad-outline.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-keypad-outline.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-keypad.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-keypad.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-lightbulb-outline.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-lightbulb-outline.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-lightbulb.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-lightbulb.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-location-outline.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-location-outline.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-location.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-location.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-locked-outline.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-locked-outline.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-locked.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-locked.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-medkit-outline.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-medkit-outline.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-medkit.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-medkit.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-mic-off.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-mic-off.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-mic-outline.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-mic-outline.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-mic.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-mic.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-minus-empty.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-minus-empty.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-minus-outline.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-minus-outline.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-minus.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-minus.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-monitor-outline.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-monitor-outline.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-monitor.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-monitor.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-moon-outline.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-moon-outline.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-moon.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-moon.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-more-outline.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-more-outline.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-more.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-more.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-musical-note.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-musical-note.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-musical-notes.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-musical-notes.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-navigate-outline.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-navigate-outline.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-navigate.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-navigate.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-paperplane-outline.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-paperplane-outline.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-paperplane.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-paperplane.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-partlysunny-outline.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-partlysunny-outline.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-partlysunny.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-partlysunny.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-pause-outline.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-pause-outline.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-pause.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-pause.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-people-outline.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-people-outline.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-people.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-people.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-person-outline.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-person-outline.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-person.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-person.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-personadd-outline.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-personadd-outline.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-personadd.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-personadd.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-photos-outline.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-photos-outline.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-photos.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-photos.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-pie-outline.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-pie-outline.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-pie.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-pie.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-play-outline.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-play-outline.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-play.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-play.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-plus-empty.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-plus-empty.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-plus-outline.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-plus-outline.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-plus.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-plus.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-pricetag-outline.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-pricetag-outline.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-pricetag.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-pricetag.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-printer-outline.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-printer-outline.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-printer.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-printer.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-rainy-outline.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-rainy-outline.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-rainy.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-rainy.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-recording-outline.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-recording-outline.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-recording.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-recording.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-redo-outline.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-redo-outline.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-redo.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-redo.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-refresh-empty.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-refresh-empty.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-refresh-outline.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-refresh-outline.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-refresh.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-refresh.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-reload.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-reload.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-rewind-outline.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-rewind-outline.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-rewind.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-rewind.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-search-strong.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-search-strong.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-search.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-search.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-skipbackward-outline.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-skipbackward-outline.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-skipbackward.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-skipbackward.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-skipforward-outline.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-skipforward-outline.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-skipforward.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-skipforward.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-snowy.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-snowy.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-speedometer-outline.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-speedometer-outline.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-speedometer.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-speedometer.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-star-outline.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-star-outline.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-star.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-star.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-stopwatch-outline.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-stopwatch-outline.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-stopwatch.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-stopwatch.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-sunny-outline.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-sunny-outline.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-sunny.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-sunny.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-telephone-outline.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-telephone-outline.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-telephone.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-telephone.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-thunderstorm-outline.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-thunderstorm-outline.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-thunderstorm.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-thunderstorm.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-time-outline.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-time-outline.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-time.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-time.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-timer-outline.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-timer-outline.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-timer.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-timer.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-trash-outline.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-trash-outline.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-trash.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-trash.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-undo-outline.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-undo-outline.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-undo.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-undo.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-unlocked-outline.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-unlocked-outline.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-unlocked.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-unlocked.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-upload-outline.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-upload-outline.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-upload.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-upload.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-videocam-outline.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-videocam-outline.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-videocam.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-videocam.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-volume-high.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-volume-high.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-volume-low.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-volume-low.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-wineglass-outline.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-wineglass-outline.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-wineglass.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-wineglass.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-world-outline.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-world-outline.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-world.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ios7-world.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ipad.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ipad.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/iphone.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/iphone.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ipod.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/ipod.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/jet.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/jet.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/key.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/key.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/knife.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/knife.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/laptop.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/laptop.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/leaf.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/leaf.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/levels.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/levels.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/lightbulb.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/lightbulb.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/link.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/link.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/load-a.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/load-a.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/load-b.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/load-b.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/load-c.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/load-c.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/load-d.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/load-d.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/location.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/location.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/locked.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/locked.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/log-in.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/log-in.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/log-out.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/log-out.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/loop.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/loop.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/magnet.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/magnet.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/male.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/male.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/man.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/man.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/map.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/map.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/medkit.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/medkit.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/mic-a.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/mic-a.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/mic-b.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/mic-b.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/mic-c.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/mic-c.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/minus-circled.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/minus-circled.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/minus-round.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/minus-round.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/minus.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/minus.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/model-s.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/model-s.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/monitor.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/monitor.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/more.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/more.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/music-note.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/music-note.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/navicon-round.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/navicon-round.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/navicon.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/navicon.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/navigate.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/navigate.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/no-smoking.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/no-smoking.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/nuclear.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/nuclear.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/paper-airplane.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/paper-airplane.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/paperclip.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/paperclip.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/pause.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/pause.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/person-add.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/person-add.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/person-stalker.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/person-stalker.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/person.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/person.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/pie-graph.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/pie-graph.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/pin.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/pin.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/pinpoint.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/pinpoint.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/pizza.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/pizza.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/plane.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/plane.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/play.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/play.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/playstation.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/playstation.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/plus-circled.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/plus-circled.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/plus-round.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/plus-round.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/plus.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/plus.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/pound.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/pound.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/power.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/power.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/pricetag.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/pricetag.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/pricetags.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/pricetags.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/printer.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/printer.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/radio-waves.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/radio-waves.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/record.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/record.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/refresh.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/refresh.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/reply-all.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/reply-all.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/reply.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/reply.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/search.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/search.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/settings.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/settings.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/share.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/share.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/shuffle.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/shuffle.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/skip-backward.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/skip-backward.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/skip-forward.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/skip-forward.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/social-android-outline.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/social-android-outline.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/social-android.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/social-android.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/social-apple-outline.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/social-apple-outline.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/social-apple.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/social-apple.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/social-bitcoin-outline.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/social-bitcoin-outline.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/social-bitcoin.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/social-bitcoin.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/social-buffer-outline.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/social-buffer-outline.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/social-buffer.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/social-buffer.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/social-designernews-outline.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/social-designernews-outline.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/social-designernews.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/social-designernews.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/social-dribbble-outline.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/social-dribbble-outline.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/social-dribbble.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/social-dribbble.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/social-dropbox-outline.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/social-dropbox-outline.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/social-dropbox.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/social-dropbox.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/social-facebook-outline.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/social-facebook-outline.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/social-facebook.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/social-facebook.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/social-freebsd-devil.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/social-freebsd-devil.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/social-github-outline.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/social-github-outline.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/social-github.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/social-github.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/social-googleplus-outline.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/social-googleplus-outline.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/social-googleplus.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/social-googleplus.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/social-hackernews-outline.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/social-hackernews-outline.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/social-hackernews.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/social-hackernews.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/social-linkedin-outline.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/social-linkedin-outline.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/social-linkedin.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/social-linkedin.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/social-pinterest-outline.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/social-pinterest-outline.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/social-pinterest.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/social-pinterest.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/social-reddit-outline.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/social-reddit-outline.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/social-reddit.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/social-reddit.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/social-rss-outline.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/social-rss-outline.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/social-rss.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/social-rss.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/social-skype-outline.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/social-skype-outline.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/social-skype.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/social-skype.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/social-tumblr-outline.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/social-tumblr-outline.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/social-tumblr.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/social-tumblr.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/social-tux.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/social-tux.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/social-twitter-outline.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/social-twitter-outline.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/social-twitter.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/social-twitter.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/social-vimeo-outline.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/social-vimeo-outline.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/social-vimeo.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/social-vimeo.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/social-windows-outline.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/social-windows-outline.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/social-windows.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/social-windows.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/social-wordpress-outline.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/social-wordpress-outline.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/social-wordpress.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/social-wordpress.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/social-yahoo-outline.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/social-yahoo-outline.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/social-yahoo.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/social-yahoo.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/social-youtube-outline.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/social-youtube-outline.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/social-youtube.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/social-youtube.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/speakerphone.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/speakerphone.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/speedometer.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/speedometer.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/spoon.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/spoon.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/star.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/star.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/stats-bars.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/stats-bars.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/steam.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/steam.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/stop.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/stop.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/thermometer.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/thermometer.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/thumbsdown.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/thumbsdown.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/thumbsup.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/thumbsup.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/trash-a.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/trash-a.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/trash-b.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/trash-b.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/umbrella.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/umbrella.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/unlocked.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/unlocked.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/upload.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/upload.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/usb.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/usb.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/videocamera.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/videocamera.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/volume-high.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/volume-high.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/volume-low.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/volume-low.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/volume-medium.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/volume-medium.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/volume-mute.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/volume-mute.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/waterdrop.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/waterdrop.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/wifi.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/wifi.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/wineglass.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/wineglass.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/woman.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/woman.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/wrench.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/wrench.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/xbox.png" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/Ionicons/png/512/xbox.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/bootstrap/grunt/change-version.js" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/bootstrap/grunt/change-version.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/chart.js/src/Chart.Core.js" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/chart.js/src/Chart.Core.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/jquery-knob/LICENSE" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/jquery-knob/LICENSE" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/jquery-knob/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/jquery-knob/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/jquery-knob/bower.json" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/jquery-knob/bower.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/jquery-knob/dist/jquery.knob.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/jquery-knob/dist/jquery.knob.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/jquery-knob/excanvas.js" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/jquery-knob/excanvas.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/jquery-knob/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/jquery-knob/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/jquery-knob/knob.jquery.json" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/jquery-knob/knob.jquery.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/jquery-knob/secretplan.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/jquery-knob/secretplan.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/jquery-ui/themes/black-tie/images/animated-overlay.gif" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/jquery-ui/themes/black-tie/images/animated-overlay.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/jquery-ui/themes/blitzer/images/animated-overlay.gif" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/jquery-ui/themes/blitzer/images/animated-overlay.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/jquery-ui/themes/cupertino/images/animated-overlay.gif" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/jquery-ui/themes/cupertino/images/animated-overlay.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/jquery-ui/themes/dark-hive/images/animated-overlay.gif" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/jquery-ui/themes/dark-hive/images/animated-overlay.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/jquery-ui/themes/dot-luv/images/animated-overlay.gif" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/jquery-ui/themes/dot-luv/images/animated-overlay.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/jquery-ui/themes/eggplant/images/animated-overlay.gif" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/jquery-ui/themes/eggplant/images/animated-overlay.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/jquery-ui/themes/excite-bike/images/animated-overlay.gif" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/jquery-ui/themes/excite-bike/images/animated-overlay.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/jquery-ui/themes/flick/images/animated-overlay.gif" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/jquery-ui/themes/flick/images/animated-overlay.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/jquery-ui/themes/hot-sneaks/images/animated-overlay.gif" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/jquery-ui/themes/hot-sneaks/images/animated-overlay.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/jquery-ui/themes/humanity/images/animated-overlay.gif" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/jquery-ui/themes/humanity/images/animated-overlay.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/jquery-ui/themes/le-frog/images/animated-overlay.gif" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/jquery-ui/themes/le-frog/images/animated-overlay.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/jquery-ui/themes/mint-choc/images/animated-overlay.gif" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/jquery-ui/themes/mint-choc/images/animated-overlay.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/jquery-ui/themes/overcast/images/animated-overlay.gif" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/jquery-ui/themes/overcast/images/animated-overlay.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/jquery-ui/themes/pepper-grinder/images/animated-overlay.gif" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/jquery-ui/themes/pepper-grinder/images/animated-overlay.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/jquery-ui/themes/redmond/images/animated-overlay.gif" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/jquery-ui/themes/redmond/images/animated-overlay.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/jquery-ui/themes/smoothness/images/animated-overlay.gif" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/jquery-ui/themes/smoothness/images/animated-overlay.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/jquery-ui/themes/south-street/images/animated-overlay.gif" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/jquery-ui/themes/south-street/images/animated-overlay.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/jquery-ui/themes/start/images/animated-overlay.gif" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/jquery-ui/themes/start/images/animated-overlay.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/jquery-ui/themes/sunny/images/animated-overlay.gif" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/jquery-ui/themes/sunny/images/animated-overlay.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/jquery-ui/themes/swanky-purse/images/animated-overlay.gif" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/jquery-ui/themes/swanky-purse/images/animated-overlay.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/jquery-ui/themes/trontastic/images/animated-overlay.gif" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/jquery-ui/themes/trontastic/images/animated-overlay.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/jquery-ui/themes/ui-darkness/images/animated-overlay.gif" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/jquery-ui/themes/ui-darkness/images/animated-overlay.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/jquery-ui/themes/ui-lightness/images/animated-overlay.gif" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/jquery-ui/themes/ui-lightness/images/animated-overlay.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/jquery-ui/themes/vader/images/animated-overlay.gif" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/jquery-ui/themes/vader/images/animated-overlay.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/jquery-ui/ui/.jshintrc" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/jquery-ui/ui/.jshintrc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/jvectormap/build.sh" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/jvectormap/build.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/morris.js/spec/viz/run.sh" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/bower_components/morris.js/spec/viz/run.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/plugins/pace/pace.css" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/plugins/pace/pace.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/plugins/pace/pace.js" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/plugins/pace/pace.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/plugins/pace/pace.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/plugins/pace/pace.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/plugins/pace/pace.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/almasaeed2010/adminlte/plugins/pace/pace.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/bin/doctrine" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/bin/doctrine" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/bin/doctrine-dbal" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/bin/doctrine-dbal" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/bin/doctrine-dbal.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/bin/doctrine-migrations" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/bin/doctrine-migrations" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/bin/doctrine-migrations.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/bin/doctrine.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/bin/php-parse" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/bin/php-parse" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/bin/php-parse.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/bin/simple-phpunit" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/bin/simple-phpunit" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/bin/simple-phpunit.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/bin/var-dump-server" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/bin/var-dump-server" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/bin/var-dump-server.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/composer/ClassLoader.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/ClassLoader.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/composer/LICENSE" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/LICENSE" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/doctrine/dbal/bin/doctrine-dbal" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/doctrine/dbal/bin/doctrine-dbal" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/doctrine/migrations/bin/doctrine-migrations" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/doctrine/migrations/bin/doctrine-migrations" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/doctrine/migrations/build-phar.sh" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/doctrine/migrations/build-phar.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/doctrine/migrations/download-box.sh" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/doctrine/migrations/download-box.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/doctrine/orm/bin/doctrine" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/doctrine/orm/bin/doctrine" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/doctrine/orm/docs/bin/generate-docs.sh" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/doctrine/orm/docs/bin/generate-docs.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/facebook/webdriver/lib/WebDriver.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/facebook/webdriver/lib/WebDriver.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/monolog/monolog/src/Monolog/Handler/Slack/SlackRecord.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/monolog/monolog/src/Monolog/Handler/Slack/SlackRecord.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/nikic/php-parser/bin/php-parse" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/nikic/php-parser/bin/php-parse" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/nikic/php-parser/test_old/run-php-src.sh" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/nikic/php-parser/test_old/run-php-src.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/ocramius/package-versions/src/PackageVersions/Versions.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/ocramius/package-versions/src/PackageVersions/Versions.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer/lib/swiftmailer_generate_mimes_config.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer/lib/swiftmailer_generate_mimes_config.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/intl/Resources/bin/compile" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/intl/Resources/bin/compile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/intl/Tests/Data/Bundle/Reader/Fixtures/build.sh" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/intl/Tests/Data/Bundle/Reader/Fixtures/build.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/panther/chromedriver-bin/chromedriver_linux64" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/panther/chromedriver-bin/chromedriver_linux64" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/panther/chromedriver-bin/chromedriver_mac64" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/panther/chromedriver-bin/chromedriver_mac64" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/panther/chromedriver-bin/update.sh" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/panther/chromedriver-bin/update.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/phpunit-bridge/bin/simple-phpunit" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/phpunit-bridge/bin/simple-phpunit" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/var-dumper/Resources/bin/var-dump-server" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/var-dumper/Resources/bin/var-dump-server" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/zendframework/zend-code/doc/book/index.md" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-code/doc/book/index.md" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -46,44 +655,13 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/Controller/HomeController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="640">
-              <caret line="40" column="27" selection-start-line="40" selection-start-column="27" selection-end-line="40" selection-end-column="27" />
-              <folding>
-                <element signature="e#34#66#0#PHP" expanded="true" />
-                <element signature="e#1078#1094#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/size.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="80">
-              <caret line="5" column="25" selection-start-line="5" selection-start-column="25" selection-end-line="5" selection-end-column="25" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Repository/HouseModelRepository.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="874">
-              <caret line="55" column="26" selection-start-line="55" selection-start-column="26" selection-end-line="55" selection-end-column="26" />
+            <state relative-caret-position="120">
+              <caret line="8" column="43" selection-start-line="8" selection-start-column="43" selection-end-line="8" selection-end-column="43" />
               <folding>
-                <element signature="e#34#66#0#PHP" expanded="true" />
+                <element signature="e#595#616#0#HTML" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/AdminLTE/AdminLTE_base.html.twig">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="544">
-              <caret line="34" column="53" selection-start-line="34" selection-start-column="53" selection-end-line="34" selection-end-column="53" />
             </state>
           </provider>
         </entry>
@@ -91,17 +669,20 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/home.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="267">
-              <caret line="82" column="57" selection-start-line="82" selection-start-column="57" selection-end-line="82" selection-end-column="57" />
+            <state relative-caret-position="240">
+              <caret line="16" column="54" selection-start-line="16" selection-start-column="54" selection-end-line="16" selection-end-column="54" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Entity/House/HouseModel.php">
+        <entry file="file://$PROJECT_DIR$/src/Controller/HomeController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="720">
-              <caret line="45" column="4" selection-start-line="45" selection-start-column="4" selection-end-line="45" selection-end-column="4" />
+            <state relative-caret-position="360">
+              <caret line="29" column="43" selection-start-line="29" selection-start-column="43" selection-end-line="29" selection-end-column="43" />
+              <folding>
+                <element signature="e#34#66#0#PHP" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -121,10 +702,20 @@
       <find>slideUp</find>
       <find>content-header</find>
       <find>connect</find>
+      <find>https://symfonycasts.com/screencast/micro-symfony/web-debug-toolbar#codeblock-dd4a012e00</find>
+      <find>class AppKernel extends Kernel</find>
+      <find>httpd</find>
     </findStrings>
+    <replaceStrings>
+      <replace />
+    </replaceStrings>
     <dirStrings>
       <dir>C:\wamp\www\access_configurator</dir>
       <dir>C:\wamp\www\access_configurator\public\theme\AdminLTE</dir>
+      <dir>$PROJECT_DIR$/vendor</dir>
+      <dir>$PROJECT_DIR$/vendor/symfony/http-kernel</dir>
+      <dir>$PROJECT_DIR$/vendor/symfony</dir>
+      <dir>$PROJECT_DIR$</dir>
     </dirStrings>
   </component>
   <component name="Git.Settings">
@@ -139,22 +730,47 @@
         <option value="$PROJECT_DIR$/public/theme/AdminLTE/dist/css/AdminLTE.css" />
         <option value="$PROJECT_DIR$/public/theme/AdminLTE/dist/css/AdminLTE.min.css" />
         <option value="$PROJECT_DIR$/templates/AdminLTE/AdminLTE_base.html.twig" />
-        <option value="$PROJECT_DIR$/.env" />
         <option value="$PROJECT_DIR$/src/Entity/HouseModel.php" />
-        <option value="$PROJECT_DIR$/src/Repository/HouseModelRepository.php" />
         <option value="$PROJECT_DIR$/config/services.yaml" />
+        <option value="$PROJECT_DIR$/.env" />
+        <option value="$PROJECT_DIR$/config/routes/dev/web_profiler.yaml" />
+        <option value="$PROJECT_DIR$/config/packages/dev/web_profiler.yaml" />
+        <option value="$PROJECT_DIR$/config/routes.yaml" />
+        <option value="$PROJECT_DIR$/public/.htaccess" />
+        <option value="$PROJECT_DIR$/src/Repository/HouseModelRepository.php" />
         <option value="$PROJECT_DIR$/src/Entity/House/HouseModel.php" />
+        <option value="$PROJECT_DIR$/src/Entity/House/HouseSize.php" />
+        <option value="$PROJECT_DIR$/src/Repository/HouseSizeRepository.php" />
+        <option value="$PROJECT_DIR$/templates/base.html.twig" />
+        <option value="$PROJECT_DIR$/src/Controller/HomeController.php" />
         <option value="$PROJECT_DIR$/templates/home.html.twig" />
         <option value="$PROJECT_DIR$/templates/size.html.twig" />
-        <option value="$PROJECT_DIR$/src/Controller/HomeController.php" />
       </list>
     </option>
   </component>
   <component name="PhpWorkspaceProjectConfiguration">
     <include_path>
-      <path value="$PROJECT_DIR$/vendor/phpdocumentor/reflection-docblock" />
-      <path value="$PROJECT_DIR$/vendor/phpdocumentor/type-resolver" />
-      <path value="$PROJECT_DIR$/vendor/phpdocumentor/reflection-common" />
+      <path value="$PROJECT_DIR$/vendor/symfony/event-dispatcher" />
+      <path value="$PROJECT_DIR$/vendor/symfony/flex" />
+      <path value="$PROJECT_DIR$/vendor/symfony/debug-pack" />
+      <path value="$PROJECT_DIR$/vendor/symfony/property-info" />
+      <path value="$PROJECT_DIR$/vendor/symfony/console" />
+      <path value="$PROJECT_DIR$/vendor/symfony/process" />
+      <path value="$PROJECT_DIR$/vendor/symfony/framework-bundle" />
+      <path value="$PROJECT_DIR$/vendor/symfony/debug" />
+      <path value="$PROJECT_DIR$/vendor/symfony/apache-pack" />
+      <path value="$PROJECT_DIR$/vendor/symfony/intl" />
+      <path value="$PROJECT_DIR$/vendor/symfony/filesystem" />
+      <path value="$PROJECT_DIR$/vendor/symfony/twig-bridge" />
+      <path value="$PROJECT_DIR$/vendor/symfony/dotenv" />
+      <path value="$PROJECT_DIR$/vendor/symfony/form" />
+      <path value="$PROJECT_DIR$/vendor/symfony/translation" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-mbstring" />
+      <path value="$PROJECT_DIR$/vendor/symfony/monolog-bridge" />
+      <path value="$PROJECT_DIR$/vendor/symfony/asset" />
+      <path value="$PROJECT_DIR$/vendor/symfony/http-foundation" />
+      <path value="$PROJECT_DIR$/vendor/symfony/config" />
+      <path value="$PROJECT_DIR$/vendor/symfony/stopwatch" />
       <path value="$PROJECT_DIR$/vendor/doctrine/doctrine-cache-bundle" />
       <path value="$PROJECT_DIR$/vendor/doctrine/cache" />
       <path value="$PROJECT_DIR$/vendor/doctrine/reflection" />
@@ -162,48 +778,58 @@
       <path value="$PROJECT_DIR$/vendor/doctrine/event-manager" />
       <path value="$PROJECT_DIR$/vendor/doctrine/annotations" />
       <path value="$PROJECT_DIR$/vendor/doctrine/orm" />
-      <path value="$PROJECT_DIR$/vendor/zendframework/zend-code" />
       <path value="$PROJECT_DIR$/vendor/doctrine/lexer" />
-      <path value="$PROJECT_DIR$/vendor/zendframework/zend-eventmanager" />
       <path value="$PROJECT_DIR$/vendor/doctrine/doctrine-bundle" />
       <path value="$PROJECT_DIR$/vendor/doctrine/common" />
-      <path value="$PROJECT_DIR$/vendor/webmozart/assert" />
-      <path value="$PROJECT_DIR$/vendor/doctrine/collections" />
       <path value="$PROJECT_DIR$/vendor/doctrine/migrations" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/collections" />
       <path value="$PROJECT_DIR$/vendor/doctrine/instantiator" />
       <path value="$PROJECT_DIR$/vendor/doctrine/doctrine-migrations-bundle" />
       <path value="$PROJECT_DIR$/vendor/doctrine/inflector" />
       <path value="$PROJECT_DIR$/vendor/doctrine/persistence" />
-      <path value="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer" />
-      <path value="$PROJECT_DIR$/vendor/composer" />
-      <path value="$PROJECT_DIR$/vendor/egulias/email-validator" />
+      <path value="$PROJECT_DIR$/vendor/easycorp/easy-log-handler" />
+      <path value="$PROJECT_DIR$/vendor/facebook/webdriver" />
       <path value="$PROJECT_DIR$/vendor/ocramius/package-versions" />
       <path value="$PROJECT_DIR$/vendor/ocramius/proxy-manager" />
+      <path value="$PROJECT_DIR$/vendor/webmozart/assert" />
+      <path value="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer" />
+      <path value="$PROJECT_DIR$/vendor/almasaeed2010/adminlte" />
+      <path value="$PROJECT_DIR$/vendor/phpdocumentor/reflection-docblock" />
+      <path value="$PROJECT_DIR$/vendor/phpdocumentor/type-resolver" />
+      <path value="$PROJECT_DIR$/vendor/phpdocumentor/reflection-common" />
+      <path value="$PROJECT_DIR$/vendor/zendframework/zend-code" />
+      <path value="$PROJECT_DIR$/vendor/zendframework/zend-eventmanager" />
+      <path value="$PROJECT_DIR$/vendor/composer" />
       <path value="$PROJECT_DIR$/vendor/fig/link-util" />
+      <path value="$PROJECT_DIR$/vendor/psr/container" />
+      <path value="$PROJECT_DIR$/vendor/psr/cache" />
+      <path value="$PROJECT_DIR$/vendor/psr/log" />
+      <path value="$PROJECT_DIR$/vendor/psr/simple-cache" />
+      <path value="$PROJECT_DIR$/vendor/psr/link" />
+      <path value="$PROJECT_DIR$/vendor/twig/twig" />
+      <path value="$PROJECT_DIR$/vendor/jdorn/sql-formatter" />
+      <path value="$PROJECT_DIR$/vendor/nikic/php-parser" />
+      <path value="$PROJECT_DIR$/vendor/sensio/framework-extra-bundle" />
+      <path value="$PROJECT_DIR$/vendor/egulias/email-validator" />
+      <path value="$PROJECT_DIR$/vendor/monolog/monolog" />
       <path value="$PROJECT_DIR$/vendor/symfony/security-guard" />
       <path value="$PROJECT_DIR$/vendor/symfony/dependency-injection" />
       <path value="$PROJECT_DIR$/vendor/symfony/security-bundle" />
       <path value="$PROJECT_DIR$/vendor/symfony/validator" />
-      <path value="$PROJECT_DIR$/vendor/symfony/browser-kit" />
       <path value="$PROJECT_DIR$/vendor/symfony/profiler-pack" />
+      <path value="$PROJECT_DIR$/vendor/symfony/browser-kit" />
       <path value="$PROJECT_DIR$/vendor/symfony/dom-crawler" />
       <path value="$PROJECT_DIR$/vendor/symfony/test-pack" />
       <path value="$PROJECT_DIR$/vendor/symfony/css-selector" />
       <path value="$PROJECT_DIR$/vendor/symfony/property-access" />
       <path value="$PROJECT_DIR$/vendor/symfony/monolog-bundle" />
       <path value="$PROJECT_DIR$/vendor/symfony/yaml" />
-      <path value="$PROJECT_DIR$/vendor/jdorn/sql-formatter" />
       <path value="$PROJECT_DIR$/vendor/symfony/polyfill-intl-icu" />
-      <path value="$PROJECT_DIR$/vendor/psr/container" />
       <path value="$PROJECT_DIR$/vendor/symfony/cache" />
-      <path value="$PROJECT_DIR$/vendor/psr/cache" />
       <path value="$PROJECT_DIR$/vendor/symfony/serializer-pack" />
-      <path value="$PROJECT_DIR$/vendor/psr/log" />
-      <path value="$PROJECT_DIR$/vendor/symfony/doctrine-bridge" />
-      <path value="$PROJECT_DIR$/vendor/psr/link" />
-      <path value="$PROJECT_DIR$/vendor/symfony/options-resolver" />
-      <path value="$PROJECT_DIR$/vendor/psr/simple-cache" />
       <path value="$PROJECT_DIR$/vendor/symfony/swiftmailer-bundle" />
+      <path value="$PROJECT_DIR$/vendor/symfony/options-resolver" />
+      <path value="$PROJECT_DIR$/vendor/symfony/doctrine-bridge" />
       <path value="$PROJECT_DIR$/vendor/symfony/twig-bundle" />
       <path value="$PROJECT_DIR$/vendor/symfony/polyfill-php72" />
       <path value="$PROJECT_DIR$/vendor/symfony/http-kernel" />
@@ -220,7 +846,6 @@
       <path value="$PROJECT_DIR$/vendor/symfony/web-link" />
       <path value="$PROJECT_DIR$/vendor/symfony/var-exporter" />
       <path value="$PROJECT_DIR$/vendor/symfony/web-profiler-bundle" />
-      <path value="$PROJECT_DIR$/vendor/nikic/php-parser" />
       <path value="$PROJECT_DIR$/vendor/symfony/var-dumper" />
       <path value="$PROJECT_DIR$/vendor/symfony/polyfill-intl-idn" />
       <path value="$PROJECT_DIR$/vendor/symfony/serializer" />
@@ -228,33 +853,6 @@
       <path value="$PROJECT_DIR$/vendor/symfony/contracts" />
       <path value="$PROJECT_DIR$/vendor/symfony/debug-bundle" />
       <path value="$PROJECT_DIR$/vendor/symfony/routing" />
-      <path value="$PROJECT_DIR$/vendor/symfony/event-dispatcher" />
-      <path value="$PROJECT_DIR$/vendor/symfony/flex" />
-      <path value="$PROJECT_DIR$/vendor/symfony/debug-pack" />
-      <path value="$PROJECT_DIR$/vendor/symfony/property-info" />
-      <path value="$PROJECT_DIR$/vendor/symfony/console" />
-      <path value="$PROJECT_DIR$/vendor/symfony/framework-bundle" />
-      <path value="$PROJECT_DIR$/vendor/symfony/process" />
-      <path value="$PROJECT_DIR$/vendor/symfony/debug" />
-      <path value="$PROJECT_DIR$/vendor/symfony/intl" />
-      <path value="$PROJECT_DIR$/vendor/symfony/filesystem" />
-      <path value="$PROJECT_DIR$/vendor/symfony/twig-bridge" />
-      <path value="$PROJECT_DIR$/vendor/monolog/monolog" />
-      <path value="$PROJECT_DIR$/vendor/symfony/dotenv" />
-      <path value="$PROJECT_DIR$/vendor/symfony/form" />
-      <path value="$PROJECT_DIR$/vendor/symfony/translation" />
-      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-mbstring" />
-      <path value="$PROJECT_DIR$/vendor/symfony/asset" />
-      <path value="$PROJECT_DIR$/vendor/symfony/monolog-bridge" />
-      <path value="$PROJECT_DIR$/vendor/symfony/config" />
-      <path value="$PROJECT_DIR$/vendor/symfony/http-foundation" />
-      <path value="$PROJECT_DIR$/vendor/symfony/stopwatch" />
-      <path value="$PROJECT_DIR$/vendor/sensio/framework-extra-bundle" />
-      <path value="$PROJECT_DIR$/vendor/twig/twig" />
-      <path value="$PROJECT_DIR$/vendor/easycorp/easy-log-handler" />
-      <path value="$PROJECT_DIR$/vendor/facebook/webdriver" />
-      <path value="$PROJECT_DIR$/vendor/almasaeed2010/adminlte" />
-      <path value="$PROJECT_DIR$/vendor/symfony/apache-pack" />
     </include_path>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
@@ -271,6 +869,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -281,12 +880,24 @@
             <path>
               <item name="access_configurator" type="b2602c69:ProjectViewProjectNode" />
               <item name="access_configurator" type="462c0819:PsiDirectoryNode" />
-              <item name="config" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="access_configurator" type="b2602c69:ProjectViewProjectNode" />
+              <item name="access_configurator" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
+              <item name="theme" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="access_configurator" type="b2602c69:ProjectViewProjectNode" />
               <item name="access_configurator" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="access_configurator" type="b2602c69:ProjectViewProjectNode" />
+              <item name="access_configurator" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Controller" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="access_configurator" type="b2602c69:ProjectViewProjectNode" />
@@ -304,13 +915,24 @@
             <path>
               <item name="access_configurator" type="b2602c69:ProjectViewProjectNode" />
               <item name="access_configurator" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Repository" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="access_configurator" type="b2602c69:ProjectViewProjectNode" />
+              <item name="access_configurator" type="462c0819:PsiDirectoryNode" />
               <item name="templates" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="access_configurator" type="b2602c69:ProjectViewProjectNode" />
+              <item name="access_configurator" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="AdminLTE" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -320,6 +942,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="add_unversioned_files" value="$PROJECT_DIR$/public/theme/AdminLTE/dist/css/AdminLTE.min.css&#10;C:/wamp/www/access_configurator/public/theme/AdminLTE/dist/css/AdminLTE.css" />
     <property name="com.jetbrains.php.lang.actions.generation.PhpGenerateFieldAccessorHandlerBase$MyMemberChooser.fluent.setters.last.selected" value="true" />
+    <property name="last.edited.regexp" value="Sample Text" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="preferences.keymap" />
@@ -361,17 +984,22 @@
       <workItem from="1558002210571" duration="2865000" />
       <workItem from="1558074992306" duration="1672000" />
       <workItem from="1558089641405" duration="4362000" />
+      <workItem from="1558180969543" duration="1476000" />
+      <workItem from="1558183084151" duration="1857000" />
+      <workItem from="1558184964865" duration="2997000" />
+      <workItem from="1558274886021" duration="4708000" />
+      <workItem from="1558279881052" duration="275000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="23503000" />
+    <option name="totallyTimeSpent" value="34816000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="0" y="25" width="1920" height="1055" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.16897655" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1782284" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -385,7 +1013,7 @@
       <window_info anchor="bottom" id="Database Changes" order="8" />
       <window_info anchor="bottom" id="Version Control" order="9" />
       <window_info anchor="bottom" id="Terminal" order="10" />
-      <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
+      <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" weight="0.32937366" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -396,28 +1024,13 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/var/log/dev.log">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="432">
-          <caret line="27" selection-start-line="27" selection-end-line="27" />
-          <folding>
-            <element signature="e#7#22#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/var/log/dev.log" />
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="112">
           <caret line="7" column="8" selection-start-line="7" selection-start-column="8" selection-end-line="7" selection-end-column="8" />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/base.html.twig">
-      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/public/theme/AdminLTE/dist/css/AdminLTE.min.css">
       <provider selected="true" editor-type-id="text-editor">
@@ -448,16 +1061,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/composer.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="416">
-          <caret line="26" column="31" selection-start-line="26" selection-start-column="31" selection-end-line="26" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/routes.yaml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/config/packages/doctrine.yaml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="160">
@@ -465,9 +1068,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/433c297a-f602-42da-8d87-558c839b446d/console.sql">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/433c297a-f602-42da-8d87-558c839b446d/console.sql" />
     <entry file="das://433c297a-f602-42da-8d87-558c839b446d/collation/utf8mb4_general_ci">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -477,13 +1078,6 @@
     <entry file="das://433c297a-f602-42da-8d87-558c839b446d/collation/macce_bin">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/.env">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="432">
-          <caret line="27" column="33" selection-start-line="27" selection-start-column="33" selection-end-line="27" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/config/services.yaml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="432">
@@ -491,51 +1085,183 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/doctrine/doctrine-bundle/DoctrineBundle.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="36" selection-start-line="7" selection-start-column="36" selection-end-line="7" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/packages/dev/debug.yaml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/packages/dev/easy_log_handler.yaml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/packages/dev/monolog.yaml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/packages/dev/routing.yaml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/packages/dev/swiftmailer.yaml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/packages/dev/web_profiler.yaml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/routes/dev/web_profiler.yaml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="22" selection-start-line="6" selection-start-column="22" selection-end-line="6" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/symfony/profiler-pack/composer.json">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/symfony/web-profiler-bundle/Resources/config/profiler.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="604">
+          <caret line="57" column="53" selection-start-line="57" selection-start-column="53" selection-end-line="57" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="25" column="18" selection-start-line="25" selection-start-column="18" selection-end-line="25" selection-end-column="18" />
+          <folding>
+            <element signature="e#7#22#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.env">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="34" selection-start-line="34" selection-end-line="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/composer.lock">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1305" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/composer.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="21" column="35" selection-start-line="21" selection-start-column="35" selection-end-line="21" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/symfony/http-kernel/HttpKernel.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="40" column="1" selection-start-line="40" selection-start-column="1" selection-end-line="40" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/symfony/http-kernel/Kernel.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="311">
+          <caret line="504" column="49" selection-start-line="504" selection-start-column="49" selection-end-line="504" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/routes.yaml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" selection-start-line="3" selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/.htaccess">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="585">
+          <caret line="39" column="70" selection-start-line="39" selection-start-column="70" selection-end-line="39" selection-end-column="70" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Entity/House/HouseModel.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="720">
-          <caret line="45" column="4" selection-start-line="45" selection-start-column="4" selection-end-line="45" selection-end-column="4" />
+        <state relative-caret-position="750">
+          <caret line="50" column="29" selection-start-line="50" selection-start-column="29" selection-end-line="50" selection-end-column="29" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/AdminLTE/AdminLTE_base.html.twig">
+    <entry file="file://$PROJECT_DIR$/src/Repository/HouseSizeRepository.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="544">
-          <caret line="34" column="53" selection-start-line="34" selection-start-column="53" selection-end-line="34" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/home.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="267">
-          <caret line="82" column="57" selection-start-line="82" selection-start-column="57" selection-end-line="82" selection-end-column="57" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/size.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="80">
-          <caret line="5" column="25" selection-start-line="5" selection-start-column="25" selection-end-line="5" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Repository/HouseModelRepository.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="874">
-          <caret line="55" column="26" selection-start-line="55" selection-start-column="26" selection-end-line="55" selection-end-column="26" />
+        <state relative-caret-position="540">
+          <caret line="36" column="6" lean-forward="true" selection-start-line="36" selection-start-column="6" selection-end-line="36" selection-end-column="6" />
           <folding>
             <element signature="e#34#66#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Controller/HomeController.php">
+    <entry file="file://$PROJECT_DIR$/templates/AdminLTE/AdminLTE_base.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="640">
-          <caret line="40" column="27" selection-start-line="40" selection-start-column="27" selection-end-line="40" selection-end-column="27" />
+        <state relative-caret-position="420">
+          <caret line="28" column="32" lean-forward="true" selection-start-line="28" selection-start-column="32" selection-end-line="28" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Repository/HouseModelRepository.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="25" column="46" selection-end-line="51" />
           <folding>
             <element signature="e#34#66#0#PHP" expanded="true" />
-            <element signature="e#1078#1094#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Entity/House/HouseSize.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="675">
+          <caret line="45" column="60" selection-start-line="45" selection-start-column="60" selection-end-line="45" selection-end-column="60" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/base.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="32" lean-forward="true" selection-start-line="10" selection-start-column="32" selection-end-line="10" selection-end-column="32" />
+          <folding>
+            <element signature="e#246#250#0#Twig" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Controller/HomeController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="29" column="43" selection-start-line="29" selection-start-column="43" selection-end-line="29" selection-end-column="43" />
+          <folding>
+            <element signature="e#34#66#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/home.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="16" column="54" selection-start-line="16" selection-start-column="54" selection-end-line="16" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/size.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="43" selection-start-line="8" selection-start-column="43" selection-end-line="8" selection-end-column="43" />
+          <folding>
+            <element signature="e#595#616#0#HTML" expanded="true" />
           </folding>
         </state>
       </provider>

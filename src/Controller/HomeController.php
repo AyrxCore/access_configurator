@@ -3,7 +3,7 @@
 namespace App\Controller;
 
 use App\Entity\House\HouseModel;
-use Doctrine\ORM\EntityManager;
+use App\Entity\House\HouseSize;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
@@ -14,7 +14,7 @@ class HomeController extends AbstractController
 {
     /**
      * @Route ("/", name="home")
-     * @param EntityManager $em
+     * @param EntityManagerInterface $em
      * @return Response
      */
     public function homepage(EntityManagerInterface $em)
@@ -25,20 +25,21 @@ class HomeController extends AbstractController
             'models' => $models
         ));
     }
-    
+
     /**
-     * @Route ("/{id}/{name}-model", name="size-page")
+     * @Route ("/{name}", name="size-page")
      * @param EntityManagerInterface $em
      * @param $name
      * @return Response
      */
-    public function sizepage(EntityManagerInterface $em, $name, $id)
+    public function sizepage(EntityManagerInterface $em, $name)
     {
-        
-        $size = $em->getRepository(HouseModel::class)->find($id);
+        $model = $em->getRepository(HouseModel::class)->findOneBy(array('name' => $name));
+        $sizes = $em->getRepository(HouseSize::class)->findBy(array('name' => $name));
 
         return $this->render('size.html.twig', array(
-            'size' => $size
+            'sizes' => $sizes,
+            'model' => $model
         ));
     }
 }

@@ -1,115 +1,31 @@
-{% extends 'AdminLTE/AdminLTE_base.html.twig' %}
+{% extends 'base.html.twig' %}
 
-{% block body %}
+{% block content %}
 
-    <body class="hold-transition skin-blue sidebar-mini">
-    <div class="wrapper">
+    <section class="content-header">
+        <h1>Choix du modèle de maison</h1>
+        <ol class="breadcrumb">
+            <li><a href="#"><i class="fa fa-dashboard"></i>Modèle </a></li>
+        </ol>
+    </section>
 
-        <header class="main-header">
-            <!-- Logo -->
-            <a href="index2.html" class="logo">
-                <!-- mini logo for sidebar mini 50x50 pixels -->
-                <span class="logo-mini"><b>A</b>LT</span>
-                <!-- logo for regular state and mobile devices -->
-                <span class="logo-lg"><b>Admin</b>LTE</span>
-            </a>
-            <!-- Header Navbar: style can be found in header.less -->
-            <nav class="navbar navbar-static-top">
-                <!-- Sidebar toggle button-->
-                <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button">
-                    <i class="fas fa-bars"></i>
-                    <span class="sr-only">Toggle navigation</span>
-                </a>
-            </nav>
-        </header>
-        <!-- Left side column. contains the logo and sidebar -->
-        <aside class="main-sidebar">
-            <!-- sidebar: style can be found in sidebar.less -->
-            <section class="sidebar">
-                <!-- Sidebar user panel -->
-                <div class="user-panel">
-                    <div class="pull-left image">
-                        <img src="{{ asset('theme/AdminLTE/dist/img/avatar5.png') }}" class="img-circle" alt="User Image">
-                    </div>
-                    <div class="pull-left info">
-                        <p>Alexander Pierce</p>
-                        <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
-                    </div>
-                </div>
-                <!-- sidebar menu: : style can be found in sidebar.less -->
-                <ul class="sidebar-menu">
-                    <li class="header">MENU PRINCIPAL</li>
-                    <li class="treeview">
-                        <a href="#">
-                            <i class="fa fa-dashboard"></i> <span>Nos modèles</span>
-                            <span class="pull-right-container">
-                    <i class="fa fa-angle-left pull-right"></i>
-                     </span>
-                        </a>
-                        <ul class="treeview-menu">
-                            {% for model in models %}
-                                <li><a href="#"><i class="fa fa-circle-o"></i>{{ model.name }}</a></li>
-                            {% endfor %}
-                        </ul>
-                    </li>
-                </ul>
-            </section>
-            <!-- /.sidebar -->
-        </aside>
+    <section class="content">
+        <div class="row">
 
-        <!-- Content Wrapper. Contains page content -->
-        <div class="content-wrapper">
-            <!-- Content Header (Page header) -->
-            <section class="content-header">
-                <h1>Choix du modèle de maison</h1>
-                <ol class="breadcrumb">
-                    <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
-                    <li class="active">Dashboard</li>
-                </ol>
-            </section>
-
-            <!-- Main content -->
-            <section class="content">
-                <!-- Main row -->
-                <div class="row">
-
-                    <section class="col-lg-12 connectedSortable d-flex justify-content-around">
-                    {% for model in models %}
-                        <div class="card" style="width: 18rem;">
-                            <img src="{{ asset('images/modeles/' ~ model.img) }}" class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <h5 class="card-title">{{ model.name }}</h5>
-                                <p class="card-text">{{ model.description }}</p>
-                                <a href="{{ model.id ~ '/' ~ model.name ~ '-model' }}" class="btn btn-primary" data-model>Choisir ce modèle</a>
-                            </div>
+            <section class="col-lg-12 connectedSortable d-flex justify-content-around">
+                {% for model in models %}
+                    <div class="card" style="width: 25rem;">
+                        <img src="{{ asset('images/modeles/' ~ model.img) }}" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">{{ model.name }}</h5>
+                            <p class="card-text">{{ model.description }}</p>
+                            <p class="card-text">A partir de {{ model.price }} €</p>
+                            <a href="{{ model.name }}" class="btn btn-primary">Choisir ce modèle</a>
                         </div>
-                    {% endfor %}
-
-                    </section>
-                    <!-- /.Left col -->
-                    <!-- right col (We are only adding the ID to make the widgets sortable)-->
-                    <section class="col-lg-5 connectedSortable">
-
-                    </section>
-                    <!-- right col -->
-                </div>
-                <!-- /.row (main row) -->
-
+                    </div>
+                {% endfor %}
             </section>
-            <!-- /.content -->
+
         </div>
-        <!-- /.content-wrapper -->
-        <footer class="main-footer">
-            <div class="pull-right hidden-xs">
-                <b>Version</b> 2.3.8
-            </div>
-            <strong>Copyright &copy; 2014-2016 <a href="http://almsaeedstudio.com">Almsaeed Studio</a>.</strong> All rights
-            reserved.
-        </footer>
-
-                </div>
-                <!-- /.tab-pane -->
-    </div>
-    </body>
-
+    </section>
 {% endblock %}

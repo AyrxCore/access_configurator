@@ -38,10 +38,10 @@
             "ref": "453e89b78ded666f351617baca5ae40d20622351"
         },
         "files": [
-            "./config/packages/doctrine.yaml",
-            "./config/packages/prod/doctrine.yaml",
-            "./src/Entity/.gitignore",
-            "./src/Repository/.gitignore"
+            "config/packages/doctrine.yaml",
+            "config/packages/prod/doctrine.yaml",
+            "src/Entity/.gitignore",
+            "src/Repository/.gitignore"
         ]
     },
     "doctrine/doctrine-cache-bundle": {
@@ -56,8 +56,8 @@
             "ref": "c1431086fec31f17fbcfe6d6d7e92059458facc1"
         },
         "files": [
-            "./config/packages/doctrine_migrations.yaml",
-            "./src/Migrations/.gitignore"
+            "config/packages/doctrine_migrations.yaml",
+            "src/Migrations/.gitignore"
         ]
     },
     "doctrine/event-manager": {
@@ -114,8 +114,11 @@
     "nikic/php-parser": {
         "version": "v4.2.1"
     },
+    "ocramius/package-versions": {
+        "version": "1.4.0"
+    },
     "ocramius/proxy-manager": {
-        "version": "2.1.1"
+        "version": "2.2.2"
     },
     "phpdocumentor/reflection-common": {
         "version": "1.0.1"
