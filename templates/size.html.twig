@@ -22,7 +22,7 @@
                             <p class="card-text">Modèle de {{ element.surface }}m²</p>
                             <p class="card-text">{{ element.description }}</p>
                             <p class="card-text">A partir de {{ element.price }} €</p>
-                            <a href="{{ element.name ~ '_' ~ element.surface }}" class="btn btn-primary">Choisir cette surface</a>
+                            <a href="{{ element.name ~ '/' ~ element.surface }}" class="btn btn-primary">Choisir cette surface</a>
                         </div>
                     </div>
                 {% endfor %}
