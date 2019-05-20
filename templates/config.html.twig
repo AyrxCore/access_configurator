@@ -23,13 +23,18 @@
                         <button class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-plus"></i></button>
                     </div><!-- /.box-tools -->
                 </div><!-- /.box-header -->
-
-{#                {% for option in options %}#}
-{#                    <div class="box-body">#}
-{#                        {{ option.name }}#}
-{#                    </div><!-- /.box-body -->#}
-{#                    {% endif %}#}
-{#                {% endfor %}#}
+                {% for option in options if option.category == category.name %}
+                    <div class="box-body">
+                        <div class="d-flex justify-content-between">
+                            <p>{{ option.name }}</p>
+                            <p>{{ option.price }} €</p>
+                            <div class="btn-group">
+                                <button type="button" class="btn btn-success btn-sm"><i class="far fa-plus-square"></i></button>
+                                <button type="button" class="btn btn-danger btn-sm"><i class="fas fa-trash-alt"></i></button>
+                            </div>
+                        </div>
+                    </div><!-- /.box-body -->
+                {% endfor %}
 
             </div><!-- /.box -->
         </div>
