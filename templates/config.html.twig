@@ -5,7 +5,7 @@
     <section class="content-header">
         <h1>Configuration du projet</h1>
         <ol class="breadcrumb">
-            <li class="active"><a href="{{ path('home') ~ '?name="' ~ model.name ~ '"' }}">Modèle</a></li>
+            <li class="active"><a href="{{ path('home') ~ '?name="' ~ name ~ '"' }}">Modèle</a></li>
             <li class="active">Surface</li>
             <li class="active">Configuration</li>
         </ol>
@@ -35,10 +35,14 @@
                         </div>
                     </div><!-- /.box-body -->
                 {% endfor %}
-
             </div><!-- /.box -->
         </div>
     </div>
     {% endfor %}
+
+    <div class="row justify-content-center">
+        <a href="{{ path('total', {'name': name, 'surface': size.surface}) }}" class="btn btn-lg btn-success">Valider</a>
+    </div>
+
 
 {% endblock %}

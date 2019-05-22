@@ -55,16 +55,32 @@ class HomeController extends AbstractController
      */
     public function configHouse(EntityManagerInterface $em, $name, $surface)
     {
-        $model = $em->getRepository(HouseModel::class)->findOneBy(array('name' => $name));
         $size = $em->getRepository(HouseSize::class)->findOneBy(array('surface' => $surface));
         $categories = $em->getRepository(Category::class)->findAll();
         $options = $em->getRepository(Options::class)->findAll();
 
         return $this->render('config.html.twig', array(
-            'model' => $model,
+            'name' => $name,
             'size' => $size,
             'categories' => $categories,
             'options' => $options
+        ));
+    }
+    
+    /**
+     * @Route ("/{name}/{surface}/total", name="total")
+     * @param EntityManagerInterface $em
+     * @param $name
+     * @param $surface
+     * @return Response
+     */
+    public function total(EntityManagerInterface $em, $name, $surface)
+    {
+        $size = $em->getRepository(HouseSize::class)->findOneBy(array('surface' => $surface));
+
+        return $this->render('total.html.twig', array(
+            'size' => $size,
+            'name' => $name
         ));
     }
 }
