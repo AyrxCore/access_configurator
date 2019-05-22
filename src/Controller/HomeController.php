@@ -17,16 +17,11 @@ class HomeController extends AbstractController
 {
     /**
      * @Route ("/", name="home")
-     * @param EntityManagerInterface $em
      * @return Response
      */
-    public function chooseModel(EntityManagerInterface $em)
+    public function chooseModel()
     {
-        $models = $em->getRepository(HouseModel::class)->findAll();
-        
-        return $this->render('home.html.twig', array(
-            'models' => $models
-        ));
+        return $this->render('home.html.twig');
     }
 
     /**

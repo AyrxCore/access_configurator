@@ -1,3 +1,19 @@
-<div>Hello</div>
-<div>{{ name }}</div>
-<div>{{ size.surface }}</div>
+{% extends 'AdminLTE/AdminLTE_base.html.twig' %}
+
+{% block content %}
+
+    <section class="content-header">
+        <h1>Configuration du projet</h1>
+        <ol class="breadcrumb">
+            <li class="active"><a href="{{ path('home') ~ '?name="' ~ name ~ '"' }}">Modèle</a></li>
+            <li class="active">Surface</li>
+            <li class="active">Configuration</li>
+        </ol>
+    </section>
+
+    <div>Hello</div>
+    <div>{{ name }}</div>
+    <div>{{ size.surface }}</div>
+
+
+{% endblock %}

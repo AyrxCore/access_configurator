@@ -2,3 +2,7 @@
     position: inherit;
     margin-bottom: 2rem;
 }
+
+.sidebar-toggle{
+    padding: 0!important;
+}

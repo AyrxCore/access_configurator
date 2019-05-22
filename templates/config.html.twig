@@ -1,4 +1,4 @@
-{% extends 'base.html.twig' %}
+{% extends 'AdminLTE/AdminLTE_base.html.twig' %}
 
 {% block content %}
 
@@ -24,10 +24,10 @@
                     </div><!-- /.box-tools -->
                 </div><!-- /.box-header -->
                 {% for option in options if option.category == category.name %}
-                    <div class="box-body">
+                    <div class="box-body option-select" data-value="{{ option.price }}">
                         <div class="d-flex justify-content-between">
                             <p>{{ option.name }}</p>
-                            <p>{{ option.price }} €</p>
+                            <p class="price">{{ option.price }} €</p>
                             <div class="btn-group">
                                 <button type="button" class="btn btn-success btn-sm"><i class="far fa-plus-square"></i></button>
                                 <button type="button" class="btn btn-danger btn-sm"><i class="fas fa-trash-alt"></i></button>
@@ -40,9 +40,25 @@
     </div>
     {% endfor %}
 
+    <div>TOTAL = <span class="total-config"></span></div>
+
     <div class="row justify-content-center">
         <a href="{{ path('total', {'name': name, 'surface': size.surface}) }}" class="btn btn-lg btn-success">Valider</a>
     </div>
 
+    <script>
+        $(document).ready(function() {
+            $(".btn-success").each(function(index,selectInput){
+                let thisOption = $(selectInput).parents(".option-select");
+                thisOption.on('click', function()
+                {
+                    $('.total-config').val() = thisOption.data('value')
+                    console.log($('.total-config').val())
+
+                })
+            })
+        });
+
+    </script>
 
 {% endblock %}
