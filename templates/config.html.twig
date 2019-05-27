@@ -51,6 +51,7 @@
             let tabId = [];
             let tabCategory = [];
             let total;
+            let precValue;
 
             $(".btn-success").on('click', function() {
 
@@ -59,11 +60,16 @@
                 let category = $(this).parents(".option-select").data("category");
                 let totalPrice = $(".total-config");
 
-
                 if(tabCategory.includes(category))
                 {
-                    var ref = $(this).parents(".box-default").find(".option-select").;
-                    console.log($(this))
+                    console.log(precValue)
+                    console.log(value)
+                    total = totalPrice.data("value") - precValue + value;
+                    console.log(total)
+
+                    tabCategory = jQuery.grep(tabCategory, function(category){
+                        return category !== id;
+                    });
                 }
 
                 if(!tabId.includes(id))
@@ -71,13 +77,16 @@
                     tabId.push(id);
                     tabCategory.push(category);
                     total = value + totalPrice.data("value");
+                    precValue = value;
                     $(this).parents(".option-select").data("active", "true");
                 } else {
                     total = totalPrice.data("value") - value;
+                    precValue = value;
                     tabId = jQuery.grep(tabId, function(value){
                         return value !== id;
                     });
                 }
+
                 totalPrice.data("value", total);
                 totalPrice.text(total);
             })
