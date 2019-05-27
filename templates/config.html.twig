@@ -24,13 +24,12 @@
                     </div><!-- /.box-tools -->
                 </div><!-- /.box-header -->
                 {% for option in options if option.category == category.name %}
-                    <div class="box-body option-select" data-value="{{ option.price }}">
+                    <div class="box-body option-select" data-value="{{ option.price }}" data-category="{{ option.category }}" data-id="{{ option.id }}" data-active="false">
                         <div class="d-flex justify-content-between">
                             <p>{{ option.name }}</p>
                             <p class="price">{{ option.price }} €</p>
                             <div class="btn-group">
-                                <button type="button" class="btn btn-success btn-sm"><i class="far fa-plus-square"></i></button>
-                                <button type="button" class="btn btn-danger btn-sm"><i class="fas fa-trash-alt"></i></button>
+                                <button type="button" class="btn btn-success btn-sm"><i class="fas fa-plus"></i></button>
                             </div>
                         </div>
                     </div><!-- /.box-body -->
@@ -40,7 +39,7 @@
     </div>
     {% endfor %}
 
-    <div>TOTAL = <span class="total-config"></span></div>
+    <div>TOTAL = <span class="total-config" data-value="{{ size.price }}">{{ size.price }}</span></div>
 
     <div class="row justify-content-center">
         <a href="{{ path('total', {'name': name, 'surface': size.surface}) }}" class="btn btn-lg btn-success">Valider</a>
@@ -48,15 +47,41 @@
 
     <script>
         $(document).ready(function() {
-            $(".btn-success").each(function(index,selectInput){
-                let thisOption = $(selectInput).parents(".option-select");
-                thisOption.on('click', function()
-                {
-                    $('.total-config').val() = thisOption.data('value')
-                    console.log($('.total-config').val())
 
-                })
+            let tabId = [];
+            let tabCategory = [];
+            let total;
+
+            $(".btn-success").on('click', function() {
+
+                let id = $(this).parents(".option-select").data("id");
+                let value = $(this).parents(".option-select").data("value");
+                let category = $(this).parents(".option-select").data("category");
+                let totalPrice = $(".total-config");
+
+
+                if(tabCategory.includes(category))
+                {
+                    var ref = $(this).parents(".box-default").find(".option-select").;
+                    console.log($(this))
+                }
+
+                if(!tabId.includes(id))
+                {
+                    tabId.push(id);
+                    tabCategory.push(category);
+                    total = value + totalPrice.data("value");
+                    $(this).parents(".option-select").data("active", "true");
+                } else {
+                    total = totalPrice.data("value") - value;
+                    tabId = jQuery.grep(tabId, function(value){
+                        return value !== id;
+                    });
+                }
+                totalPrice.data("value", total);
+                totalPrice.text(total);
             })
+
         });
 
     </script>
