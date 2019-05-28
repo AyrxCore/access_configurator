@@ -31,12 +31,16 @@ class Options
      * @ORM\Column(type="string", length=255, nullable=true)
      */
     private $price;
-
+    
     /**
-     * @var string
-     * @ORM\Column(type="json_array", length=255, nullable=true)
+     * @ORM\Column(type="string", length=255, nullable=true)
      */
-    private $color;
+    private $description;
+    
+    /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     */
+    private $img;
 
     /**
      * @return mixed
@@ -99,22 +103,38 @@ class Options
         $this->price = $price;
         return $this;
     }
-
+    
     /**
      * @return mixed
      */
-    public function getColor()
+    public function getDescription()
     {
-        return $this->color;
+        return $this->description;
     }
-
+    
     /**
-     * @param mixed $color
+     * @param mixed $description
+     */
+    public function setDescription($description)
+    {
+        $this->description = $description;
+    }
+    
+    /**
+     * @return mixed
+     */
+    public function getImg()
+    {
+        return $this->img;
+    }
+    
+    /**
+     * @param mixed $img
      * @return Options
      */
-    public function setColor($color)
+    public function setImg($img)
     {
-        $this->color = $color;
+        $this->img = $img;
         return $this;
     }
 

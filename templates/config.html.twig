@@ -11,35 +11,33 @@
         </ol>
     </section>
 
-    <div>Vous avez choisi </div>
-
     {% for category in categories %}
-    <div class="row justify-content-center">
-        <div class="col-md-6">
-            <div class="box box-default collapsed-box">
-                <div class="box-header with-border">
-                    <h3 class="box-title">{{ category.name }}</h3>
-                    <div class="box-tools pull-right">
-                        <button class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-plus"></i></button>
-                    </div><!-- /.box-tools -->
-                </div><!-- /.box-header -->
-                {% for option in options if option.category == category.name %}
-                    <div class="box-body option-select" data-value="{{ option.price }}" data-category="{{ option.category }}" data-id="{{ option.id }}" data-active="false">
-                        <div class="d-flex justify-content-between">
-                            <p>{{ option.name }}</p>
-                            <p class="price">{{ option.price }} €</p>
-                            <div class="btn-group">
-                                <button type="button" class="btn btn-success btn-sm"><i class="fas fa-plus"></i></button>
+        <div class="row justify-content-center ">
+            <div class="col-md-6">
+                <div class="box box-default collapsed-box">
+                    <div class="box-header with-border">
+                        <h3 class="box-title">{{ category.name }}</h3>
+                        <div class="box-tools pull-right">
+                            <button class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-plus"></i></button>
+                        </div><!-- /.box-tools -->
+                    </div><!-- /.box-header -->
+                    {% for option in options if option.category == category.name %}
+                        <div class="box-body option-select" data-value="{{ option.price }}" data-category="{{ option.category }}" data-id="{{ option.id }}" data-active="false">
+                            <div class="d-flex justify-content-between">
+                                <p>{{ option.name }}</p>
+                                <p class="price">{{ option.price }} €</p>
+                                <div class="btn-group">
+                                    <button type="button" class="btn btn-success btn-sm"><i class="fas fa-plus"></i></button>
+                                </div>
                             </div>
-                        </div>
-                    </div><!-- /.box-body -->
-                {% endfor %}
-            </div><!-- /.box -->
+                        </div><!-- /.box-body -->
+                    {% endfor %}
+                </div><!-- /.box -->
+            </div>
         </div>
-    </div>
     {% endfor %}
 
-    <div>TOTAL = <span class="total-config" data-value="{{ size.price }}">{{ size.price }}</span></div>
+    <div class="total-config">Coût total avec les options = <span class="value-config" data-value="{{ size.price }}">{{ size.price }} €</span></div>
 
     <div class="row justify-content-center">
         <a href="{{ path('total', {'name': name, 'surface': size.surface}) }}" class="btn btn-lg btn-success">Valider</a>
@@ -49,37 +47,21 @@
         $(document).ready(function() {
 
             let tabId = [];
-            let tabCategory = [];
             let total;
-            let precValue;
 
             $(".btn-success").on('click', function() {
 
                 let id = $(this).parents(".option-select").data("id");
                 let value = $(this).parents(".option-select").data("value");
-                let category = $(this).parents(".option-select").data("category");
-                let totalPrice = $(".total-config");
-
-                if(tabCategory.includes(category))
-                {
-                    console.log(precValue)
-                    console.log(value)
-                    total = totalPrice.data("value") - precValue + value;
-                    console.log(total)
-
-                    tabCategory = jQuery.grep(tabCategory, function(category){
-                        return category !== id;
-                    });
-                }
+                let totalPrice = $(".value-config");
 
                 if(!tabId.includes(id))
                 {
                     tabId.push(id);
-                    tabCategory.push(category);
                     total = value + totalPrice.data("value");
-                    precValue = value;
                     $(this).parents(".option-select").data("active", "true");
-                } else {
+                }
+                else {
                     total = totalPrice.data("value") - value;
                     precValue = value;
                     tabId = jQuery.grep(tabId, function(value){
@@ -88,7 +70,7 @@
                 }
 
                 totalPrice.data("value", total);
-                totalPrice.text(total);
+                totalPrice.html(total + " €");
             })
 
         });

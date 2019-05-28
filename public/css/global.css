@@ -1,3 +1,5 @@
+/*---------- HOME ----------*/
+
 .user-panel{
     position: inherit;
     margin-bottom: 2rem;
@@ -5,4 +7,18 @@
 
 .sidebar-toggle{
     padding: 0!important;
+}
+
+.infobulle{
+    position: absolute;
+    background: antiquewhite;
+    display: none;
+}
+
+/*---------- CONFIG ----------*/
+
+.total-config{
+    font-size: 2rem;
+    text-align: center;
+    margin: 2rem 0;
 }
