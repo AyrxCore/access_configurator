@@ -1,4 +1,4 @@
-/*---------- HOME ----------*/
+/*---------- LAYOUT ----------*/
 
 .user-panel{
     position: inherit;
@@ -9,10 +9,40 @@
     padding: 0!important;
 }
 
-.infobulle{
-    position: absolute;
-    background: antiquewhite;
-    display: none;
+/*---------- HOME ----------*/
+
+.card-body{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+}
+
+.model-name{
+    font-size: 2rem;
+    color: 	#696969;
+}
+
+.model-img{
+    width: 400px;
+    height: 250px;
+}
+
+.model-price{
+    margin:0;
+ }
+
+.model-price span{
+    font-size: 2rem;
+}
+
+.model-choice{
+    width: 50%;
+    margin-top: 2rem;
+}
+
+.link-block{
+    margin: 2rem 0 1rem;
 }
 
 /*---------- CONFIG ----------*/

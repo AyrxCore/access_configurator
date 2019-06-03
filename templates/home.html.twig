@@ -15,12 +15,16 @@
             <section class="col-lg-12 connectedSortable d-flex justify-content-around">
                 {% for model in models %}
                     <div class="card" style="width: 25rem;">
-                        <img src="{{ asset('images/modeles/' ~ model.img) }}" class="card-img-top img-model-home" alt="...">
+                        <img src="{{ asset('images/modeles/' ~ model.img) }}" class="card-img-top model-img" alt="...">
                         <div class="card-body">
-                            <h5 class="card-title">{{ model.name }}</h5>
-                            <p class="card-text">{{ model.description }}</p>
-                            <p class="card-text">A partir de {{ model.price }} €</p>
-                            <a href="{{ model.name }}" class="btn btn-primary">Choisir ce modèle</a>
+                            <div>
+                                <h5 class="card-title model-name">{{ model.name }}</h5>
+                                <p class="card-text">{{ model.description }}</p>
+                            </div>
+                            <div class="link-block">
+                                <p class="card-text model-price">A partir de <br><span> {{ model.price }} €</span></p>
+                                <a href="{{ model.name }}" class="btn btn-primary model-choice">Choisir ce modèle</a>
+                            </div>
                         </div>
                     </div>
                 {% endfor %}
@@ -28,5 +32,15 @@
 
         </div>
     </section>
+
+    <script>
+
+        $(document).ready(function() {
+
+           
+
+        });
+
+    </script>
 
 {% endblock %}
