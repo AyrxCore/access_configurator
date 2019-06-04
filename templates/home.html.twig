@@ -22,7 +22,7 @@
                                 <p class="card-text">{{ model.description }}</p>
                             </div>
                             <div class="link-block">
-                                <p class="card-text model-price">A partir de <br><span> {{ model.price }} €</span></p>
+                                <p class="card-text model-price">A partir de <br><span class="price"> {{ model.price }}</span><span class="euro"> €</span></p>
                                 <a href="{{ model.name }}" class="btn btn-primary model-choice">Choisir ce modèle</a>
                             </div>
                         </div>
@@ -35,9 +35,13 @@
 
     <script>
 
+        var price = $(".price");
+
         $(document).ready(function() {
 
-           
+            for(var i=0; i <= price.length - 1; i++){
+                price[i].textContent = new Intl.NumberFormat().format(price[i].innerHTML);
+            }
 
         });
 
