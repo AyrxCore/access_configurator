@@ -15,18 +15,32 @@
             <section class="col-lg-12 connectedSortable d-flex justify-content-around">
                 {% for element in sizes %}
                     <div class="card" style="width: 30rem;">
-                        <img src="{{ asset('images/size/' ~ element.imgRdc) }}" class="card-img-top" alt="...">
-                        <img src="{{ asset('images/size/' ~ element.imgFloor) }}" class="card-img-top" alt="...">
                         <div class="card-body">
-                            <p class="card-text">Modèle de {{ element.surface }}m²</p>
+                            <p class="card-text size-name">Modèle de {{ element.surface }}m²</p>
                             <p class="card-text">{{ element.description }}</p>
-                            <p class="card-text">A partir de {{ element.price }} €</p>
-                            <a href="{{ element.name ~ '/' ~ element.surface }}" class="btn btn-primary">Choisir cette surface</a>
+                            <p class="card-text size-price">A partir de<br><span class="price"> {{ element.price }}</span><span class="euro"> €</span></p>
+                            <a href="{{ element.name ~ '/' ~ element.surface }}" class="btn btn-primary size-choice">Choisir cette surface</a>
                         </div>
+                        <img src="{{ asset('images/size/' ~ element.imgRdc) }}" class="card-img-top size-img" alt="...">
+                        <img src="{{ asset('images/size/' ~ element.imgFloor) }}" class="card-img-top size-img" alt="...">
                     </div>
                 {% endfor %}
             </section>
 
         </div>
     </section>
+
+    <script>
+
+        var price = $(".price");
+
+        $(document).ready(function() {
+
+            for(var i=0; i <= price.length - 1; i++){
+                price[i].textContent = new Intl.NumberFormat().format(price[i].innerHTML);
+            }
+
+        });
+
+    </script>
 {% endblock %}

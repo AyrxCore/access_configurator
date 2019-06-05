@@ -11,6 +11,10 @@
 
 /*---------- HOME ----------*/
 
+.card{
+    box-shadow: 7px 6px 19px -6px rgba(133,130,133,1);
+}
+
 .card-body{
     display: flex;
     flex-direction: column;
@@ -18,31 +22,43 @@
     text-align: center;
 }
 
-.model-name{
+.model-name, .size-name{
     font-size: 2rem;
     color: 	#696969;
 }
 
-.model-img{
-    width: 400px;
+.model-img, .size-img{
     height: 250px;
 }
 
-.model-price{
-    margin:0;
+.model-price, .size-price{
+    border: #948484 solid 1px;
+    width: 50%;
+    margin: auto;
+    border-radius: 20px;
+    padding: 1rem;
  }
 
-.model-price span, .euro{
+.model-price span, .size-price span, .euro{
     font-size: 2rem;
 }
 
-.model-choice{
+.model-choice, .size-choice{
     width: 50%;
-    margin-top: 2rem;
+    margin: 2rem auto 0rem;
+    font-size: 1.2rem;
 }
 
 .link-block{
     margin: 2rem 0 1rem;
+}
+
+/*---------- SIZE ----------*/
+
+.size-img{
+    margin: 1rem auto 1rem;
+    border: #2c3b41 solid 1px;
+    width: 80%;
 }
 
 /*---------- CONFIG ----------*/
@@ -51,4 +67,8 @@
     font-size: 2rem;
     text-align: center;
     margin: 2rem 0;
+}
+
+.submitOptions{
+    margin-bottom: 3rem;
 }

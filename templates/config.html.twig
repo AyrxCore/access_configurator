@@ -25,7 +25,7 @@
                         <div class="box-body option-select" data-value="{{ option.price }}" data-category="{{ option.category }}" data-id="{{ option.id }}" data-active="false">
                             <div class="d-flex justify-content-between">
                                 <p>{{ option.name }}</p>
-                                <p class="price">{{ option.price }} €</p>
+                                <p class="option-price">{{ option.price }} €</p>
                                 <div class="btn-group">
                                     <button type="button" class="btn btn-success btn-sm"><i class="fas fa-plus"></i></button>
                                 </div>
@@ -37,13 +37,14 @@
         </div>
     {% endfor %}
 
-    <div class="total-config">Coût total avec les options = <span class="value-config" data-value="{{ size.price }}">{{ size.price }} €</span></div>
+    <div class="total-config">Coût total, options incluses = <span class="value-config" data-value="{{ size.price }}">{{ size.price }}</span><span> €</span></div>
 
     <div class="row justify-content-center">
-        <a href="{{ path('total', {'name': name, 'surface': size.surface}) }}" class="btn btn-lg btn-success">Valider</a>
+        <a href="{{ path('total', {'name': name, 'surface': size.surface}) }}" class="btn btn-lg btn-success submitOptions">Valider</a>
     </div>
 
     <script>
+
         $(document).ready(function() {
 
             let tabId = [];
@@ -70,8 +71,13 @@
                 }
 
                 totalPrice.data("value", total);
-                totalPrice.html(total + " €");
+
+                totalPrice.html(new Intl.NumberFormat().format(total));
             })
+
+            var price = $(".value-config")[0];
+
+            price.textContent = new Intl.NumberFormat().format(price.textContent);
 
         });
 
