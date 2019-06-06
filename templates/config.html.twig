@@ -10,34 +10,54 @@
             <li class="active">Configuration</li>
         </ol>
     </section>
-
+    <div class="config-content">
     {% for category in categories %}
         <div class="row justify-content-center ">
-            <div class="col-md-6">
+            <div class="col-md-8">
                 <div class="box box-default collapsed-box">
                     <div class="box-header with-border">
-                        <h3 class="box-title">{{ category.name }}</h3>
+                        <h3 class="box-title category-name">{{ category.name }}</h3>
                         <div class="box-tools pull-right">
                             <button class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-plus"></i></button>
                         </div><!-- /.box-tools -->
                     </div><!-- /.box-header -->
-                    {% for option in options if option.category == category.name %}
-                        <div class="box-body option-select" data-value="{{ option.price }}" data-category="{{ option.category }}" data-id="{{ option.id }}" data-active="false">
-                            <div class="d-flex justify-content-between">
-                                <p>{{ option.name }}</p>
-                                <p class="option-price">{{ option.price }} €</p>
-                                <div class="btn-group">
-                                    <button type="button" class="btn btn-success btn-sm"><i class="fas fa-plus"></i></button>
-                                </div>
+
+                            <!-- /.box-header -->
+                            <div class="box-body table-responsive no-padding">
+                                <table class="table table-hover">
+                                    <tr>
+                                        <th>Nom</th>
+                                        <th>Prix</th>
+                                        <th>Matière</th>
+                                        <th>Couleur</th>
+                                    </tr>
+                                    {% for option in options if option.category == category.name %}
+                                        <tr class="option-select" data-value="{{ option.price }}" data-id="{{ option.id }}" data-active="false">
+                                            <td>{{ option.name }}</td>
+                                            <td>{{ option.price }} €</td>
+                                            <td>
+                                                <select>
+                                                    <option value=""></option>
+                                                </select>
+                                            </td>
+                                            <td>
+                                                <select>
+                                                    <option value=""></option>
+                                                </select>
+                                            </td>
+                                            <td><button type="button" class="btn btn-success btn-sm"><i class="fas fa-plus"></i></button></td>
+                                        </tr>
+                                    {% endfor %}
+                                </table>
                             </div>
+                            <!-- /.box-body -->
                         </div><!-- /.box-body -->
-                    {% endfor %}
                 </div><!-- /.box -->
             </div>
-        </div>
     {% endfor %}
+    </div>
 
-    <div class="total-config">Coût total, options incluses = <span class="value-config" data-value="{{ size.price }}">{{ size.price }}</span><span> €</span></div>
+    <div class="total-config">Coût total, options incluses = <span class="value-config" data-value="{{ size.price }}" >{{ size.price }}</span><span> €</span></div>
 
     <div class="row justify-content-center">
         <a href="{{ path('total', {'name': name, 'surface': size.surface}) }}" class="btn btn-lg btn-success submitOptions">Valider</a>
@@ -49,25 +69,25 @@
 
             let tabId = [];
             let total;
+            let totalPrice = $(".value-config");
 
             $(".btn-success").on('click', function() {
 
                 let id = $(this).parents(".option-select").data("id");
                 let value = $(this).parents(".option-select").data("value");
-                let totalPrice = $(".value-config");
 
                 if(!tabId.includes(id))
                 {
                     tabId.push(id);
                     total = value + totalPrice.data("value");
-                    $(this).parents(".option-select").data("active", "true");
+                    $(this).parents(".option-select").attr("data-active", "true");
                 }
                 else {
                     total = totalPrice.data("value") - value;
-                    precValue = value;
                     tabId = jQuery.grep(tabId, function(value){
                         return value !== id;
                     });
+                    $(this).parents(".option-select").attr("data-active", "false");
                 }
 
                 totalPrice.data("value", total);
@@ -75,12 +95,19 @@
                 totalPrice.html(new Intl.NumberFormat().format(total));
             })
 
-            var price = $(".value-config")[0];
-
-            price.textContent = new Intl.NumberFormat().format(price.textContent);
+            totalPrice[0].textContent = new Intl.NumberFormat().format(totalPrice[0].textContent);
 
         });
 
     </script>
 
 {% endblock %}
+
+{#<div class="box-body option-select" data-value="{{ option.price }}" data-category="{{ option.category }}" data-id="{{ option.id }}" data-active="false">#}
+{#    <div class="d-flex justify-content-between">#}
+{#        <p>{{ option.name }}</p>#}
+{#        <p class="option-price">{{ option.price }} €</p>#}
+{#        <div class="btn-group">#}
+{#            <button type="button" class="btn btn-success btn-sm"><i class="fas fa-plus"></i></button>#}
+{#        </div>#}
+{#    </div>#}
