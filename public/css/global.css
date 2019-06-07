@@ -87,9 +87,20 @@
 
 .option-select[data-active="true"]{
     background: rgba(0, 204, 102, 0.5);
-    border: solid 1px rgba(0, 204, 102, 0.5);
 }
 
 .option-select[data-active="true"]:hover{
     background: rgba(0, 204, 102, 0.5);
+}
+
+.option-price, .option-button{
+    text-align: center;
+}
+
+.option-price{
+    font-size: 1.5rem;
+}
+
+.total-config span{
+    font-size: 3.5rem;
 }

@@ -27,25 +27,28 @@
                                 <table class="table table-hover">
                                     <tr>
                                         <th>Nom</th>
-                                        <th>Prix</th>
                                         <th>Matière</th>
                                         <th>Couleur</th>
                                     </tr>
                                     {% for option in options if option.category == category.name %}
                                         <tr class="option-select" data-value="{{ option.price }}" data-id="{{ option.id }}" data-active="false">
                                             <td>{{ option.name }}</td>
-                                            <td>{{ option.price }} €</td>
                                             <td>
                                                 <select>
-                                                    <option value=""></option>
+                                                    {% for material in constant('App\\Entity\\Product\\Options::MATERIALS') %}
+                                                        <option value="">{{ material }}</option>
+                                                    {% endfor %}
                                                 </select>
                                             </td>
                                             <td>
                                                 <select>
-                                                    <option value=""></option>
+                                                    {% for color in constant('App\\Entity\\Product\\Options::COLORS') %}
+                                                        <option value="">{{ color }}</option>
+                                                    {% endfor %}
                                                 </select>
                                             </td>
-                                            <td><button type="button" class="btn btn-success btn-sm"><i class="fas fa-plus"></i></button></td>
+                                            <td class="option-button"><button type="button" class="btn btn-success btn-sm"><i class="fas fa-plus"></i></button></td>
+                                            <td class="option-price">+ {{ option.price }} €</td>
                                         </tr>
                                     {% endfor %}
                                 </table>
@@ -57,7 +60,7 @@
     {% endfor %}
     </div>
 
-    <div class="total-config">Coût total, options incluses = <span class="value-config" data-value="{{ size.price }}" >{{ size.price }}</span><span> €</span></div>
+    <div class="total-config">Coût total, options incluses = <br><span class="value-config" data-value="{{ size.price }}" >{{ size.price }}</span><span> €</span></div>
 
     <div class="row justify-content-center">
         <a href="{{ path('total', {'name': name, 'surface': size.surface}) }}" class="btn btn-lg btn-success submitOptions">Valider</a>

@@ -41,7 +41,29 @@ class Options
      * @ORM\Column(type="string", length=255, nullable=true)
      */
     private $img;
+    
+    /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     */
+    private $color;
+    
+    /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     */
+    private $material;
+    
+    const COLORS = [
+        "Blanc",
+        "Noir",
+        "Gris"
+    ];
 
+    const MATERIALS = [
+        "Acier",
+        "Bois",
+        "Béton"
+    ];
+    
     /**
      * @return mixed
      */
@@ -136,6 +158,38 @@ class Options
     {
         $this->img = $img;
         return $this;
+    }
+    
+    /**
+     * @return mixed
+     */
+    public function getColor()
+    {
+        return $this->color;
+    }
+    
+    /**
+     * @param mixed $color
+     */
+    public function setColor($color)
+    {
+        $this->color = $color;
+    }
+    
+    /**
+     * @return mixed
+     */
+    public function getMaterial()
+    {
+        return $this->material;
+    }
+    
+    /**
+     * @param mixed $material
+     */
+    public function setMaterial($material)
+    {
+        $this->material = $material;
     }
 
 }
