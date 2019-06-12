@@ -2,7 +2,7 @@
 
 namespace App\Twig;
 
-use App\Entity\House\HouseModel;
+use App\Entity\HouseModel;
 use Doctrine\ORM\EntityManagerInterface;
 use Twig_Extension;
 use Twig_Extension_GlobalsInterface;

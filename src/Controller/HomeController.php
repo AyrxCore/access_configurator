@@ -2,10 +2,11 @@
 
 namespace App\Controller;
 
-use App\Entity\House\HouseModel;
-use App\Entity\House\HouseSize;
-use App\Entity\Product\Category;
-use App\Entity\Product\Options;
+use App\Entity\HouseModel;
+use App\Entity\HouseSize;
+use App\Entity\Category;
+use App\Entity\Options;
+use App\Form\UserType;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
@@ -20,6 +21,18 @@ class HomeController extends AbstractController
     public function chooseModel()
     {
         return $this->render('home.html.twig');
+    }
+    
+    /**
+     * @Route ("/connexion", name="connexion")
+     * @return Response
+     */
+    public function connexion()
+    {
+        $form = $this->createForm(UserType::class);
+        return $this->render('connexion.html.twig', [
+            'form' => $form->createView()
+        ]);
     }
 
     /**

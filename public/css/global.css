@@ -9,6 +9,15 @@
     padding: 0!important;
 }
 
+.btn-connexion{
+    margin: 0rem auto 1rem;
+}
+
+.btn-connexion a{
+    font-weight: bold;
+    color: black!important;
+}
+
 /*---------- HOME ----------*/
 
 .card{
