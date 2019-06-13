@@ -12,9 +12,44 @@
         </ol>
     </section>
 
-    <div>Hello</div>
-    <div>{{ name }}</div>
-    <div>{{ size.surface }}</div>
+    <div class="box">
 
+        <div class="box-body">
+            <table id="example2" class="table table-bordered table-hover">
+                <thead>
+                {% for categorie in categories %}
+                <tr>
+                    <th>{{ categorie.name }}</th>
+                </tr>
+                    {% for option in options if option.category == categorie.name %}
+                        <tr>
+                            <td>{{ option.name }}</td>
+                            <td>{{ option.price }}</td>
+                            <td>Couleur</td>
+                            <td>Matériel</td>
+                        </tr>
+                    {% endfor %}
+                {% endfor %}
+                </thead>
+                <tbody>
+                <tr>
+                    <td>Trident</td>
+                    <td>Internet
+                        Explorer 4.0
+                    </td>
+                    <td>Win 95+</td>
+                </tr>
+                </tbody>
+                <tfoot>
+                <tr>
+                    <th>Rendering engine</th>
+                    <th>Browser</th>
+                    <th>Platform(s)</th>
+                </tr>
+                </tfoot>
+            </table>
+        </div>
+
+    </div>
 
 {% endblock %}

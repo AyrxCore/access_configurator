@@ -2,7 +2,7 @@
 
 namespace App\Repository;
 
-use App\Entity\Product\Options;
+use App\Entity\Options;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Symfony\Bridge\Doctrine\RegistryInterface;
 

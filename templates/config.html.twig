@@ -35,14 +35,14 @@
                                             <td>{{ option.name }}</td>
                                             <td>
                                                 <select>
-                                                    {% for material in constant('App\\Entity\\Product\\Options::MATERIALS') %}
+                                                    {% for material in constant('App\\Entity\\Options::MATERIALS') %}
                                                         <option value="">{{ material }}</option>
                                                     {% endfor %}
                                                 </select>
                                             </td>
                                             <td>
                                                 <select>
-                                                    {% for color in constant('App\\Entity\\Product\\Options::COLORS') %}
+                                                    {% for color in constant('App\\Entity\\Options::COLORS') %}
                                                         <option value="">{{ color }}</option>
                                                     {% endfor %}
                                                 </select>
@@ -96,7 +96,7 @@
                 totalPrice.data("value", total);
 
                 totalPrice.html(new Intl.NumberFormat().format(total));
-            })
+            });
 
             totalPrice[0].textContent = new Intl.NumberFormat().format(totalPrice[0].textContent);
 

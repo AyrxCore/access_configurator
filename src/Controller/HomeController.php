@@ -83,10 +83,14 @@ class HomeController extends AbstractController
     public function total(EntityManagerInterface $em, $name, $surface)
     {
         $size = $em->getRepository(HouseSize::class)->findOneBy(array('surface' => $surface));
+        $categories = $em->getRepository(Category::class)->findAll();
+        $options = $em->getRepository(Options::class)->findAll();
 
         return $this->render('total.html.twig', array(
             'size' => $size,
-            'name' => $name
+            'name' => $name,
+            'categories' => $categories,
+            'options' => $options
         ));
     }
 }

@@ -2,7 +2,7 @@
 
 namespace App\Repository;
 
-use App\Entity\House\HouseSize;
+use App\Entity\HouseSize;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Symfony\Bridge\Doctrine\RegistryInterface;
 
