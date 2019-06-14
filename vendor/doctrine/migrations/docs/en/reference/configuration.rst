@@ -32,6 +32,7 @@ Now, in the root of your project place a file named ``migrations.php``, ``migrat
             'executed_at_column_name' => 'executed_at',
             'migrations_directory' => '/data/doctrine/migrations-docs-example/lib/MyProject/Migrations',
             'all_or_nothing' => true,
+            'check_database_platform' => true,
         ];
 
     .. code-block:: yaml
@@ -44,6 +45,7 @@ Now, in the root of your project place a file named ``migrations.php``, ``migrat
         executed_at_column_name: "executed_at"
         migrations_directory: "/data/doctrine/migrations-docs-example/lib/MyProject/Migrations"
         all_or_nothing: true
+        check_database_platform: true
 
     .. code-block:: xml
 
@@ -62,6 +64,8 @@ Now, in the root of your project place a file named ``migrations.php``, ``migrat
             <migrations-directory>/data/doctrine/migrations-docs-example/lib/MyProject/Migrations</migrations-directory>
 
             <all-or-nothing>true</all-or-nothing>
+
+            <check-database-platform>true</check-database-platform>
         </doctrine-migrations>
 
     .. code-block:: json
@@ -74,7 +78,8 @@ Now, in the root of your project place a file named ``migrations.php``, ``migrat
             "column_length": 14,
             "executed_at_column_name": "executed_at",
             "migrations_directory": "/data/doctrine/migrations-docs-example/lib/MyProject/Migrations",
-            "all_or_nothing": true
+            "all_or_nothing": true,
+            "check_database_platform": true
         }
 
 Please note that if you want to use the YAML configuration option, you will need to install the ``symfony/yaml`` package with composer:
@@ -96,7 +101,7 @@ Here are details about what each configuration option does:
 +----------------------------+------------+----------------------------+----------------------------------------------------------------------------------+
 | column_name                | no         | version                    | The name of the column which stores the version name.                            |
 +----------------------------+------------+----------------------------+----------------------------------------------------------------------------------+
-| column_length              | no         | 14                         | The length of the column which stores the version name.                           |
+| column_length              | no         | 14                         | The length of the column which stores the version name.                          |
 +----------------------------+------------+----------------------------+----------------------------------------------------------------------------------+
 | executed_at_column_name    | no         | executed_at                | The name of the column which stores the date that a migration was executed.      |
 +----------------------------+------------+----------------------------+----------------------------------------------------------------------------------+
@@ -105,6 +110,8 @@ Here are details about what each configuration option does:
 | all_or_nothing             | no         | false                      | Whether or not to wrap multiple migrations in a single transaction.              |
 +----------------------------+------------+----------------------------+----------------------------------------------------------------------------------+
 | migrations                 | no         | []                         | Manually specify the array of migration versions instead of finding migrations.  |
++----------------------------+------------+----------------------------+----------------------------------------------------------------------------------+
+| check_database_platform    | no         | true                       | Whether to add a database platform check at the beginning of the generated code. |
 +----------------------------+------------+----------------------------+----------------------------------------------------------------------------------+
 
 Manually Providing Migrations

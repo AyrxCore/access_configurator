@@ -19,7 +19,7 @@
             <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
 
             {#--- ADMIN LTE CSS ---#}
-            <link rel="stylesheet" href="{{ asset('theme/AdminLTE/dist/css/AdminLTE.min.css') }}">
+            <link rel="stylesheet" href="{{ asset('theme/AdminLTE/dist/css/AdminLTE.css') }}">
 
             {#--- ADMIN LTE SKINS ---#}
             <link rel="stylesheet" href="{{ asset('theme/AdminLTE/dist/css/skins/skin-blue.min.css') }}">
@@ -76,16 +76,24 @@
                 <!-- Sidebar user panel -->
                 <div class="user-panel">
                     <div class="pull-left image">
-                        <img src="{{ asset('theme/AdminLTE/dist/img/avatar5.png') }}" class="img-circle" alt="User Image">
+                        {% if app.user %}
+                        <img src="{{ asset('images/Risitas.jpg') }}" class="img-circle" alt="User Image">
+                        {% else %}
+                            <img src="{{ asset('images/default-avatar.png') }}" class="img-circle" alt="User Image">
+                        {% endif %}
                     </div>
+                    {% if app.user %}
                     <div class="pull-left info">
                         <p>Anthony Chapiron</p>
                     </div>
+                    {% endif %}
                 </div>
                 <div class="col-md-8 btn-connexion">
-                    <a href="{{ path('app_login') }}" class="btn btn-block btn-warning">Connexion</a>
+                    {% if app.user %}
                     <a href="{{ path('app_logout') }}" class="btn btn-block btn-success">Déconnexion</a>
-
+                    {% else %}
+                    <a href="{{ path('app_login') }}" class="btn btn-block btn-warning">Connexion</a>
+                    {% endif %}
                 </div>
 
 
@@ -105,6 +113,13 @@
                             {% endfor %}
                         </ul>
                     </li>
+                    {% if app.user %}
+                    <li class="treeview">
+                        <a href="{{ path('admin') }}">
+                            <i class="fa fa-dashboard"></i> <span>Administration</span>
+                        </a>
+                    </li>
+                    {% endif %}
                 </ul>
             </div>
             <!-- /.sidebar -->
