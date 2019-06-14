@@ -1,4 +1,5 @@
 {% extends 'AdminLTE/AdminLTE_base.html.twig' %}
+
 {% block content %}
 
     <section class="content-header">
@@ -19,7 +20,7 @@
                             <p class="card-text size-name">Modèle de {{ element.surface }}m²</p>
                             <p class="card-text">{{ element.description }}</p>
                             <p class="card-text size-price">A partir de<br><span class="price"> {{ element.price }}</span><span class="euro"> €</span></p>
-                            <a href="{{ element.name ~ '/' ~ element.surface }}" class="btn btn-primary size-choice">Choisir cette surface</a>
+                            <a href="{{ path('config', {'name' : element.name, 'surface' : element.surface}) }}" class="btn btn-primary size-choice">Choisir cette surface</a>
                         </div>
                         <img src="{{ asset('images/size/' ~ element.imgRdc) }}" class="card-img-top size-img" alt="...">
                         <img src="{{ asset('images/size/' ~ element.imgFloor) }}" class="card-img-top size-img" alt="...">

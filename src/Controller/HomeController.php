@@ -8,9 +8,11 @@ use App\Entity\Category;
 use App\Entity\Options;
 use App\Form\UserType;
 use Doctrine\ORM\EntityManagerInterface;
+use Symfony\Component\HttpFoundation\Request;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Component\Security\Http\Authentication\AuthenticationUtils;
 
 class HomeController extends AbstractController
 {
@@ -24,25 +26,14 @@ class HomeController extends AbstractController
     }
     
     /**
-     * @Route ("/connexion", name="connexion")
-     * @return Response
-     */
-    public function connexion()
-    {
-        $form = $this->createForm(UserType::class);
-        return $this->render('connexion.html.twig', [
-            'form' => $form->createView()
-        ]);
-    }
-
-    /**
-     * @Route ("/{name}", name="size")
+     * @Route ("/size", name="size", requirements={"name"="{name}"})
+     * @param Request $request
      * @param EntityManagerInterface $em
-     * @param $name
      * @return Response
      */
-    public function chooseSize(EntityManagerInterface $em, $name)
+    public function chooseSize(Request $request, EntityManagerInterface $em)
     {
+        $name = $request->query->get('name');
         $model = $em->getRepository(HouseModel::class)->findOneBy(array('name' => $name));
         $sizes = $em->getRepository(HouseSize::class)->findBy(array('name' => $name));
 
@@ -51,16 +42,17 @@ class HomeController extends AbstractController
             'model' => $model
         ));
     }
-
+    
     /**
-     * @Route ("/{name}/{surface}", name="config")
+     * @Route ("/config", name="config", requirements={"name"="{name}", "surface"="{surface}"})
+     * @param Request $request
      * @param EntityManagerInterface $em
-     * @param $name
-     * @param $surface
      * @return Response
      */
-    public function configHouse(EntityManagerInterface $em, $name, $surface)
+    public function configHouse(Request $request, EntityManagerInterface $em)
     {
+        $name = $request->query->get('name');
+        $surface = $request->query->get('surface');
         $size = $em->getRepository(HouseSize::class)->findOneBy(array('surface' => $surface));
         $categories = $em->getRepository(Category::class)->findAll();
         $options = $em->getRepository(Options::class)->findAll();
