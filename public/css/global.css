@@ -28,6 +28,12 @@
     max-width: 400px;
 }
 
+.title-tabs{
+    padding: 1rem;
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+
 /*---------- CONNEXION ----------*/
 
 .box-footer{

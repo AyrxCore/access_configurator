@@ -2,67 +2,151 @@
 
 {% block content %}
 
-    <div class="box">
-        <div class="box-header with-border">
-            <h3 class="box-title">Modèles</h3>
-        </div>
-        <!-- /.box-header -->
-        <div class="box-body">
-            <table class="table table-bordered">
-                <tr>
-                    <th>Nom du modèle</th>
-                    <th>Prix du modèle</th>
-                    <th>Description</th>
-                    <th>Image</th>
-                </tr>
-                {% for model in models %}
-                <tr>
-                    <td>{{ model.name }}</td>
-                    <td>{{ model.price }} €</td>
-                    <td>{{ model.description }}</td>
-                    <td><img class="imgModeleBase" src="{{ asset('images/modeles/' ~ model.img) }}"></td>
-                </tr>
-                {% endfor %}
-            </table>
-        </div>
-        <!-- /.box-body -->
-        <div class="box-footer clearfix">
-            <form role="form">
-                <div class="row">
-                    <div class="col-sm">
-                        <div class="form-group">
-                            <label for="name">Nom du modèle</label>
-                            <input id="name" type="text" class="form-control" placeholder="Nom">
-                        </div>
-                    </div>
-                    <div class="col-sm">
-                        <div class="form-group">
-                            <label for="price">Prix du modèle</label>
-                            <input id="price" type="number" class="form-control" placeholder="Prix">
-                        </div>
-                    </div>
-                    <div class="col-sm">
-                        <div class="form-group">
-                            <label for="description">Description du modèle</label>
-                            <input id="description" type="text" class="form-control" placeholder="Description">
-                        </div>
-                    </div>
-                    <div class="col-sm">
-                        <div class="form-group d-flex flex-column justify-content-center">
-                            <label for="uploadImg">Choisissez votre image</label>
-                            <input type="file" id="uploadImg">
-                        </div>
-                    </div>
-                    <div class="col-sm align-self-center">
-                        <div class="form-group">
-                            <button type="submit" class="btn bg-olive margin">Ajouter</button>
-                        </div>
+    <div class="col-md-auto py-4">
+        <div class="nav-tabs-custom">
+            <ul class="nav nav-tabs">
+                <li class="active title-tabs"><a href="#tab_1" data-toggle="tab">Modèles</a></li>
+                <li class="title-tabs"><a href="#tab_2" data-toggle="tab">Surfaces</a></li>
+                <li class="title-tabs"><a href="#tab_3" data-toggle="tab">Catégories</a></li>
+                <li class="title-tabs"><a href="#tab_4" data-toggle="tab">Options</a></li>
+            </ul>
+            <div class="tab-content">
+                <div class="tab-pane active" id="tab_1">
+                    <table class="table table-bordered">
+                        <tr>
+                            <th>Nom du modèle</th>
+                            <th>Prix du modèle</th>
+                            <th>Description</th>
+                            <th>Image</th>
+                        </tr>
+                        {% for model in models %}
+                            <tr>
+                                <td>{{ model.name }}</td>
+                                <td>{{ model.price }} €</td>
+                                <td>{{ model.description }}</td>
+                                <td><img class="imgModeleBase" src="{{ asset('images/modeles/' ~ model.img) }}"></td>
+                            </tr>
+                        {% endfor %}
+                    </table>
+                    <div class="box-footer clearfix">
+                        <form role="form">
+                            <div class="row">
+                                <div class="col-sm">
+                                    <div class="form-group">
+                                        <label for="name">Nom du modèle</label>
+                                        <input id="name" type="text" class="form-control" placeholder="Nom">
+                                    </div>
+                                </div>
+                                <div class="col-sm">
+                                    <div class="form-group">
+                                        <label for="price">Prix du modèle</label>
+                                        <input id="price" type="number" class="form-control" placeholder="Prix">
+                                    </div>
+                                </div>
+                                <div class="col-sm">
+                                    <div class="form-group">
+                                        <label for="description">Description du modèle</label>
+                                        <input id="description" type="text" class="form-control" placeholder="Description">
+                                    </div>
+                                </div>
+                                <div class="col-sm">
+                                    <div class="form-group d-flex flex-column justify-content-center">
+                                        <label for="uploadImg">Choisissez votre image</label>
+                                        <input type="file" id="uploadImg">
+                                    </div>
+                                </div>
+                                <div class="col-sm align-self-center">
+                                    <div class="form-group">
+                                        <button type="submit" class="btn bg-olive margin">Ajouter</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
                     </div>
                 </div>
-            </form>
+                <div class="tab-pane" id="tab_2">
+                    <table class="table table-bordered">
+                        <tr>
+                            <th>Nom du modèle</th>
+                            <th>Surface</th>
+                            <th>Prix du modèle</th>
+                            <th>Description</th>
+                            <th>Image</th>
+                        </tr>
+                        {% for size in sizes %}
+                            <tr>
+                                <td>{{ size.name }}</td>
+                                <td>{{ size.surface }} m²</td>
+                                <td>{{ size.price }} €</td>
+                                <td>{{ size.description }}</td>
+                                <td><img class="imgModeleBase" src="{{ asset('images/modeles/' ~ size.imgRdc) }}"></td>
+                            </tr>
+                        {% endfor %}
+                    </table>
+                    <div class="box-footer clearfix">
+                        <form role="form">
+                            <div class="row">
+                                <div class="col-sm">
+                                    <div class="form-group">
+                                        <label for="name">Nom du modèle</label>
+                                        <input id="name" type="text" class="form-control" placeholder="Nom">
+                                    </div>
+                                </div>
+                                <div class="col-sm">
+                                    <div class="form-group">
+                                        <label for="surface">Surface</label>
+                                        <input id="surface" type="number" class="form-control" placeholder="Surface">
+                                    </div>
+                                </div>
+                                <div class="col-sm">
+                                    <div class="form-group">
+                                        <label for="price">Prix de cette surface</label>
+                                        <input id="price" type="text" class="form-control" placeholder="Prix">
+                                    </div>
+                                </div>
+                                <div class="col-sm">
+                                    <div class="form-group">
+                                        <label for="description">Description</label>
+                                        <input id="description" type="text" class="form-control" placeholder="Description">
+                                    </div>
+                                </div>
+                                <div class="col-sm">
+                                    <div class="form-group d-flex flex-column justify-content-center">
+                                        <label for="uploadImg">Choisissez votre image du RDC</label>
+                                        <input type="file" id="uploadImg">
+                                    </div>
+                                </div>
+                                <div class="col-sm">
+                                    <div class="form-group d-flex flex-column justify-content-center">
+                                        <label for="uploadImg">Choisissez votre image de l'étage</label>
+                                        <input type="file" id="uploadImg">
+                                    </div>
+                                </div>
+                                <div class="col-sm align-self-center">
+                                    <div class="form-group">
+                                        <button type="submit" class="btn bg-olive margin">Ajouter</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="tab-pane" id="tab_3">
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                    Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+                    when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                    It has survived not only five centuries, but also the leap into electronic typesetting,
+                    remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset
+                    sheets containing Lorem Ipsum passages, and more recently with desktop publishing software
+                    like Aldus PageMaker including versions of Lorem Ipsum.
+                </div>
+                <div class="tab-pane" id="tab_4">
+                    sdgqsdg
+                </div>
+            </div>
         </div>
     </div>
-    <!-- /.box -->
+
 
 {% endblock %}
 
