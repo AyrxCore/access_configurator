@@ -2,7 +2,67 @@
 
 {% block content %}
 
-    <div>hello</div>
+    <div class="box">
+        <div class="box-header with-border">
+            <h3 class="box-title">Modèles</h3>
+        </div>
+        <!-- /.box-header -->
+        <div class="box-body">
+            <table class="table table-bordered">
+                <tr>
+                    <th>Nom du modèle</th>
+                    <th>Prix du modèle</th>
+                    <th>Description</th>
+                    <th>Image</th>
+                </tr>
+                {% for model in models %}
+                <tr>
+                    <td>{{ model.name }}</td>
+                    <td>{{ model.price }} €</td>
+                    <td>{{ model.description }}</td>
+                    <td><img class="imgModeleBase" src="{{ asset('images/modeles/' ~ model.img) }}"></td>
+                </tr>
+                {% endfor %}
+            </table>
+        </div>
+        <!-- /.box-body -->
+        <div class="box-footer clearfix">
+            <form role="form">
+                <div class="row">
+                    <div class="col-sm">
+                        <div class="form-group">
+                            <label for="name">Nom du modèle</label>
+                            <input id="name" type="text" class="form-control" placeholder="Nom">
+                        </div>
+                    </div>
+                    <div class="col-sm">
+                        <div class="form-group">
+                            <label for="price">Prix du modèle</label>
+                            <input id="price" type="number" class="form-control" placeholder="Prix">
+                        </div>
+                    </div>
+                    <div class="col-sm">
+                        <div class="form-group">
+                            <label for="description">Description du modèle</label>
+                            <input id="description" type="text" class="form-control" placeholder="Description">
+                        </div>
+                    </div>
+                    <div class="col-sm">
+                        <div class="form-group d-flex flex-column justify-content-center">
+                            <label for="uploadImg">Choisissez votre image</label>
+                            <input type="file" id="uploadImg">
+                        </div>
+                    </div>
+                    <div class="col-sm align-self-center">
+                        <div class="form-group">
+                            <button type="submit" class="btn bg-olive margin">Ajouter</button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <!-- /.box -->
 
 {% endblock %}
 

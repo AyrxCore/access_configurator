@@ -18,6 +18,16 @@
     color: black!important;
 }
 
+/*---------- ADMINISTRATION ----------*/
+
+#uploadImg{
+    margin: auto;
+}
+
+.imgModeleBase{
+    max-width: 400px;
+}
+
 /*---------- CONNEXION ----------*/
 
 .box-footer{
