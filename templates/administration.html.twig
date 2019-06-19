@@ -5,17 +5,18 @@
     <div class="col-md-auto py-4">
         <div class="nav-tabs-custom">
             <ul class="nav nav-tabs">
-                <li class="active title-tabs"><a href="#tab_1" data-toggle="tab">Modèles</a></li>
-                <li class="title-tabs"><a href="#tab_2" data-toggle="tab">Surfaces</a></li>
-                <li class="title-tabs"><a href="#tab_3" data-toggle="tab">Catégories</a></li>
-                <li class="title-tabs"><a href="#tab_4" data-toggle="tab">Options</a></li>
+                <li class="title-tabs"><a href="#tab_1" class="title-admin" data-toggle="tab">Modèles</a></li>
+                <li class="title-tabs"><a href="#tab_2" class="title-admin" data-toggle="tab">Surfaces</a></li>
+                <li class="title-tabs"><a href="#tab_3" class="title-admin" data-toggle="tab">Catégories</a></li>
+                <li class="title-tabs"><a href="#tab_4" class="title-admin" data-toggle="tab">Options</a></li>
             </ul>
             <div class="tab-content">
+                {#------- MODELES -------#}
                 <div class="tab-pane active" id="tab_1">
                     <table class="table table-bordered">
                         <tr>
-                            <th>Nom du modèle</th>
-                            <th>Prix du modèle</th>
+                            <th>Nom</th>
+                            <th>Prix</th>
                             <th>Description</th>
                             <th>Image</th>
                         </tr>
@@ -33,19 +34,19 @@
                             <div class="row">
                                 <div class="col-sm">
                                     <div class="form-group">
-                                        <label for="name">Nom du modèle</label>
+                                        <label for="name">Nom</label>
                                         <input id="name" type="text" class="form-control" placeholder="Nom">
                                     </div>
                                 </div>
                                 <div class="col-sm">
                                     <div class="form-group">
-                                        <label for="price">Prix du modèle</label>
+                                        <label for="price">Prix</label>
                                         <input id="price" type="number" class="form-control" placeholder="Prix">
                                     </div>
                                 </div>
                                 <div class="col-sm">
                                     <div class="form-group">
-                                        <label for="description">Description du modèle</label>
+                                        <label for="description">Description</label>
                                         <input id="description" type="text" class="form-control" placeholder="Description">
                                     </div>
                                 </div>
@@ -64,12 +65,13 @@
                         </form>
                     </div>
                 </div>
+                {#------- SURFACES -------#}
                 <div class="tab-pane" id="tab_2">
                     <table class="table table-bordered">
                         <tr>
-                            <th>Nom du modèle</th>
+                            <th>Nom</th>
                             <th>Surface</th>
-                            <th>Prix du modèle</th>
+                            <th>Prix</th>
                             <th>Description</th>
                             <th>Image</th>
                         </tr>
@@ -79,7 +81,7 @@
                                 <td>{{ size.surface }} m²</td>
                                 <td>{{ size.price }} €</td>
                                 <td>{{ size.description }}</td>
-                                <td><img class="imgModeleBase" src="{{ asset('images/modeles/' ~ size.imgRdc) }}"></td>
+                                <td><img class="imgModeleBase" src="{{ asset('images/size/' ~ size.imgRdc) }}"></td>
                             </tr>
                         {% endfor %}
                     </table>
@@ -88,7 +90,7 @@
                             <div class="row">
                                 <div class="col-sm">
                                     <div class="form-group">
-                                        <label for="name">Nom du modèle</label>
+                                        <label for="name">Nom</label>
                                         <input id="name" type="text" class="form-control" placeholder="Nom">
                                     </div>
                                 </div>
@@ -100,7 +102,7 @@
                                 </div>
                                 <div class="col-sm">
                                     <div class="form-group">
-                                        <label for="price">Prix de cette surface</label>
+                                        <label for="price">Prix</label>
                                         <input id="price" type="text" class="form-control" placeholder="Prix">
                                     </div>
                                 </div>
@@ -131,22 +133,89 @@
                         </form>
                     </div>
                 </div>
+                {#------- CATEGORIES -------#}
                 <div class="tab-pane" id="tab_3">
-                    Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                    Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
-                    when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-                    It has survived not only five centuries, but also the leap into electronic typesetting,
-                    remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset
-                    sheets containing Lorem Ipsum passages, and more recently with desktop publishing software
-                    like Aldus PageMaker including versions of Lorem Ipsum.
+                    <table class="table table-bordered">
+                        <tr>
+                            <th>Nom</th>
+                        </tr>
+                        {% for categorie in categories %}
+                            <tr>
+                                <td>{{ categorie.name }}</td>
+                            </tr>
+                        {% endfor %}
+                    </table>
+                    <div class="box-footer clearfix">
+                        <form role="form">
+                            <div class="row">
+                                <div class="col-sm">
+                                    <div class="form-group">
+                                        <label for="name">Nom</label>
+                                        <input id="name" type="text" class="form-control" placeholder="Nom">
+                                    </div>
+                                </div>
+                                <div class="col-sm align-self-center">
+                                    <div class="form-group">
+                                        <button type="submit" class="btn bg-olive margin">Ajouter</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
                 </div>
+                {#------- OPTIONS -------#}
                 <div class="tab-pane" id="tab_4">
-                    sdgqsdg
+                    <table class="table table-bordered">
+                        <tr>
+                            <th>Nom</th>
+                            <th>Prix</th>
+                        </tr>
+                        {% for option in options %}
+                            <tr>
+                                <td>{{ option.name }}</td>
+                                <td>{{ option.price }} €</td>
+                            </tr>
+                        {% endfor %}
+                    </table>
+                    <div class="box-footer clearfix">
+                        <form role="form">
+                            <div class="row">
+                                <div class="col-sm">
+                                    <div class="form-group">
+                                        <label for="name">Nom</label>
+                                        <input id="name" type="text" class="form-control" placeholder="Nom">
+                                    </div>
+                                </div>
+                                <div class="col-sm">
+                                    <div class="form-group">
+                                        <label for="price">Prix</label>
+                                        <input id="price" type="number" class="form-control" placeholder="Prix">
+                                    </div>
+                                </div>
+                                <div class="col-sm align-self-center">
+                                    <div class="form-group">
+                                        <button type="submit" class="btn bg-olive margin">Ajouter</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 
+    <script>
+
+        $(document).ready(function() {
+
+            $('.title-admin').on('click', function(){
+                console.log($(this))
+            })
+
+        });
+
+    </script>
 
 {% endblock %}
 
