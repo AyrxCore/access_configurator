@@ -5,7 +5,7 @@
     <div class="col-md-auto py-4">
         <div class="nav-tabs-custom">
             <ul class="nav nav-tabs">
-                <li class="title-tabs"><a href="#tab_1" class="title-admin" data-toggle="tab">Modèles</a></li>
+                <li class="title-tabs active"><a href="#tab_1" class="title-admin" data-toggle="tab">Modèles</a></li>
                 <li class="title-tabs"><a href="#tab_2" class="title-admin" data-toggle="tab">Surfaces</a></li>
                 <li class="title-tabs"><a href="#tab_3" class="title-admin" data-toggle="tab">Catégories</a></li>
                 <li class="title-tabs"><a href="#tab_4" class="title-admin" data-toggle="tab">Options</a></li>
@@ -210,7 +210,30 @@
         $(document).ready(function() {
 
             $('.title-admin').on('click', function(){
-                console.log($(this))
+                $('.title-tabs').removeClass('active');
+                $(this).parents('.title-tabs').addClass('active');
+            })
+
+            $('button:submit').on('click', function(e){
+
+                e.preventDefault();
+
+                var thisButton = $(this);
+                var formData = new FormData();
+
+                $.ajax({
+                    type: 'POST',
+                    url: '{{ path('edit_elements') }}',
+                    data: formData,
+                    processData: false,
+                    contentType: false
+                })
+                    .done(function (data) {
+                        alert(data)
+                    })
+                    .fail(function () {
+                        alert('fail')
+                    });
             })
 
         });

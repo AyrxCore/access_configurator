@@ -29,6 +29,26 @@
 
         {% endblock %}
 
+        {%  block javascripts %}
+
+            {#--- JQUERY ---#}
+            <script
+                    src="https://code.jquery.com/jquery-3.4.1.min.js"
+                    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+                    crossorigin="anonymous"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+
+            {#--- BOOTSTRAP ---#}
+            <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+            {#--- ADMIN LTE JS ---#}
+            <script src="{{ asset('theme/AdminLTE/dist/js/app.min.js') }}"></script>
+            <script src="{{ asset('theme/AdminLTE/dist/js/demo.js') }}"></script>
+            <script src="{{ asset('theme/AdminLTE/dist/js/adminlte.min.js') }}"></script>
+            <script src="{{ asset('theme/AdminLTE/dist/js/fastclick.js') }}"></script>
+
+        {% endblock %}
+
     </head>
 
     <body class="hold-transition skin-blue sidebar-mini">
@@ -128,27 +148,6 @@
 
     </div>
     <!-- /.tab-pane -->
-    </div>
-    {%  block javascripts %}
-
-        {#--- JQUERY ---#}
-        <script
-                src="https://code.jquery.com/jquery-3.4.1.js"
-                integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
-                crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-
-        {#--- BOOTSTRAP ---#}
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-
-        {#--- ADMIN LTE JS ---#}
-        <script src="{{ asset('theme/AdminLTE/dist/js/app.min.js') }}"></script>
-        <script src="{{ asset('theme/AdminLTE/dist/js/demo.js') }}"></script>
-        <script src="{{ asset('theme/AdminLTE/dist/js/adminlte.min.js') }}"></script>
-        <script src="{{ asset('theme/AdminLTE/dist/js/fastclick.js') }}"></script>
-
-
-    {% endblock %}
 
     </body>
 
