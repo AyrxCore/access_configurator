@@ -14,9 +14,9 @@ class EditController extends AbstractController
      */
     public function editElements()
     {
-        $test = 'hello';
+        dump($_POST);
         
-        return new JsonResponse($test);
+        return new JsonResponse($_POST);
     }
     
 }
