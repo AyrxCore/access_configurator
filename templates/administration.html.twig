@@ -194,7 +194,7 @@
                                 </div>
                                 <div class="col-sm align-self-center">
                                     <div class="form-group">
-                                        <input type="submit" class="btn bg-olive margin">Ajoyuter</input>
+                                        <button type="submit" class="btn bg-olive margin">Ajouter</button>
                                     </div>
                                 </div>
                             </div>
@@ -214,11 +214,24 @@
                 $(this).parents('.title-tabs').addClass('active');
             });
 
-            $('.form-edit').submit(function(e){
+            $('form').submit(function (e) {
+                e.preventDefault();
 
-                console.log('hello')
+                var formData = new FormData();
 
-            });
+                console.log(formData)
+                $.ajax({
+                    type: "POST",
+                    url: '{{ path('edit_elements') }}',
+                    data: form.serialize(), // serializes the form's elements.
+                    contentType: false,
+                    processData: false,
+                    success: function(data)
+                    {
+                        console.log(data); // show response from the php script.
+                    }
+                });
+            })
 
         });
 
