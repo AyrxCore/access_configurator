@@ -30,7 +30,7 @@
                         {% endfor %}
                     </table>
                     <div class="box-footer clearfix">
-                        <form role="form">
+                        <form role="form" class="form-edit">
                             <div class="row">
                                 <div class="col-sm">
                                     <div class="form-group">
@@ -214,11 +214,11 @@
                 $(this).parents('.title-tabs').addClass('active');
             });
 
-            $('form').submit(function (e) {
+            $('.btn.bg-olive').on('click',function (e) {
                 e.preventDefault();
-
+                var form = $(this).parents('.form-edit');
                 var formData = new FormData();
-
+                formData.append(form)
                 console.log(formData)
                 $.ajax({
                     type: "POST",

@@ -31,6 +31,7 @@ class SecurityController extends AbstractController
 
     /**
      * @Route("/admin", name="admin")
+     * @param EntityManagerInterface $em
      * @return Response
      */
     public function administration(EntityManagerInterface $em){
@@ -40,7 +41,7 @@ class SecurityController extends AbstractController
         $categories = $em->getRepository(Category::class)->findAll();
         $options = $em->getRepository(Options::class)->findAll();
         
-        return $this->render('administration.html.twig', [
+        return $this->render('admin/administration.html.twig', [
             'models' => $models,
             'sizes' => $sizes,
             'categories' => $categories,
