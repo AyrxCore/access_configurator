@@ -1,0 +1,29 @@
+<div class="tab-pane" id="tab_3">
+    <table class="table table-bordered">
+        <tr>
+            <th>Nom</th>
+        </tr>
+        {% for categorie in categories %}
+            <tr>
+                <td>{{ categorie.name }}</td>
+            </tr>
+        {% endfor %}
+    </table>
+    <div class="box-footer clearfix">
+        <form role="form">
+            <div class="row">
+                <div class="col-sm">
+                    <div class="form-group">
+                        <label for="name">Nom</label>
+                        <input id="name" type="text" class="form-control" placeholder="Nom">
+                    </div>
+                </div>
+                <div class="col-sm align-self-center">
+                    <div class="form-group">
+                        <button type="submit" class="btn bg-olive margin" data-type="categories">Ajouter</button>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

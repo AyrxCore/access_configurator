@@ -1,0 +1,67 @@
+<div class="tab-pane" id="tab_2">
+    <table class="table table-bordered">
+        <tr>
+            <th>Nom</th>
+            <th>Surface</th>
+            <th>Prix</th>
+            <th>Description</th>
+            <th>Image</th>
+        </tr>
+        {% for size in sizes %}
+            <tr>
+                <td>{{ size.name }}</td>
+                <td>{{ size.surface }} m²</td>
+                <td>{{ size.price }} €</td>
+                <td>{{ size.description }}</td>
+                <td><img class="imgModeleBase" src="{{ asset('images/size/' ~ size.imgRdc) }}"></td>
+            </tr>
+        {% endfor %}
+    </table>
+    <div class="box-footer clearfix">
+        <form role="form">
+            <div class="row">
+                <div class="col-sm">
+                    <div class="form-group">
+                        <label for="name">Nom</label>
+                        <input id="name" type="text" class="form-control" placeholder="Nom">
+                    </div>
+                </div>
+                <div class="col-sm">
+                    <div class="form-group">
+                        <label for="surface">Surface</label>
+                        <input id="surface" type="number" class="form-control" placeholder="Surface">
+                    </div>
+                </div>
+                <div class="col-sm">
+                    <div class="form-group">
+                        <label for="price">Prix</label>
+                        <input id="price" type="text" class="form-control" placeholder="Prix">
+                    </div>
+                </div>
+                <div class="col-sm">
+                    <div class="form-group">
+                        <label for="description">Description</label>
+                        <input id="description" type="text" class="form-control" placeholder="Description">
+                    </div>
+                </div>
+                <div class="col-sm">
+                    <div class="form-group d-flex flex-column justify-content-center">
+                        <label for="uploadImg">Choisissez votre image du RDC</label>
+                        <input type="file" id="uploadImg">
+                    </div>
+                </div>
+                <div class="col-sm">
+                    <div class="form-group d-flex flex-column justify-content-center">
+                        <label for="uploadImg">Choisissez votre image de l'étage</label>
+                        <input type="file" id="uploadImg">
+                    </div>
+                </div>
+                <div class="col-sm align-self-center">
+                    <div class="form-group">
+                        <button type="submit" class="btn bg-olive margin" data-type="surfaces">Ajouter</button>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

@@ -12,195 +12,13 @@
             </ul>
             <div class="tab-content">
                 {#------- MODELES -------#}
-                <div class="tab-pane active" id="tab_1">
-                    <table class="table table-bordered">
-                        <tr>
-                            <th>Nom</th>
-                            <th>Prix</th>
-                            <th>Description</th>
-                            <th>Image</th>
-                        </tr>
-                        {% for model in models %}
-                            <tr>
-                                <td>{{ model.name }}</td>
-                                <td>{{ model.price }} €</td>
-                                <td>{{ model.description }}</td>
-                                <td><img class="imgModeleBase" src="{{ asset('images/modeles/' ~ model.img) }}"></td>
-                            </tr>
-                        {% endfor %}
-                    </table>
-                    <div class="box-footer clearfix">
-                        <form role="form" class="form-edit">
-                            <div class="row">
-                                <div class="col-sm">
-                                    <div class="form-group">
-                                        <label for="name">Nom</label>
-                                        <input id="name" type="text" class="form-control" placeholder="Nom">
-                                    </div>
-                                </div>
-                                <div class="col-sm">
-                                    <div class="form-group">
-                                        <label for="price">Prix</label>
-                                        <input id="price" type="number" class="form-control" placeholder="Prix">
-                                    </div>
-                                </div>
-                                <div class="col-sm">
-                                    <div class="form-group">
-                                        <label for="description">Description</label>
-                                        <input id="description" type="text" class="form-control" placeholder="Description">
-                                    </div>
-                                </div>
-                                <div class="col-sm">
-                                    <div class="form-group d-flex flex-column justify-content-center">
-                                        <label for="uploadImg">Choisissez votre image</label>
-                                        <input type="file" id="uploadImg">
-                                    </div>
-                                </div>
-                                <div class="col-sm align-self-center">
-                                    <div class="form-group">
-                                        <button type="submit" class="btn bg-olive margin">Ajouter</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-                </div>
+                {% include 'admin/adminModeles.html.twig' %}
                 {#------- SURFACES -------#}
-                <div class="tab-pane" id="tab_2">
-                    <table class="table table-bordered">
-                        <tr>
-                            <th>Nom</th>
-                            <th>Surface</th>
-                            <th>Prix</th>
-                            <th>Description</th>
-                            <th>Image</th>
-                        </tr>
-                        {% for size in sizes %}
-                            <tr>
-                                <td>{{ size.name }}</td>
-                                <td>{{ size.surface }} m²</td>
-                                <td>{{ size.price }} €</td>
-                                <td>{{ size.description }}</td>
-                                <td><img class="imgModeleBase" src="{{ asset('images/size/' ~ size.imgRdc) }}"></td>
-                            </tr>
-                        {% endfor %}
-                    </table>
-                    <div class="box-footer clearfix">
-                        <form role="form">
-                            <div class="row">
-                                <div class="col-sm">
-                                    <div class="form-group">
-                                        <label for="name">Nom</label>
-                                        <input id="name" type="text" class="form-control" placeholder="Nom">
-                                    </div>
-                                </div>
-                                <div class="col-sm">
-                                    <div class="form-group">
-                                        <label for="surface">Surface</label>
-                                        <input id="surface" type="number" class="form-control" placeholder="Surface">
-                                    </div>
-                                </div>
-                                <div class="col-sm">
-                                    <div class="form-group">
-                                        <label for="price">Prix</label>
-                                        <input id="price" type="text" class="form-control" placeholder="Prix">
-                                    </div>
-                                </div>
-                                <div class="col-sm">
-                                    <div class="form-group">
-                                        <label for="description">Description</label>
-                                        <input id="description" type="text" class="form-control" placeholder="Description">
-                                    </div>
-                                </div>
-                                <div class="col-sm">
-                                    <div class="form-group d-flex flex-column justify-content-center">
-                                        <label for="uploadImg">Choisissez votre image du RDC</label>
-                                        <input type="file" id="uploadImg">
-                                    </div>
-                                </div>
-                                <div class="col-sm">
-                                    <div class="form-group d-flex flex-column justify-content-center">
-                                        <label for="uploadImg">Choisissez votre image de l'étage</label>
-                                        <input type="file" id="uploadImg">
-                                    </div>
-                                </div>
-                                <div class="col-sm align-self-center">
-                                    <div class="form-group">
-                                        <button type="submit" class="btn bg-olive margin">Ajouter</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-                </div>
+                {% include 'admin/adminSurfaces.html.twig' %}
                 {#------- CATEGORIES -------#}
-                <div class="tab-pane" id="tab_3">
-                    <table class="table table-bordered">
-                        <tr>
-                            <th>Nom</th>
-                        </tr>
-                        {% for categorie in categories %}
-                            <tr>
-                                <td>{{ categorie.name }}</td>
-                            </tr>
-                        {% endfor %}
-                    </table>
-                    <div class="box-footer clearfix">
-                        <form role="form">
-                            <div class="row">
-                                <div class="col-sm">
-                                    <div class="form-group">
-                                        <label for="name">Nom</label>
-                                        <input id="name" type="text" class="form-control" placeholder="Nom">
-                                    </div>
-                                </div>
-                                <div class="col-sm align-self-center">
-                                    <div class="form-group">
-                                        <button type="submit" class="btn bg-olive margin">Ajouter</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-                </div>
+                {% include 'admin/adminCategories.html.twig' %}
                 {#------- OPTIONS -------#}
-                <div class="tab-pane" id="tab_4">
-                    <table class="table table-bordered">
-                        <tr>
-                            <th>Nom</th>
-                            <th>Prix</th>
-                        </tr>
-                        {% for option in options %}
-                            <tr>
-                                <td>{{ option.name }}</td>
-                                <td>{{ option.price }} €</td>
-                            </tr>
-                        {% endfor %}
-                    </table>
-                    <div class="box-footer clearfix">
-                        <form role="form" class="form-edit">
-                            <div class="row">
-                                <div class="col-sm">
-                                    <div class="form-group">
-                                        <label for="name">Nom</label>
-                                        <input id="name" type="text" class="form-control" placeholder="Nom">
-                                    </div>
-                                </div>
-                                <div class="col-sm">
-                                    <div class="form-group">
-                                        <label for="price">Prix</label>
-                                        <input id="price" type="number" class="form-control" placeholder="Prix">
-                                    </div>
-                                </div>
-                                <div class="col-sm align-self-center">
-                                    <div class="form-group">
-                                        <button type="submit" class="btn bg-olive margin">Ajouter</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-                </div>
+                {% include 'admin/adminOptions.html.twig' %}
             </div>
         </div>
     </div>
@@ -215,15 +33,47 @@
             });
 
             $('.btn.bg-olive').on('click',function (e) {
+
                 e.preventDefault();
-                var form = $(this).parents('.form-edit');
-                var formData = new FormData();
-                formData.append(form)
-                console.log(formData)
+
+                let name = $(this).parents('.form-edit').find('#name').val();
+                let price = $(this).parents('.form-edit').find('#price').val();
+                let description = $(this).parents('.form-edit').find('#description').val();
+                let surface = $(this).parents('.form-edit').find('#surface').val();
+                let formData = new FormData();
+
+                if($(this).data('type') === 'modeles'){
+                    formData.append('type', 'modeles');
+                    formData.append('name', name);
+                    formData.append('price', price);
+                    formData.append('description', description);
+                    console.log(formData)
+                    console.log(name);
+                }
+
+                if($(this).data('type') === 'surfaces'){
+                    formData.append('type', 'surfaces');
+                    formData.append('name', name);
+                    formData.append('surface', surface);
+                    formData.append('price', price);
+                    formData.append('description', description);
+                }
+
+                if($(this).data('type') === 'categories'){
+                    formData.append('type', 'categories');
+                    formData.append('name', name);
+                }
+
+                if($(this).data('type') === 'options'){
+                    formData.append('type', 'options');
+                    formData.append('name', name);
+                    formData.append('price', price);
+                }
+
                 $.ajax({
                     type: "POST",
-                    url: '{{ path('edit_elements') }}',
-                    data: form.serialize(), // serializes the form's elements.
+                    url: '{{ path('add_element') }}',
+                    data: formData, // serializes the form's elements.
                     contentType: false,
                     processData: false,
                     success: function(data)

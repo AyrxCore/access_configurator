@@ -1,0 +1,53 @@
+<div class="tab-pane active" id="tab_1">
+    <table class="table table-bordered">
+        <tr>
+            <th>Nom</th>
+            <th>Prix</th>
+            <th>Description</th>
+            <th>Image</th>
+        </tr>
+        {% for model in models %}
+            <tr>
+                <td>{{ model.name }}</td>
+                <td>{{ model.price }} €</td>
+                <td>{{ model.description }}</td>
+                <td><img class="imgModeleBase" src="{{ asset('images/modeles/' ~ model.img) }}"></td>
+            </tr>
+        {% endfor %}
+    </table>
+    <div class="box-footer clearfix">
+        <form role="form" class="form-edit">
+            <div class="row">
+                <div class="col-sm">
+                    <div class="form-group">
+                        <label for="name">Nom</label>
+                        <input id="name" type="text" class="form-control" placeholder="Nom">
+                    </div>
+                </div>
+                <div class="col-sm">
+                    <div class="form-group">
+                        <label for="price">Prix</label>
+                        <input id="price" type="number" class="form-control" placeholder="Prix">
+                    </div>
+                </div>
+                <div class="col-sm">
+                    <div class="form-group">
+                        <label for="description">Description</label>
+                        <input id="description" type="text" class="form-control" placeholder="Description">
+                    </div>
+                </div>
+                <div class="col-sm">
+                    <div class="form-group d-flex flex-column justify-content-center">
+                        <label for="uploadImg">Choisissez votre image</label>
+                        <input type="file" id="uploadImg">
+                    </div>
+                </div>
+                <div class="col-sm align-self-center">
+                    <div class="form-group">
+                        <button type="submit" class="btn bg-olive margin" data-type="modeles">Ajouter</button>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
