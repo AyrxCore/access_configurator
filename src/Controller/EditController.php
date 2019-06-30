@@ -21,49 +21,48 @@ class EditController extends AbstractController
      * @param EntityManagerInterface $em
      * @return JsonResponse
      */
-    public function addElement(EntityManagerInterface $em)
+    public function addElement(Request $request, EntityManagerInterface $em)
     {
-        if($this->post('type') === 'modeles'){
+        $post = $request->request;
+
+        if($post->get('type') === 'modeles'){
             $model = new HouseModel();
-            $model->setName($this->post('name'));
-            $model->setPrice($this->post('price'));
-            $model->setDescription($this->post('description'));
+            $model->setName($post->get('name'));
+            $model->setPrice($post->get('price'));
+            $model->setDescription($post->get('description'));
             $em->persist($model);
             $em->flush();
         }
 
-        if($this->post('type') === 'surfaces'){
+        if($post->get('type') === 'surfaces'){
             $size = new HouseSize();
-            $size->setName($this->post('name'));
-            $size->setSurface($this->post('surface'));
-            $size->setPrice($this->post('price'));
-            $size->setDescription($this->post('description'));
+            $size->setName($post->get('name'));
+            $size->setSurface($post->get('surface'));
+            $size->setPrice($post->get('price'));
+            $size->setDescription($post->get('description'));
             $em->persist($size);
             $em->flush();
         }
 
-        if($this->post('type') === 'categories'){
+        if($post->get('type') === 'categories'){
             $category = new Category();
-            $category->setName($this->post('name'));
+            $category->setName($post->get('name'));
             $em->persist($category);
             $em->flush();
         }
 
-        if($this->post('type') === 'options'){
+        if($post->get('type') === 'options'){
             $option = new Options();
-            $option->setName($this->post('name'));
-            $option->setPrice($this->post('price'));
+            $option->setName($post->get('name'));
+            $option->setPrice($post->get('price'));
             $em->persist($option);
             $em->flush();
         }
-        
-        return new JsonResponse();
+        $data = $post;
+
+        dump($data);
+
+        return new JsonResponse($data);
     }
 
-    public function post($param)
-    {
-        $request = new Request();
-        return $request->request->get($param);
-    }
-    
 }

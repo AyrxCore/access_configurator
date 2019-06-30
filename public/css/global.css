@@ -34,6 +34,12 @@
     font-weight: bold;
 }
 
+.tab-admin td,
+.tab-admin th{
+    vertical-align: middle;
+    min-width: 6rem;
+}
+
 /*---------- CONNEXION ----------*/
 
 .box-footer{

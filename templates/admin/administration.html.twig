@@ -10,7 +10,7 @@
                 <li class="title-tabs"><a href="#tab_3" class="title-admin" data-toggle="tab">Catégories</a></li>
                 <li class="title-tabs"><a href="#tab_4" class="title-admin" data-toggle="tab">Options</a></li>
             </ul>
-            <div class="tab-content">
+            <div class="tab-content tab-admin">
                 {#------- MODELES -------#}
                 {% include 'admin/adminModeles.html.twig' %}
                 {#------- SURFACES -------#}
@@ -47,8 +47,6 @@
                     formData.append('name', name);
                     formData.append('price', price);
                     formData.append('description', description);
-                    console.log(formData)
-                    console.log(name);
                 }
 
                 if($(this).data('type') === 'surfaces'){
@@ -79,6 +77,7 @@
                     success: function(data)
                     {
                         console.log(data); // show response from the php script.
+
                     }
                 });
             })
