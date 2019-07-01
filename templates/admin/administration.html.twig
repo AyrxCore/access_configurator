@@ -24,67 +24,9 @@
     </div>
 
     <script>
-
-        $(document).ready(function() {
-
-            $('.title-admin').on('click', function(){
-                $('.title-tabs').removeClass('active');
-                $(this).parents('.title-tabs').addClass('active');
-            });
-
-            $('.btn.bg-olive').on('click',function (e) {
-
-                e.preventDefault();
-
-                let name = $(this).parents('.form-edit').find('#name').val();
-                let price = $(this).parents('.form-edit').find('#price').val();
-                let description = $(this).parents('.form-edit').find('#description').val();
-                let surface = $(this).parents('.form-edit').find('#surface').val();
-                let formData = new FormData();
-
-                if($(this).data('type') === 'modeles'){
-                    formData.append('type', 'modeles');
-                    formData.append('name', name);
-                    formData.append('price', price);
-                    formData.append('description', description);
-                }
-
-                if($(this).data('type') === 'surfaces'){
-                    formData.append('type', 'surfaces');
-                    formData.append('name', name);
-                    formData.append('surface', surface);
-                    formData.append('price', price);
-                    formData.append('description', description);
-                }
-
-                if($(this).data('type') === 'categories'){
-                    formData.append('type', 'categories');
-                    formData.append('name', name);
-                }
-
-                if($(this).data('type') === 'options'){
-                    formData.append('type', 'options');
-                    formData.append('name', name);
-                    formData.append('price', price);
-                }
-
-                $.ajax({
-                    type: "POST",
-                    url: '{{ path('add_element') }}',
-                    data: formData, // serializes the form's elements.
-                    contentType: false,
-                    processData: false,
-                    success: function(data)
-                    {
-                        console.log(data); // show response from the php script.
-
-                    }
-                });
-            })
-
-        });
-
+        var route_admin = "{{ path('add_element') }}";
     </script>
+    <script type="text/javascript" src="{{ asset('js/administration.js') }}"></script>
 
 {% endblock %}
 

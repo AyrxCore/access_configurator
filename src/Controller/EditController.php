@@ -24,6 +24,12 @@ class EditController extends AbstractController
     public function addElement(Request $request, EntityManagerInterface $em)
     {
         $post = $request->request;
+        $data = [];
+        
+        foreach ($post as $key => $value){
+            $data[$key] = $value;
+        }
+        dump($post);
 
         if($post->get('type') === 'modeles'){
             $model = new HouseModel();
@@ -58,9 +64,6 @@ class EditController extends AbstractController
             $em->persist($option);
             $em->flush();
         }
-        $data = $post;
-
-        dump($data);
 
         return new JsonResponse($data);
     }
