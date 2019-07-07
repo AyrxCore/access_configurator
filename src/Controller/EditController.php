@@ -6,15 +6,49 @@ use App\Entity\Category;
 use App\Entity\HouseModel;
 use App\Entity\HouseSize;
 use App\Entity\Options;
+use App\Form\CategoryType;
+use App\Form\HouseModelType;
+use App\Form\HouseSizeType;
+use App\Form\OptionsType;
 use Doctrine\ORM\EntityManagerInterface;
 
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
 class EditController extends AbstractController
 {
+    /**
+     * @Route("/admin", name="admin")
+     * @param EntityManagerInterface $em
+     * @return Response
+     */
+    public function administration(EntityManagerInterface $em){
+
+        $models = $em->getRepository(HouseModel::class)->findAll();
+        $sizes = $em->getRepository(HouseSize::class)->findAll();
+        $categories = $em->getRepository(Category::class)->findAll();
+        $options = $em->getRepository(Options::class)->findAll();
+
+        $formModel = $this->createForm(HouseModelType::class);
+        $formSize = $this->createForm(HouseSizeType::class);
+        $formCategory = $this->createForm(CategoryType::class);
+        $formOptions = $this->createForm(OptionsType::class);
+
+        return $this->render('admin/administration.html.twig', [
+            'models' => $models,
+            'sizes' => $sizes,
+            'categories' => $categories,
+            'options' => $options,
+            'formModel' => $formModel->createView(),
+            'formSize' => $formSize->createView(),
+            'formCategory' => $formCategory->createView(),
+            'formOptions' => $formOptions->createView()
+        ]);
+    }
+
     /**
      * @Route("/add_element", name="add_element")
      * @param Request $request
@@ -29,43 +63,67 @@ class EditController extends AbstractController
         foreach ($post as $key => $value){
             $data[$key] = $value;
         }
-        dump($post);
 
         if($post->get('type') === 'modeles'){
-            $model = new HouseModel();
-            $model->setName($post->get('name'));
-            $model->setPrice($post->get('price'));
-            $model->setDescription($post->get('description'));
-            $em->persist($model);
-            $em->flush();
+            $entity = new HouseModel();
+            $entity->setName($post->get('house_model')['name']);
+            $entity->setPrice($post->get('house_model')['price']);
+            $entity->setDescription($post->get('house_model')['description']);
         }
 
         if($post->get('type') === 'surfaces'){
-            $size = new HouseSize();
-            $size->setName($post->get('name'));
-            $size->setSurface($post->get('surface'));
-            $size->setPrice($post->get('price'));
-            $size->setDescription($post->get('description'));
-            $em->persist($size);
-            $em->flush();
+            $entity = new HouseSize();
+            $entity->setName($post->get('house_size')['name']);
+            $entity->setSurface($post->get('house_size')['surface']);
+            $entity->setPrice($post->get('house_size')['price']);
+            $entity->setDescription($post->get('house_size')['description']);
         }
 
         if($post->get('type') === 'categories'){
-            $category = new Category();
-            $category->setName($post->get('name'));
-            $em->persist($category);
-            $em->flush();
+            $entity = new Category();
+            $entity->setName($post->get('category')['name']);
         }
 
         if($post->get('type') === 'options'){
-            $option = new Options();
-            $option->setName($post->get('name'));
-            $option->setPrice($post->get('price'));
-            $em->persist($option);
-            $em->flush();
+            $entity = new Options();
+            $entity->setName($post->get('options')['name']);
+            $entity->setPrice($post->get('options')['price']);
         }
 
+        $em->persist($entity);
+        $em->flush();
+
         return new JsonResponse($data);
+    }
+
+    /**
+     * @Route("/supp_element", name="supp_element")
+     * @param Request $request
+     * @param EntityManagerInterface $em
+     * @return JsonResponse
+     */
+    public function suppElement(Request $request, EntityManagerInterface $em)
+    {
+        $post = $request->request;
+
+        if($post->get('type') === 'modeles'){
+            $selectElement = $em->getRepository(HouseModel::class)->findOneBy($post->get('id'));
+            dump($selectElement);
+        }
+
+//        if($post->get('type') === 'surfaces'){
+//
+//        }
+//
+//        if($post->get('type') === 'categories'){
+//
+//        }
+//
+//        if($post->get('type') === 'options'){
+//
+//        }
+
+        return new JsonResponse();
     }
 
 }

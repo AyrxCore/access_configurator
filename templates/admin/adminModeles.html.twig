@@ -5,6 +5,7 @@
             <th>Prix</th>
             <th>Description</th>
             <th>Image</th>
+            <th>Actions</th>
         </tr>
         {% for model in models %}
             <tr>
@@ -12,39 +13,41 @@
                 <td>{{ model.price }} €</td>
                 <td>{{ model.description }}</td>
                 <td><img class="imgModeleBase" src="{{ asset('images/modeles/' ~ model.img) }}"></td>
+                <td>
+                    <button class="trash-element"><i class="fas fa-trash-alt"></i></button>
+                    <button class="edit-element"><i class="fas fa-edit"></i></button>
+                </td>
+                <input class="action-id" type="hidden" value="{{ model.id }}">
             </tr>
         {% endfor %}
     </table>
     <div class="box-footer clearfix">
-        <form role="form" class="form-edit" id="truc">
+        <form role="form" id="form-admin">
             <div class="row">
                 <div class="col-sm">
                     <div class="form-group">
-                        <label for="name">Nom</label>
-                        <input id="name" type="text" class="form-control" placeholder="Nom">
+                        {{ form_row(formModel.name) }}
                     </div>
                 </div>
                 <div class="col-sm">
                     <div class="form-group">
-                        <label for="price">Prix</label>
-                        <input id="price" type="number" class="form-control" placeholder="Prix">
+                        {{ form_row(formModel.price) }}
                     </div>
                 </div>
                 <div class="col-sm">
                     <div class="form-group">
-                        <label for="description">Description</label>
-                        <input id="description" type="text" class="form-control" placeholder="Description">
+                        {{ form_row(formModel.description) }}
                     </div>
                 </div>
-                <div class="col-sm">
-                    <div class="form-group d-flex flex-column justify-content-center">
-                        <label for="uploadImg">Choisissez votre image</label>
-                        <input type="file" id="uploadImg">
-                    </div>
-                </div>
+{#                <div class="col-sm">#}
+{#                    <div class="form-group d-flex flex-column justify-content-center">#}
+{#                        <label for="uploadImg">Choisissez votre image</label>#}
+{#                        <input type="file" id="uploadImg">#}
+{#                    </div>#}
+{#                </div>#}
                 <div class="col-sm align-self-center">
                     <div class="form-group">
-                        <button type="submit" class="btn bg-olive margin" data-type="modeles">Ajouter</button>
+                        <button type="submit" class="btn bg-olive margin add-element" data-type="modeles">Ajouter</button>
                     </div>
                 </div>
             </div>

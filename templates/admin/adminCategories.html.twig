@@ -2,25 +2,30 @@
     <table class="table table-bordered category-list">
         <tr>
             <th>Nom</th>
+            <th>Actions</th>
         </tr>
         {% for categorie in categories %}
+            <input type="hidden" value="{{ categorie.id }}">
             <tr>
                 <td>{{ categorie.name }}</td>
+                <td>
+                    <button><i class="fas fa-trash-alt"></i></button>
+                    <button><i class="fas fa-edit"></i></button>
+                </td>
             </tr>
         {% endfor %}
     </table>
     <div class="box-footer clearfix">
-        <form role="form" class="form-edit">
+        <form role="form" id="form-admin">
             <div class="row">
                 <div class="col-sm">
                     <div class="form-group">
-                        <label for="name">Nom</label>
-                        <input id="name" type="text" class="form-control" placeholder="Nom">
+                        {{ form_row(formCategory.name) }}
                     </div>
                 </div>
                 <div class="col-sm align-self-center">
                     <div class="form-group">
-                        <button type="submit" class="btn bg-olive margin" data-type="categories">Ajouter</button>
+                        <button type="submit" class="btn bg-olive margin add-element" data-type="categories">Ajouter</button>
                     </div>
                 </div>
             </div>
