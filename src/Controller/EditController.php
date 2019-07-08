@@ -89,9 +89,11 @@ class EditController extends AbstractController
             $entity->setName($post->get('options')['name']);
             $entity->setPrice($post->get('options')['price']);
         }
-
+        
         $em->persist($entity);
         $em->flush();
+    
+        $data['id'] = $entity->getId();
 
         return new JsonResponse($data);
     }
@@ -107,21 +109,23 @@ class EditController extends AbstractController
         $post = $request->request;
 
         if($post->get('type') === 'modeles'){
-            $selectElement = $em->getRepository(HouseModel::class)->findOneBy($post->get('id'));
-            dump($selectElement);
+            $selectElement = $em->getRepository(HouseModel::class)->find($post->get('id'));
         }
 
-//        if($post->get('type') === 'surfaces'){
-//
-//        }
-//
-//        if($post->get('type') === 'categories'){
-//
-//        }
-//
-//        if($post->get('type') === 'options'){
-//
-//        }
+        if($post->get('type') === 'surfaces'){
+            $selectElement = $em->getRepository(HouseSize::class)->find($post->get('id'));
+        }
+
+        if($post->get('type') === 'categories'){
+            $selectElement = $em->getRepository(Category::class)->find($post->get('id'));
+        }
+
+        if($post->get('type') === 'options'){
+            $selectElement = $em->getRepository(Options::class)->find($post->get('id'));
+        }
+        
+        $em->remove($selectElement);
+        $em->flush();
 
         return new JsonResponse();
     }
