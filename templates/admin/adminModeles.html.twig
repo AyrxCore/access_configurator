@@ -9,11 +9,11 @@
         </tr>
         {% for model in models %}
             <tr>
-                <td>{{ model.name }}</td>
+                <td><a href="#" id="name">{{ model.name }}</a></td>
                 <td>{{ model.price }} €</td>
                 <td>{{ model.description }}</td>
                 <td><img class="imgModeleBase" src="{{ asset('images/modeles/' ~ model.img) }}"></td>
-                <td>
+                <td class="list-actions">
                     <button class="trash-element"><i class="fas fa-trash-alt"></i></button>
                     <button class="edit-element"><i class="fas fa-edit"></i></button>
                 </td>

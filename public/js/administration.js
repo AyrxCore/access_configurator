@@ -46,14 +46,14 @@ $(document).ready(function() {
         });
     });
 
-    $('.trash-element').on('click', function () {
+    $('.model-list').on('click', '.trash-element', function () {
+
+        let thisButton = $(this);
+
+        let idToSupp = thisButton.parents('tr').find('.action-id').val();
+        let typeEntity = thisButton.parents('.tab-pane').find('.add-element').data('type');
 
         if(confirm('Voulez-vous supprimer cet élément ?')){
-
-            let thisButton = $(this);
-
-            let idToSupp = thisButton.parents('tr').find('.action-id').val();
-            let typeEntity = thisButton.parents('.tab-pane').find('.add-element').data('type');
 
             $.post(
                 route_supp_element,
@@ -65,5 +65,13 @@ $(document).ready(function() {
         else {
             return false;
         }
-    })
+    });
+
+    $('#name').editable({
+        type: 'text',
+        pk: $(this).find('.action-id').val(),
+        url: '/post',
+        title: 'Modifier le nom du modèle'
+    });
+
 });

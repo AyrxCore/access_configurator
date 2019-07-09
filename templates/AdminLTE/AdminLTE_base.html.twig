@@ -27,6 +27,9 @@
             {#--- CSS PRINCIPAL ---#}
             <link rel="stylesheet" href="{{ asset('css/global.css') }}">
 
+            {#--- X-EDITABLE ---#}
+            <link href="//cdnjs.cloudflare.com/ajax/libs/x-editable/1.5.0/bootstrap3-editable/css/bootstrap-editable.css" rel="stylesheet"/>
+
         {% endblock %}
 
         {%  block javascripts %}
@@ -46,6 +49,9 @@
             <script src="{{ asset('theme/AdminLTE/dist/js/demo.js') }}"></script>
             <script src="{{ asset('theme/AdminLTE/dist/js/adminlte.min.js') }}"></script>
             <script src="{{ asset('theme/AdminLTE/dist/js/fastclick.js') }}"></script>
+
+            {#--- X-EDITABLE ---#}
+            <script src="{{ asset('js/bootstrap-editable.min.js') }}"></script>
 
         {% endblock %}
 
