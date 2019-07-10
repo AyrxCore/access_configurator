@@ -24,22 +24,22 @@ $(document).ready(function() {
             {
                 console.log(data)
                 if(data['type'] === 'modeles'){
-                    let element = "<tr><td>"+ data.house_model.name +"</td><td>"+ data.house_model.price +" €</td><td>"+ data.house_model.description +"</td><td><img class=\"imgModeleBase\" src=\"#\"></td><td><button class=\"trash-element\"><i class=\"fas fa-trash-alt\"></i></button><button class=\"edit-element\"><i class=\"fas fa-edit\"></i></button></td><input class=\"action-id\" type=\"hidden\" value="+ data.id +"></tr>";
+                    let element = "<tr><td><a href=\"#\" class=\"name\">"+ data.house_model.name +"</a></td><td><a href=\"#\" class=\"price\">"+ data.house_model.price +" €</a></td><td><a href=\"#\" class=\"description\">"+ data.house_model.description +"</a></td><td><img class=\"imgModeleBase\" src=\"#\"></td><td class='list-actions'><button class=\"trash-element\"><i class=\"fas fa-trash-alt\"></i></button></td><input class=\"action-id\" type=\"hidden\" value="+ data.id +"></tr>";
                     thisButton.parents('.tab-pane.active').find('.model-list').append(element);
                 }
 
                 if(data['type'] === 'surfaces'){
-                    let element = "<tr><td>"+ data.house_size.name +"</td><td>"+ data.house_size.surface +"</td><td>"+ data.house_size.price +" €</td><td>"+ data.house_size.description +"</td><td><img class=\"imgModeleBase\" src=\"#\"></td><td><button class=\"trash-element\"><i class=\"fas fa-trash-alt\"></i></button><button class=\"edit-element\"><i class=\"fas fa-edit\"></i></button></td><input class=\"action-id\" type=\"hidden\" value="+ data.id +"></tr>";
+                    let element = "<tr><td><a href=\"#\" class=\"name\">"+ data.house_size.name +"</a></td><td><a href=\"#\" class=\"surface\">"+ data.house_size.surface +" m²</a></td><td><a href=\"#\" class=\"price\">"+ data.house_size.price +"</a> €</td><td><a href=\"#\" class=\"description\">"+ data.house_size.description +"</a></td><td><img class=\"imgModeleBase\" src=\"#\"></td><td class='list-actions'><button class=\"trash-element\"><i class=\"fas fa-trash-alt\"></i></button></td><input class=\"action-id\" type=\"hidden\" value="+ data.id +"></tr>";
                     thisButton.parents('.tab-pane.active').find('.surface-list').append(element);
                 }
 
                 if(data['type'] === 'categories'){
-                    let element = "<tr><td>"+ data.category.name +"</td><td><button class=\"trash-element\"><i class=\"fas fa-trash-alt\"></i></button><button class=\"edit-element\"><i class=\"fas fa-edit\"></i></button></td><input class=\"action-id\" type=\"hidden\" value="+ data.id +"></tr>";
+                    let element = "<tr><td><a href=\"#\" class=\"name\">"+ data.category.name +"</a></td><td class='list-actions'><button class=\"trash-element\"><i class=\"fas fa-trash-alt\"></i></button></td><input class=\"action-id\" type=\"hidden\" value="+ data.id +"></tr>";
                     thisButton.parents('.tab-pane.active').find('.category-list').append(element);
                 }
 
                 if(data['type'] === 'options'){
-                    let element = "<tr><td>"+ data.options.name +"</td><td>"+ data.options.price +" €</td><td><button class=\"trash-element\"><i class=\"fas fa-trash-alt\"></i></button><button class=\"edit-element\"><i class=\"fas fa-edit\"></i></button></td><input class=\"action-id\" type=\"hidden\" value="+ data.id +"></tr>";
+                    let element = "<tr><td><a href=\"#\" class=\"name\">"+ data.options.name +"</a></td><td><a href=\"#\" class=\"price\">"+ data.options.price +" €</a></td><td><a href=\"#\" class=\"description\">"+ data.options.description +"</a></td><td class='list-actions'><button class=\"trash-element\"><i class=\"fas fa-trash-alt\"></i></button></td><input class=\"action-id\" type=\"hidden\" value="+ data.id +"></tr>";
                     thisButton.parents('.tab-pane.active').find('.option-list').append(element);
                 }
             }

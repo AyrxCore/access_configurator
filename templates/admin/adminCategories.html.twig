@@ -1,16 +1,16 @@
 <div class="tab-pane" id="tab_3">
     <table class="table table-bordered category-list">
         <tr>
-            <th>Nom</th>
-            <th>Actions</th>
+            <th style="width: 50%;">Nom</th>
+            <th style="width: 50%;">Actions</th>
         </tr>
         {% for categorie in categories %}
-            <input type="hidden" value="{{ categorie.id }}">
             <tr>
                 <td><a href="#" class="name">{{ categorie.name }}</a> <i class="fas fa-pen-alt min-size"></i></td>
-                <td>
+                <td class="list-actions">
                     <button><i class="fas fa-trash-alt"></i></button>
                 </td>
+                <input class="action-id" type="hidden" value="{{ categorie.id }}">
             </tr>
         {% endfor %}
     </table>

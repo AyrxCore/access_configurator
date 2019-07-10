@@ -1,16 +1,16 @@
 <div class="tab-pane active" id="tab_1">
     <table class="table table-bordered model-list">
         <tr>
-            <th>Nom</th>
-            <th>Prix</th>
-            <th>Description</th>
-            <th>Image</th>
-            <th>Actions</th>
+            <th style="width: 10%;">Nom</th>
+            <th style="width: 10%;">Prix</th>
+            <th style="width: 30%;">Description</th>
+            <th style="width: 15%;">Image</th>
+            <th style="width: 5%;">Actions</th>
         </tr>
         {% for model in models %}
             <tr>
                 <td><a href="#" class="name">{{ model.name }}</a> <i class="fas fa-pen-alt min-size"></i></td>
-                <td><a href="#" class="price">{{ model.price }}</a> € <i class="fas fa-pen-alt min-size"></i></td>
+                <td><a href="#" class="price">{{ model.price }} € </a><i class="fas fa-pen-alt min-size"></i></td>
                 <td><a href="#" class="description">{{ model.description }}</a> <i class="fas fa-pen-alt min-size"></i></td>
                 <td><img class="imgModeleBase" src="{{ asset('images/modeles/' ~ model.img) }}"></td>
                 <td class="list-actions">

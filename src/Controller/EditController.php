@@ -130,4 +130,52 @@ class EditController extends AbstractController
         return new JsonResponse();
     }
 
+    /**
+     * @Route("/edit_element", name="edit_element")
+     * @param Request $request
+     * @param EntityManagerInterface $em
+     * @return JsonResponse
+     */
+    public function editElement(Request $request, EntityManagerInterface $em)
+    {
+        $post = $request->request;
+        $data = [];
+
+        if($post->get('type') === 'modeles'){
+            $selectElement = $em->getRepository(HouseModel::class)->find($post->get('id'));
+        }
+
+        if($post->get('type') === 'surfaces'){
+            $selectElement = $em->getRepository(HouseSize::class)->find($post->get('id'));
+        }
+
+        if($post->get('type') === 'categories'){
+            $selectElement = $em->getRepository(Category::class)->find($post->get('id'));
+        }
+
+        if($post->get('type') === 'options'){
+            $selectElement = $em->getRepository(Options::class)->find($post->get('id'));
+        }
+
+        switch ($post->get('name')) {
+            case 'name':
+                $selectElement->setName($post->get('value'));
+                break;
+            case 'description':
+                $selectElement->setDescription($post->get('value'));
+                break;
+            case 'price':
+                $selectElement->setPrice($post->get('value'));
+                break;
+            case 'surface':
+                $selectElement->setSurface($post->get('value'));
+                break;
+        };
+
+        $em->persist($selectElement);
+        $em->flush();
+
+        return new JsonResponse($data);
+    }
+
 }

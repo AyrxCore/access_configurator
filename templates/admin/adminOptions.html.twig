@@ -1,19 +1,20 @@
 <div class="tab-pane" id="tab_4">
     <table class="table table-bordered option-list">
         <tr>
-            <th>Nom</th>
-            <th>Prix</th>
-            <th>Actions</th>
+            <th style="width: 10%;">Nom</th>
+            <th style="width: 10%;">Prix</th>
+            <th style="width: 30%;">Description</th>
+            <th style="width: 5%;">Actions</th>
         </tr>
         {% for option in options %}
-            <input type="hidden" value="{{ option.id }}">
             <tr>
                 <td><a href="#" class="name">{{ option.name }}</a> <i class="fas fa-pen-alt min-size"></i></td>
-                <td><a href="#" class="price">{{ option.price }}</a> € <i class="fas fa-pen-alt min-size"></i></td>
+                <td><a href="#" class="price">{{ option.price }} €</a> <i class="fas fa-pen-alt min-size"></i></td>
                 <td><a href="#" class="description">{{ option.description }}</a> <i class="fas fa-pen-alt min-size"></i></td>
                 <td class="list-actions">
                     <button class="trash-element"><i class="fas fa-trash-alt"></i></button>
                 </td>
+                <input class="action-id" type="hidden" value="{{ option.id }}">
             </tr>
         {% endfor %}
     </table>

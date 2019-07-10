@@ -1,6 +1,4 @@
-.editable-click,
-a.editable-click,
 a.editable-click:hover {
-    border: none!important;
-    color: #444!important;
+    text-decoration: none;
+    border-bottom: none;
 }

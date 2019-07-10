@@ -37,7 +37,6 @@
 .tab-admin td,
 .tab-admin th{
     vertical-align: middle;
-    min-width: 6rem;
 }
 
 .min-size{
@@ -46,6 +45,11 @@
 
 .list-actions{
     text-align: center;
+}
+
+.tab-pane td a{
+    color: #444;
+    border: none;
 }
 
 /*---------- CONNEXION ----------*/
