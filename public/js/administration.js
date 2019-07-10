@@ -46,7 +46,7 @@ $(document).ready(function() {
         });
     });
 
-    $('.model-list').on('click', '.trash-element', function () {
+    $('.tab-content').on('click', '.trash-element', function () {
 
         let thisButton = $(this);
 
@@ -65,13 +65,6 @@ $(document).ready(function() {
         else {
             return false;
         }
-    });
-
-    $('#name').editable({
-        type: 'text',
-        pk: $(this).find('.action-id').val(),
-        url: '/post',
-        title: 'Modifier le nom du modèle'
     });
 
 });

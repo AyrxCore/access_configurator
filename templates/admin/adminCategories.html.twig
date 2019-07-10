@@ -7,10 +7,9 @@
         {% for categorie in categories %}
             <input type="hidden" value="{{ categorie.id }}">
             <tr>
-                <td>{{ categorie.name }}</td>
+                <td><a href="#" class="name">{{ categorie.name }}</a> <i class="fas fa-pen-alt min-size"></i></td>
                 <td>
                     <button><i class="fas fa-trash-alt"></i></button>
-                    <button><i class="fas fa-edit"></i></button>
                 </td>
             </tr>
         {% endfor %}

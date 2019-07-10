@@ -8,11 +8,11 @@
         {% for option in options %}
             <input type="hidden" value="{{ option.id }}">
             <tr>
-                <td>{{ option.name }}</td>
-                <td>{{ option.price }} €</td>
-                <td>
-                    <button><i class="fas fa-trash-alt"></i></button>
-                    <button><i class="fas fa-edit"></i></button>
+                <td><a href="#" class="name">{{ option.name }}</a> <i class="fas fa-pen-alt min-size"></i></td>
+                <td><a href="#" class="price">{{ option.price }}</a> € <i class="fas fa-pen-alt min-size"></i></td>
+                <td><a href="#" class="description">{{ option.description }}</a> <i class="fas fa-pen-alt min-size"></i></td>
+                <td class="list-actions">
+                    <button class="trash-element"><i class="fas fa-trash-alt"></i></button>
                 </td>
             </tr>
         {% endfor %}

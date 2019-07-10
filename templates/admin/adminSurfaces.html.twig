@@ -11,14 +11,13 @@
         {% for size in sizes %}
             <input type="hidden" value="{{ size.id }}">
             <tr>
-                <td>{{ size.name }}</td>
-                <td>{{ size.surface }} m²</td>
-                <td>{{ size.price }} €</td>
-                <td>{{ size.description }}</td>
+                <td><a href="#" class="name">{{ size.name }}</a> <i class="fas fa-pen-alt min-size"></i></td>
+                <td><a href="#" class="surface">{{ size.surface }}</a> m² <i class="fas fa-pen-alt min-size"></i></td>
+                <td><a href="#" class="price">{{ size.price }}</a> € <i class="fas fa-pen-alt min-size"></i></td>
+                <td><a href="#" class="description">{{ size.description }}</a> <i class="fas fa-pen-alt min-size"></i></td>
                 <td><img class="imgModeleBase" src="{{ asset('images/size/' ~ size.imgRdc) }}"></td>
                 <td>
                     <button><i class="fas fa-trash-alt"></i></button>
-                    <button><i class="fas fa-edit"></i></button>
                 </td>
             </tr>
         {% endfor %}
