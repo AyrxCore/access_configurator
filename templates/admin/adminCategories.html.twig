@@ -6,11 +6,10 @@
         </tr>
         {% for categorie in categories %}
             <tr>
-                <td><a href="#" class="name">{{ categorie.name }}</a> <i class="fas fa-pen-alt min-size"></i></td>
+                <td><a href="#" class="editable name" data-type="text" data-pk="{{ categorie.id }}" data-url="{{ path('edit_element') }}" data-name="categories">{{ categorie.name }}</a> <i class="fas fa-pen-alt min-size"></i></td>
                 <td class="list-actions">
-                    <button><i class="fas fa-trash-alt"></i></button>
+                    <button class="trash-element" data-id="{{ categorie.id }}"><i class="fas fa-trash-alt"></i></button>
                 </td>
-                <input class="action-id" type="hidden" value="{{ categorie.id }}">
             </tr>
         {% endfor %}
     </table>

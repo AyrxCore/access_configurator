@@ -2,23 +2,22 @@
     <table class="table table-bordered surface-list">
         <tr>
             <th style="width: 10%;">Nom</th>
-            <th style="width: 10%;">Surface</th>
-            <th style="width: 10%;">Prix</th>
+            <th style="width: 15%;">Surface (en m²)</th>
+            <th style="width: 10%;">Prix (en €)</th>
             <th style="width: 30%;">Description</th>
             <th style="width: 15%;">Image</th>
             <th style="width: 5%;">Actions</th>
         </tr>
         {% for size in sizes %}
             <tr>
-                <td><a href="#" class="name">{{ size.name }}</a> <i class="fas fa-pen-alt min-size"></i></td>
-                <td><a href="#" class="surface">{{ size.surface }} m² </a><i class="fas fa-pen-alt min-size"></i></td>
-                <td><a href="#" class="price">{{ size.price }} € </a><i class="fas fa-pen-alt min-size"></i></td>
-                <td><a href="#" class="description">{{ size.description }}</a> <i class="fas fa-pen-alt min-size"></i></td>
+                <td><a href="#" class="editable name" data-type="text" data-pk="{{ size.id }}" data-url="{{ path('edit_element') }}" data-name="size">{{ size.name }}</a> <i class="fas fa-pen-alt min-size"></i></td>
+                <td><a href="#" class="editable size" data-type="text" data-pk="{{ size.id }}" data-url="{{ path('edit_element') }}" data-name="size">{{ size.surface }}</a><i class="fas fa-pen-alt min-size"></i></td>
+                <td><a href="#" class="editable price" data-type="text" data-pk="{{ size.id }}" data-url="{{ path('edit_element') }}" data-name="size">{{ size.price }}</a><i class="fas fa-pen-alt min-size"></i></td>
+                <td><a href="#" class="editable description" data-type="textarea" data-pk="{{ size.id }}" data-url="{{ path('edit_element') }}" data-name="size">{{ size.description }}</a> <i class="fas fa-pen-alt min-size"></i></td>
                 <td><img class="imgModeleBase" src="{{ asset('images/size/' ~ size.imgRdc) }}"></td>
                 <td class="list-actions">
-                    <button><i class="fas fa-trash-alt"></i></button>
+                    <button data-id="{{ size.id }}"><i class="fas fa-trash-alt"></i></button>
                 </td>
-                <input class="action-id" type="hidden" value="{{ size.id }}">
             </tr>
         {% endfor %}
     </table>
@@ -27,7 +26,11 @@
             <div class="row">
                 <div class="col-sm">
                     <div class="form-group">
-                        {{ form_row(formSize.name) }}
+                        <select>
+                            {% for model in models %}
+                                <option value="{{ model.name }}">{{ model.name }}</option>
+                            {% endfor %}
+                        </select>
                     </div>
                 </div>
                 <div class="col-sm">

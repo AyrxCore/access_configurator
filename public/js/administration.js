@@ -13,6 +13,7 @@ $(document).ready(function() {
 
         let formData = new FormData(thisButton.parents('#form-admin')[0]);
         formData.append('type', thisButton.data('type'));
+        formData.append('name', thisButton.parents('.form-admin').find('select option:selected').attr('value'))
 
         $.ajax({
             type: "POST",
@@ -24,22 +25,22 @@ $(document).ready(function() {
             {
                 console.log(data)
                 if(data['type'] === 'modeles'){
-                    let element = "<tr><td><a href=\"#\" class=\"name\">"+ data.house_model.name +"</a></td><td><a href=\"#\" class=\"price\">"+ data.house_model.price +" €</a></td><td><a href=\"#\" class=\"description\">"+ data.house_model.description +"</a></td><td><img class=\"imgModeleBase\" src=\"#\"></td><td class='list-actions'><button class=\"trash-element\"><i class=\"fas fa-trash-alt\"></i></button></td><input class=\"action-id\" type=\"hidden\" value="+ data.id +"></tr>";
+                    let element = "<tr><td><a href=\"#\" class=\"name\" data-type=\"text\" data-pk="+ data.id +" data-url="+ data.path +" data-name=\"models\" data-pk="+ data.id +">"+ data.house_model.name +"</a></td><td><a href=\"#\" class=\"price\" data-id="+ data.id +">"+ data.house_model.price +"</a></td><td><a href=\"#\" class=\"description\" data-id="+ data.id +">"+ data.house_model.description +"</a></td><td><img class=\"imgModeleBase\" src=\"#\"></td><td class='list-actions'><button class=\"trash-element\" data-id="+ data.id +"><i class=\"fas fa-trash-alt\"></i></button></td></tr>";
                     thisButton.parents('.tab-pane.active').find('.model-list').append(element);
                 }
 
                 if(data['type'] === 'surfaces'){
-                    let element = "<tr><td><a href=\"#\" class=\"name\">"+ data.house_size.name +"</a></td><td><a href=\"#\" class=\"surface\">"+ data.house_size.surface +" m²</a></td><td><a href=\"#\" class=\"price\">"+ data.house_size.price +"</a> €</td><td><a href=\"#\" class=\"description\">"+ data.house_size.description +"</a></td><td><img class=\"imgModeleBase\" src=\"#\"></td><td class='list-actions'><button class=\"trash-element\"><i class=\"fas fa-trash-alt\"></i></button></td><input class=\"action-id\" type=\"hidden\" value="+ data.id +"></tr>";
+                    let element = "<tr><td><a href=\"#\" class=\"name\" data-pk="+ data.id +">"+ data.house_size.name +"</a></td><td><a href=\"#\" class=\"surface\" data-id="+ data.id +">"+ data.house_size.surface +"</a></td><td><a href=\"#\" class=\"price\" data-id="+ data.id +">"+ data.house_size.price +"</a></td><td><a href=\"#\" class=\"description\" data-id="+ data.id +">"+ data.house_size.description +"</a></td><td><img class=\"imgModeleBase\" src=\"#\"></td><td class='list-actions'><button class=\"trash-element\" data-id="+ data.id +"><i class=\"fas fa-trash-alt\"></i></button></td></tr>";
                     thisButton.parents('.tab-pane.active').find('.surface-list').append(element);
                 }
 
                 if(data['type'] === 'categories'){
-                    let element = "<tr><td><a href=\"#\" class=\"name\">"+ data.category.name +"</a></td><td class='list-actions'><button class=\"trash-element\"><i class=\"fas fa-trash-alt\"></i></button></td><input class=\"action-id\" type=\"hidden\" value="+ data.id +"></tr>";
+                    let element = "<tr><td><a href=\"#\" class=\"name\" data-pk="+ data.id +">"+ data.category.name +"</a></td><td class='list-actions'><button class=\"trash-element\" data-id="+ data.id +"><i class=\"fas fa-trash-alt\"></i></button></td></tr>";
                     thisButton.parents('.tab-pane.active').find('.category-list').append(element);
                 }
 
                 if(data['type'] === 'options'){
-                    let element = "<tr><td><a href=\"#\" class=\"name\">"+ data.options.name +"</a></td><td><a href=\"#\" class=\"price\">"+ data.options.price +" €</a></td><td><a href=\"#\" class=\"description\">"+ data.options.description +"</a></td><td class='list-actions'><button class=\"trash-element\"><i class=\"fas fa-trash-alt\"></i></button></td><input class=\"action-id\" type=\"hidden\" value="+ data.id +"></tr>";
+                    let element = "<tr><td><a href=\"#\" class=\"name\" data-pk="+ data.id +">"+ data.options.name +"</a></td><td><a href=\"#\" class=\"price\" data-id="+ data.id +">"+ data.options.price +"</a></td><td><a href=\"#\" class=\"description\" data-id="+ data.id +">"+ data.options.description +"</a></td><td class='list-actions'><button class=\"trash-element\" data-id="+ data.id +"><i class=\"fas fa-trash-alt\"></i></button></td></tr>";
                     thisButton.parents('.tab-pane.active').find('.option-list').append(element);
                 }
             }
@@ -50,7 +51,7 @@ $(document).ready(function() {
 
         let thisButton = $(this);
 
-        let idToSupp = thisButton.parents('tr').find('.action-id').val();
+        let idToSupp = thisButton.data('id');
         let typeEntity = thisButton.parents('.tab-pane').find('.add-element').data('type');
 
         if(confirm('Voulez-vous supprimer cet élément ?')){

@@ -92,8 +92,9 @@ class EditController extends AbstractController
         
         $em->persist($entity);
         $em->flush();
-    
+
         $data['id'] = $entity->getId();
+        $data['path'] = '{{path(\'edit_element\')}';
 
         return new JsonResponse($data);
     }
@@ -139,45 +140,42 @@ class EditController extends AbstractController
     public function editElement(Request $request, EntityManagerInterface $em)
     {
         $post = $request->request;
-        $data = [];
-        
-        dump($post->get('type'));
 
-        if($post->get('type') === 'modeles'){
-            $selectElement = $em->getRepository(HouseModel::class)->find($post->get('id'));
+        if($post->get('name') === 'models'){
+            $selectElement = $em->getRepository(HouseModel::class)->find($post->get('pk'));
         }
 
-        if($post->get('type') === 'surfaces'){
-            $selectElement = $em->getRepository(HouseSize::class)->find($post->get('id'));
+        if($post->get('name') === 'size'){
+            $selectElement = $em->getRepository(HouseSize::class)->find($post->get('pk'));
         }
 
-        if($post->get('type') === 'categories'){
-            $selectElement = $em->getRepository(Category::class)->find($post->get('id'));
+        if($post->get('name') === 'categories'){
+            $selectElement = $em->getRepository(Category::class)->find($post->get('pk'));
         }
 
-        if($post->get('type') === 'options'){
-            $selectElement = $em->getRepository(Options::class)->find($post->get('id'));
+        if($post->get('name') === 'options'){
+            $selectElement = $em->getRepository(Options::class)->find($post->get('pk'));
         }
 
-//        switch ($post->get('name')) {
-//            case 'name':
-//                $selectElement->setName($post->get('value'));
-//                break;
-//            case 'description':
-//                $selectElement->setDescription($post->get('value'));
-//                break;
-//            case 'price':
-//                $selectElement->setPrice($post->get('value'));
-//                break;
-//            case 'surface':
-//                $selectElement->setSurface($post->get('value'));
-//                break;
-//        };
-//
-//        $em->persist($selectElement);
-//        $em->flush();
+        switch ($post->get('type')) {
+            case 'name':
+                $selectElement->setName($post->get('value'));
+                break;
+            case 'description':
+                $selectElement->setDescription($post->get('value'));
+                break;
+            case 'price':
+                $selectElement->setPrice($post->get('value'));
+                break;
+            case 'size':
+                $selectElement->setSurface($post->get('value'));
+                break;
+        };
 
-        return new JsonResponse($data);
+        $em->persist($selectElement);
+        $em->flush();
+
+        return new JsonResponse();
     }
 
 }

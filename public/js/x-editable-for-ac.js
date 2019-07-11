@@ -1,62 +1,40 @@
 $(document).ready(function() {
 
-    $('.tab-pane').on('click', '.editable', function(){
+    $('.tab-pane').on('mousedown', '.editable', function(){
 
-        var editElementId = $(this).parents('tr').find('.action-id').val();
-        console.log(editElementId);
+        if($(this).hasClass('name')){
+            $('.name').editable(
+                {
+                    params: {type: 'name'}
+                }
+            );
+        }
 
-        $('.name').editable({
-            type: 'text',
-            name: 'name',
-            pk: editElementId,
-            url: route_edit_element,
-        });
+        if($(this).hasClass('description')) {
+            $('.description').editable(
+                {
+                    rows: 15,
+                    params: {type: 'description'}
+                }
+            );
+        }
+
+        if($(this).hasClass('size')) {
+            $('.size').editable(
+                {
+                    params: {type: 'size'}
+                }
+            );
+        }
+
+        if($(this).hasClass('price')) {
+            $('.price').editable(
+                {
+                    params: {type: 'price'}
+                }
+            );
+        }
 
     });
 
-    // $('.name').on('mousedown', function () {
-
-    // })
-
-        // $('.description').editable({
-        //     type: 'textarea',
-        //     params: {
-        //         type: type,
-        //         id: id,
-        //         name: 'description'
-        //     },
-        //     pk: 1,
-        //     url: route_edit_element,
-        //     success: function (data) {
-        //         console.log(data)
-        //     }
-        // });
-
-        // $('.price').editable({
-        //     type: 'number',
-        //     params: {
-        //         type: $(e.target).parents('.tab-pane').find('.add-element').data('type'),
-        //         id: $(e.target).parents('tr').find('.action-id').val(),
-        //         name: 'price'
-        //     },
-        //     pk: 1,
-        //     url: route_edit_element,
-        //     success: function (data) {
-        //         console.log(data)
-        //     }
-        // });
-        //
-        // $('.surface').editable({
-        //     type: 'number',
-        //     params: {
-        //         type: $(e.target).parents('.tab-pane').find('.add-element').data('type'),
-        //         id: $(e.target).parents('tr').find('.action-id').val(),
-        //         name: 'surface'
-        //     },
-        //     pk: 1,
-        //     url: route_edit_element,
-        //     success: function (data) {
-        //         console.log(data)
-        //     }
-        // });
 });

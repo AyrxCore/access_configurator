@@ -2129,7 +2129,6 @@ Makes editable any HTML element on the page. Applied as jQuery method.
         }
 
         //return jquery object
-        console.log(this)
         return this.each(function () {
             var $this = $(this), 
                 data = $this.data(datakey), 
