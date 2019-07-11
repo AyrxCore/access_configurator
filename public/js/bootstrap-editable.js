@@ -2065,7 +2065,7 @@ Makes editable any HTML element on the page. Applied as jQuery method.
                             value: editable.input.value2submit(editable.value),
                             pk: (typeof editable.options.pk === 'function') ? 
                                 editable.options.pk.call(editable.options.scope) : 
-                                editable.options.pk 
+                                editable.options.pk
                         };
 
                         //additional params
@@ -2129,6 +2129,7 @@ Makes editable any HTML element on the page. Applied as jQuery method.
         }
 
         //return jquery object
+        console.log(this)
         return this.each(function () {
             var $this = $(this), 
                 data = $this.data(datakey), 

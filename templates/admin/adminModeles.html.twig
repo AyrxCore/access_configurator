@@ -9,9 +9,9 @@
         </tr>
         {% for model in models %}
             <tr>
-                <td><a href="#" class="name">{{ model.name }}</a> <i class="fas fa-pen-alt min-size"></i></td>
-                <td><a href="#" class="price">{{ model.price }} € </a><i class="fas fa-pen-alt min-size"></i></td>
-                <td><a href="#" class="description">{{ model.description }}</a> <i class="fas fa-pen-alt min-size"></i></td>
+                <td><a href="#" class="editable name">{{ model.name }}</a> <i class="fas fa-pen-alt min-size"></i></td>
+                <td><a href="#" class="editable price">{{ model.price }} € </a><i class="fas fa-pen-alt min-size"></i></td>
+                <td><a href="#" class="editable description">{{ model.description }}</a> <i class="fas fa-pen-alt min-size"></i></td>
                 <td><img class="imgModeleBase" src="{{ asset('images/modeles/' ~ model.img) }}"></td>
                 <td class="list-actions">
                     <button class="trash-element"><i class="fas fa-trash-alt"></i></button>

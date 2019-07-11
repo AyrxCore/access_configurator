@@ -140,6 +140,8 @@ class EditController extends AbstractController
     {
         $post = $request->request;
         $data = [];
+        
+        dump($post->get('type'));
 
         if($post->get('type') === 'modeles'){
             $selectElement = $em->getRepository(HouseModel::class)->find($post->get('id'));
@@ -157,23 +159,23 @@ class EditController extends AbstractController
             $selectElement = $em->getRepository(Options::class)->find($post->get('id'));
         }
 
-        switch ($post->get('name')) {
-            case 'name':
-                $selectElement->setName($post->get('value'));
-                break;
-            case 'description':
-                $selectElement->setDescription($post->get('value'));
-                break;
-            case 'price':
-                $selectElement->setPrice($post->get('value'));
-                break;
-            case 'surface':
-                $selectElement->setSurface($post->get('value'));
-                break;
-        };
-
-        $em->persist($selectElement);
-        $em->flush();
+//        switch ($post->get('name')) {
+//            case 'name':
+//                $selectElement->setName($post->get('value'));
+//                break;
+//            case 'description':
+//                $selectElement->setDescription($post->get('value'));
+//                break;
+//            case 'price':
+//                $selectElement->setPrice($post->get('value'));
+//                break;
+//            case 'surface':
+//                $selectElement->setSurface($post->get('value'));
+//                break;
+//        };
+//
+//        $em->persist($selectElement);
+//        $em->flush();
 
         return new JsonResponse($data);
     }
