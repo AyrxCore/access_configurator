@@ -6,7 +6,7 @@
             <th style="width: 10%;">Prix (en €)</th>
             <th style="width: 30%;">Description</th>
             <th style="width: 15%;">Image</th>
-            <th style="width: 5%;">Actions</th>
+            <th style="width: 5%;">Action</th>
         </tr>
         {% for size in sizes %}
             <tr>
@@ -16,17 +16,18 @@
                 <td><a href="#" class="editable description" data-type="textarea" data-pk="{{ size.id }}" data-url="{{ path('edit_element') }}" data-name="size">{{ size.description }}</a> <i class="fas fa-pen-alt min-size"></i></td>
                 <td><img class="imgModeleBase" src="{{ asset('images/size/' ~ size.imgRdc) }}"></td>
                 <td class="list-actions">
-                    <button data-id="{{ size.id }}"><i class="fas fa-trash-alt"></i></button>
+                    <button class="trash-element" data-id="{{ size.id }}"><i class="fas fa-trash-alt"></i></button>
                 </td>
             </tr>
         {% endfor %}
     </table>
     <div class="box-footer clearfix">
-        <form role="form" id="form-admin">
+        {{ form_start(formSize, {'id': 'form-admin'}) }}
+        <form role="form">
             <div class="row">
                 <div class="col-sm">
                     <div class="form-group">
-                        <select>
+                        <select id="all-models">
                             {% for model in models %}
                                 <option value="{{ model.name }}">{{ model.name }}</option>
                             {% endfor %}
@@ -67,5 +68,6 @@
                 </div>
             </div>
         </form>
+        {{ form_end(formSize) }}
     </div>
 </div>

@@ -23,6 +23,11 @@ class Category
     private $name;
 
     /**
+     * @ORM\OneToMany(targetEntity="App\Entity\Options", mappedBy="category")
+     */
+    private $options;
+
+    /**
      * @return mixed
      */
     public function getId()
@@ -47,4 +52,21 @@ class Category
         $this->name = $name;
         return $this;
     }
+
+    /**
+     * @return mixed
+     */
+    public function getOptions()
+    {
+        return $this->options;
+    }
+
+    /**
+     * @param mixed $options
+     */
+    public function setOptions($options)
+    {
+        $this->options = $options;
+    }
+
 }

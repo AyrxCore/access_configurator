@@ -2,13 +2,15 @@
     <table class="table table-bordered option-list">
         <tr>
             <th style="width: 10%;">Nom</th>
+            <th style="width: 10%;">Catégorie</th>
             <th style="width: 10%;">Prix (en €)</th>
             <th style="width: 30%;">Description</th>
-            <th style="width: 5%;">Actions</th>
+            <th style="width: 5%;">Action</th>
         </tr>
         {% for option in options %}
             <tr>
                 <td><a href="#" class="editable name" data-type="text" data-pk="{{ option.id }}" data-url="{{ path('edit_element') }}" data-name="options">{{ option.name }}</a> <i class="fas fa-pen-alt min-size"></i></td>
+                <td><a href="#" class="editable category" data-type="select" data-pk="{{ option.id }}" data-url="{{ path('edit_element') }}" data-name="options">{{ option.category.name }}</a> <i class="fas fa-pen-alt min-size"></i></td>
                 <td><a href="#" class="editable price" data-type="text" data-pk="{{ option.id }}" data-url="{{ path('edit_element') }}" data-name="options">{{ option.price }}</a> <i class="fas fa-pen-alt min-size"></i></td>
                 <td><a href="#" class="editable description" data-type="textarea" data-pk="{{ option.id }}" data-url="{{ path('edit_element') }}" data-name="options">{{ option.description }}</a> <i class="fas fa-pen-alt min-size"></i></td>
                 <td class="list-actions">
@@ -23,6 +25,15 @@
                 <div class="col-sm">
                     <div class="form-group">
                         {{ form_row(formOptions.name) }}
+                    </div>
+                </div>
+                <div class="col-sm">
+                    <div class="form-group">
+                        <select id="all-categories">
+                            {% for category in categories %}
+                                <option value="{{ category.name }}">{{ category.name }}</option>
+                            {% endfor %}
+                        </select>
                     </div>
                 </div>
                 <div class="col-sm">

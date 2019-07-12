@@ -5,6 +5,7 @@ namespace App\Form;
 use App\Entity\Options;
 
 use Symfony\Component\Form\AbstractType;
+use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
 use Symfony\Component\Form\Extension\Core\Type\MoneyType;
 use Symfony\Component\Form\Extension\Core\Type\TextareaType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
@@ -18,6 +19,14 @@ class OptionsType extends AbstractType
         $builder->add(
             'name', TextType::class, array(
                 'label' => 'Nom du modèle',
+            )
+        );
+
+        $builder->add(
+            'category', ChoiceType::class, array(
+                'label' => 'Associé à la catégorie',
+                'expanded' => false,
+                'multiple' => false
             )
         );
 

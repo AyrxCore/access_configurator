@@ -21,6 +21,13 @@ class HouseSizeType extends AbstractType
 {
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
+        $builder->add(
+            'name', ChoiceType::class, array(
+                'label' => 'Prix minimum du modèle',
+                'expanded' => false,
+                'multiple' => false
+            )
+        );
 
         $builder->add(
             'price', MoneyType::class, array(

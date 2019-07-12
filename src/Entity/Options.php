@@ -23,7 +23,7 @@ class Options
     private $name;
 
     /**
-     * @ORM\Column(type="string", length=255, nullable=true)
+     * @ORM\ManyToOne(targetEntity="App\Entity\Category", inversedBy="options")
      */
     private $category;
 
@@ -91,7 +91,7 @@ class Options
     }
 
     /**
-     * @return mixed
+     * @return string
      */
     public function getCategory()
     {
@@ -99,7 +99,7 @@ class Options
     }
 
     /**
-     * @param mixed $category
+     * @param string $category
      * @return Options
      */
     public function setCategory($category)

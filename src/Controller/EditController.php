@@ -64,7 +64,7 @@ class EditController extends AbstractController
             $data[$key] = $value;
         }
 
-        if($post->get('type') === 'modeles'){
+        if($post->get('type') === 'models'){
             $entity = new HouseModel();
             $entity->setName($post->get('house_model')['name']);
             $entity->setPrice($post->get('house_model')['price']);
@@ -73,7 +73,10 @@ class EditController extends AbstractController
 
         if($post->get('type') === 'surfaces'){
             $entity = new HouseSize();
-            $entity->setName($post->get('house_size')['name']);
+            if(isset($post->get('house_size')['name']))
+                $entity->setName($post->get('house_size')['name']);
+            else
+                $entity->setName($post->get('selectName'));
             $entity->setSurface($post->get('house_size')['surface']);
             $entity->setPrice($post->get('house_size')['price']);
             $entity->setDescription($post->get('house_size')['description']);
@@ -87,6 +90,10 @@ class EditController extends AbstractController
         if($post->get('type') === 'options'){
             $entity = new Options();
             $entity->setName($post->get('options')['name']);
+            $categoryId = $em->getRepository(Category::class)->findOneBy(array(
+                'name' => $post->get('selectName')
+            ));
+            $entity->setCategory($categoryId);
             $entity->setPrice($post->get('options')['price']);
         }
         
@@ -109,7 +116,7 @@ class EditController extends AbstractController
     {
         $post = $request->request;
 
-        if($post->get('type') === 'modeles'){
+        if($post->get('type') === 'models'){
             $selectElement = $em->getRepository(HouseModel::class)->find($post->get('id'));
         }
 
@@ -169,6 +176,12 @@ class EditController extends AbstractController
                 break;
             case 'size':
                 $selectElement->setSurface($post->get('value'));
+                break;
+            case 'category':
+                $categoryId = $em->getRepository(Category::class)->findOneBy(array(
+                    'name' => $post->get('value')
+                ));
+                $selectElement->setCategory($categoryId);
                 break;
         };
 
