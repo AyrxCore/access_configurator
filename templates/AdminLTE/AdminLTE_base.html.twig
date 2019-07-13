@@ -18,16 +18,16 @@
             {#--- FONT AWESOME ---#}
             <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
 
-            {#--- ADMIN LTE CSS ---#}
+            {#--- ADMIN LTE CSS (General theme)---#}
             <link rel="stylesheet" href="{{ asset('theme/AdminLTE/dist/css/AdminLTE.css') }}">
 
-            {#--- ADMIN LTE SKINS ---#}
+            {#--- ADMIN LTE SKINS (General theme)---#}
             <link rel="stylesheet" href="{{ asset('theme/AdminLTE/dist/css/skins/skin-blue.min.css') }}">
 
             {#--- CSS PRINCIPAL ---#}
             <link rel="stylesheet" href="{{ asset('css/global.css') }}">
 
-            {#--- X-EDITABLE ---#}
+            {#--- X-EDITABLE (Edit fields in Administration)---#}
             <link href="{{ asset('css/bootstrap-editable.css') }}" rel="stylesheet"/>
             <link href="{{ asset('css/x-editable-for-ac.css') }}" rel="stylesheet"/>
 
@@ -45,14 +45,27 @@
             {#--- BOOTSTRAP ---#}
             <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
-            {#--- ADMIN LTE JS ---#}
+            {#--- ADMIN LTE JS (General theme)---#}
             <script src="{{ asset('theme/AdminLTE/dist/js/app.min.js') }}"></script>
             <script src="{{ asset('theme/AdminLTE/dist/js/demo.js') }}"></script>
             <script src="{{ asset('theme/AdminLTE/dist/js/adminlte.min.js') }}"></script>
             <script src="{{ asset('theme/AdminLTE/dist/js/fastclick.js') }}"></script>
 
-            {#--- X-EDITABLE ---#}
+            {#--- X-EDITABLE (Edit fields in Administration)---#}
             <script src="{{ asset('js/bootstrap-editable.js') }}"></script>
+
+            {#--- STICKY (Fix the total value on Config)---#}
+            <script src="{{ asset('js/jquery.sticky.js') }}"></script>
+
+            <script src="{{ asset('bundles/fosjsrouting/js/router.min.js') }}"></script>
+            <script src="{{ path('fos_js_routing_js', { callback: 'fos.Router.setData' }) }}"></script>
+{#            <script>#}
+{#                const routes = require('../../public/js/fos_js_routes.json');#}
+{#                import Routing from '../../vendor/friendsofsymfony/jsrouting-bundle/Resources/public/js/router.min.js';#}
+
+{#                Routing.setRoutingData(routes);#}
+{#                Routing.generate('rep_log_list');#}
+{#            </script>#}
 
         {% endblock %}
 

@@ -129,7 +129,12 @@ td,
 .total-config{
     font-size: 2rem;
     text-align: center;
-    margin: 2rem 0;
+    margin: 2rem auto;
+    z-index: 1!important;
+    background: #ecf0f5;
+    padding: 1.5rem 0;
+    border: solid 1px black;
+    width: 70%;
 }
 
 .submitOptions{

@@ -9,9 +9,9 @@
         </tr>
         {% for model in models %}
             <tr>
-                <td><a href="#" class="editable name" data-type="text" data-pk="{{ model.id }}" data-url="{{ path('edit_element') }}" data-name="models">{{ model.name }}</a> <i class="fas fa-pen-alt min-size"></i></td>
+                <td><a href="#" class="editable name" data-type="text" data-pk="{{ model.id }}" data-url="{{ path('edit_element') }}" data-name="models">{{ model.name }}</a><i class="fas fa-pen-alt min-size"></i></td>
                 <td><a href="#" class="editable price" data-type="text" data-pk="{{ model.id }}" data-url="{{ path('edit_element') }}" data-name="models">{{ model.price }}</a><i class="fas fa-pen-alt min-size"></i></td>
-                <td><a href="#" class="editable description" data-type="textarea" data-pk="{{ model.id }}" data-url="{{ path('edit_element') }}" data-name="models">{{ model.description }}</a> <i class="fas fa-pen-alt min-size"></i></td>
+                <td><a href="#" class="editable description" data-type="textarea" data-pk="{{ model.id }}" data-url="{{ path('edit_element') }}" data-name="models">{{ model.description }}</a><i class="fas fa-pen-alt min-size"></i></td>
                 <td><img class="imgModeleBase" src="{{ asset('images/modeles/' ~ model.img) }}"></td>
                 <td class="list-actions">
                     <button class="trash-element" data-id="{{ model.id }}"><i class="fas fa-trash-alt"></i></button>

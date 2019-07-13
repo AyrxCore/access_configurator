@@ -10,6 +10,11 @@
             <li class="active">Configuration</li>
         </ol>
     </section>
+
+    <div id="total-configs" class="total-config">
+            Coût total, options incluses = <br><span class="value-config" data-value="{{ size.price }}" >{{ size.price }}</span><span> €</span>
+    </div>
+
     <div class="config-content">
     {% for category in categories %}
         <div class="row justify-content-center ">
@@ -30,7 +35,7 @@
                                         <th>Matière</th>
                                         <th>Couleur</th>
                                     </tr>
-                                    {% for option in options if option.category == category.name %}
+                                    {% for option in options if option.category.id == category.id %}
                                         <tr class="option-select" data-value="{{ option.price }}" data-id="{{ option.id }}" data-active="false">
                                             <td>{{ option.name }}</td>
                                             <td>
@@ -59,8 +64,6 @@
             </div>
     {% endfor %}
     </div>
-
-    <div class="total-config">Coût total, options incluses = <br><span class="value-config" data-value="{{ size.price }}" >{{ size.price }}</span><span> €</span></div>
 
     <div class="row justify-content-center">
         <a href="{{ path('total', {'name': name, 'surface': size.surface}) }}" class="btn btn-lg btn-success submitOptions">Valider</a>
@@ -99,6 +102,8 @@
             });
 
             totalPrice[0].textContent = new Intl.NumberFormat().format(totalPrice[0].textContent);
+
+            $("#total-configs").sticky({topSpacing:-35});
 
         });
 
