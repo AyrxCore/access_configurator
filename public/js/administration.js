@@ -24,7 +24,6 @@ $(document).ready(function() {
             processData: false,
             success: function(data)
             {
-                console.log(Routing.generate('home'))
                 form.reset();
                 if(data['type'] === 'models'){
                     let element = "<tr><td><a href=\"#\" class=\"editable name\" data-type=\"text\" data-pk="+ data.id +" data-url="+ data.path +" data-name=\"models\">"+ data.house_model.name +"</a><i class=\"fas fa-pen-alt min-size\"></i></td><td><a href=\"#\" class=\"editable price\" data-pk="+ data.id +">"+ data.house_model.price +"</a><i class=\"fas fa-pen-alt min-size\"></i></td><td><a href=\"#\" class=\"editable description\" data-pk="+ data.id +">"+ data.house_model.description +"</a><i class=\"fas fa-pen-alt min-size\"></i></td><td><img class=\"imgModeleBase\" src=\"#\"></td><td class='list-actions'><button class=\"trash-element\" data-id="+ data.id +"><i class=\"fas fa-trash-alt\"></i></button></td></tr>";
