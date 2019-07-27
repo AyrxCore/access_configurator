@@ -16,12 +16,17 @@ class HouseSize
      * @ORM\Column(type="integer")
      */
     private $id;
-
+    
+    /**
+     * @ORM\ManyToOne(targetEntity="App\Entity\HouseModel", inversedBy="houseSize")
+     */
+    private $houseModel;
+    
     /**
      * @ORM\Column(type="string", length=255, nullable=true)
      */
-    private $name;
-
+    private $surface;
+    
     /**
      * @ORM\Column(type="integer", nullable=true)
      */
@@ -40,13 +45,8 @@ class HouseSize
     /**
      * @ORM\Column(type="string", length=255, nullable=true)
      */
-    private $surface;
-
-    /**
-     * @ORM\Column(type="string", length=255, nullable=true)
-     */
     private $description;
-
+    
     /**
      * @return mixed
      */
@@ -58,18 +58,18 @@ class HouseSize
     /**
      * @return mixed
      */
-    public function getName()
+    public function getHouseModel()
     {
-        return $this->name;
+        return $this->houseModel;
     }
 
     /**
-     * @param mixed $name
+     * @param mixed $houseModel
      * @return HouseSize
      */
-    public function setName($name)
+    public function setHouseModel($houseModel)
     {
-        $this->name = $name;
+        $this->houseModel = $houseModel;
         return $this;
     }
 
@@ -162,4 +162,5 @@ class HouseSize
         $this->description = $description;
         return $this;
     }
+    
 }

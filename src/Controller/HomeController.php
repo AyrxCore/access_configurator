@@ -5,7 +5,7 @@ namespace App\Controller;
 use App\Entity\HouseModel;
 use App\Entity\HouseSize;
 use App\Entity\Category;
-use App\Entity\Options;
+use App\Entity\Product;
 use App\Form\UserType;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Component\HttpFoundation\Request;
@@ -55,7 +55,7 @@ class HomeController extends AbstractController
         $surface = $request->query->get('surface');
         $size = $em->getRepository(HouseSize::class)->findOneBy(array('surface' => $surface));
         $categories = $em->getRepository(Category::class)->findAll();
-        $options = $em->getRepository(Options::class)->findAll();
+        $options = $em->getRepository(Product::class)->findAll();
 
         return $this->render('config.html.twig', array(
             'name' => $name,
@@ -76,7 +76,7 @@ class HomeController extends AbstractController
     {
         $size = $em->getRepository(HouseSize::class)->findOneBy(array('surface' => $surface));
         $categories = $em->getRepository(Category::class)->findAll();
-        $options = $em->getRepository(Options::class)->findAll();
+        $options = $em->getRepository(Product::class)->findAll();
 
         return $this->render('total.html.twig', array(
             'size' => $size,

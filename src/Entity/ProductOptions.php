@@ -5,10 +5,10 @@ namespace App\Entity;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * @ORM\Table(name="options")
- * @ORM\Entity(repositoryClass="App\Repository\OptionsRepository")
+ * @ORM\Table(name="product_options")
+// * @ORM\Entity(repositoryClass="App\Repository\ProductOptionsRepository")
  */
-class Options
+class ProductOptions
 {
     /**
      * @ORM\Id()
@@ -23,9 +23,9 @@ class Options
     private $name;
 
     /**
-     * @ORM\ManyToOne(targetEntity="App\Entity\Category", inversedBy="options")
+     * @ORM\ManyToOne(targetEntity="App\Entity\Product", inversedBy="productOptions")
      */
-    private $category;
+    private $product;
 
     /**
      * @ORM\Column(type="string", length=255, nullable=true)
@@ -82,7 +82,7 @@ class Options
 
     /**
      * @param mixed $name
-     * @return Options
+     * @return ProductOptions
      */
     public function setName($name)
     {
@@ -93,18 +93,18 @@ class Options
     /**
      * @return string
      */
-    public function getCategory()
+    public function getProduct()
     {
-        return $this->category;
+        return $this->product;
     }
 
     /**
-     * @param string $category
-     * @return Options
+     * @param string $product
+     * @return ProductOptions
      */
-    public function setCategory($category)
+    public function setProduct($product)
     {
-        $this->category = $category;
+        $this->product = $product;
         return $this;
     }
 
@@ -118,7 +118,7 @@ class Options
 
     /**
      * @param mixed $price
-     * @return Options
+     * @return ProductOptions
      */
     public function setPrice($price)
     {
@@ -152,7 +152,7 @@ class Options
     
     /**
      * @param mixed $img
-     * @return Options
+     * @return ProductOptions
      */
     public function setImg($img)
     {

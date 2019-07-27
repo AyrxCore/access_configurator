@@ -5,11 +5,11 @@ namespace App\Controller;
 use App\Entity\Category;
 use App\Entity\HouseModel;
 use App\Entity\HouseSize;
-use App\Entity\Options;
+use App\Entity\Product;
 use App\Form\CategoryType;
 use App\Form\HouseModelType;
 use App\Form\HouseSizeType;
-use App\Form\OptionsType;
+use App\Form\ProductType;
 use Doctrine\ORM\EntityManagerInterface;
 
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
@@ -30,12 +30,12 @@ class EditController extends AbstractController
         $models = $em->getRepository(HouseModel::class)->findAll();
         $sizes = $em->getRepository(HouseSize::class)->findAll();
         $categories = $em->getRepository(Category::class)->findAll();
-        $options = $em->getRepository(Options::class)->findAll();
+        $options = $em->getRepository(Product::class)->findAll();
 
         $formModel = $this->createForm(HouseModelType::class);
         $formSize = $this->createForm(HouseSizeType::class);
         $formCategory = $this->createForm(CategoryType::class);
-        $formOptions = $this->createForm(OptionsType::class);
+        $formOptions = $this->createForm(ProductType::class);
 
         return $this->render('admin/administration.html.twig', [
             'models' => $models,
@@ -88,7 +88,7 @@ class EditController extends AbstractController
         }
 
         if($post->get('type') === 'options'){
-            $entity = new Options();
+            $entity = new Product();
             $entity->setName($post->get('options')['name']);
             $categoryId = $em->getRepository(Category::class)->findOneBy(array(
                 'name' => $post->get('selectName')
@@ -129,7 +129,7 @@ class EditController extends AbstractController
         }
 
         if($post->get('type') === 'options'){
-            $selectElement = $em->getRepository(Options::class)->find($post->get('id'));
+            $selectElement = $em->getRepository(Product::class)->find($post->get('id'));
         }
         
         $em->remove($selectElement);
@@ -161,7 +161,7 @@ class EditController extends AbstractController
         }
 
         if($post->get('name') === 'options'){
-            $selectElement = $em->getRepository(Options::class)->find($post->get('pk'));
+            $selectElement = $em->getRepository(Product::class)->find($post->get('pk'));
         }
 
         switch ($post->get('type')) {
