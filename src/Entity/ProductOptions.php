@@ -26,11 +26,6 @@ class ProductOptions
      * @ORM\ManyToOne(targetEntity="App\Entity\Product", inversedBy="productOptions")
      */
     private $product;
-
-    /**
-     * @ORM\Column(type="string", length=255, nullable=true)
-     */
-    private $price;
     
     /**
      * @ORM\Column(type="string", length=255, nullable=true)
@@ -51,6 +46,11 @@ class ProductOptions
      * @ORM\Column(type="string", length=255, nullable=true)
      */
     private $material;
+    
+    /**
+     * @ORM\Column(type="json_array", length=255, nullable=true)
+     */
+    private $price;
     
     const COLORS = [
         "Blanc",
@@ -105,24 +105,6 @@ class ProductOptions
     public function setProduct($product)
     {
         $this->product = $product;
-        return $this;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getPrice()
-    {
-        return $this->price;
-    }
-
-    /**
-     * @param mixed $price
-     * @return ProductOptions
-     */
-    public function setPrice($price)
-    {
-        $this->price = $price;
         return $this;
     }
     
@@ -190,6 +172,22 @@ class ProductOptions
     public function setMaterial($material)
     {
         $this->material = $material;
+    }
+    
+    /**
+     * @return mixed
+     */
+    public function getPrice()
+    {
+        return $this->price;
+    }
+    
+    /**
+     * @param mixed $price
+     */
+    public function setPrice($price)
+    {
+        $this->price = $price;
     }
 
 }

@@ -28,9 +28,9 @@ class Product
     private $category;
     
     /**
-     * @ORM\ManyToMany(targetEntity="App\Entity\HouseSize", inversedBy="product")
+     * @ORM\OneToMany(targetEntity="App\Entity\ProductOptions", mappedBy="product")
      */
-    private $houseSize;
+    private $productOptions;
 
     /**
      * @return mixed
@@ -79,17 +79,17 @@ class Product
     /**
      * @return mixed
      */
-    public function getHouseSize()
+    public function getProductOptions()
     {
-        return $this->houseSize;
+        return $this->productOptions;
     }
     
     /**
-     * @param mixed $houseSize
+     * @param mixed $productOptions
      */
-    public function setHouseSize($houseSize)
+    public function setProductOptions($productOptions)
     {
-        $this->houseSize = $houseSize;
+        $this->productOptions = $productOptions;
     }
 
 }
