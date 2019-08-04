@@ -31,29 +31,43 @@
                         <table class="table table-hover">
                             <tr>
                                 <th>Nom</th>
+                                <th>Type</th>
                                 <th>Matière</th>
                                 <th>Couleur</th>
+                                <th>Prix</th>
                             </tr>
                             {% for product in products if product.category.id == category.id %}
-                                <div>{{ dump(product) }}</div>
                                 <tr class="option-select" {#data-value="{{ option.price }}" data-id="{{ option.id }}"#} data-active="false">
                                     <td>{{ product.name }}</td>
-{#                                    <td>#}
-{#                                        <select>#}
-{#                                            {% for material in constant('App\\Entity\\Options::MATERIALS') %}#}
-{#                                                <option value="">{{ material }}</option>#}
-{#                                            {% endfor %}#}
-{#                                        </select>#}
-{#                                    </td>#}
-{#                                    <td>#}
-{#                                        <select>#}
-{#                                            {% for color in constant('App\\Entity\\Options::COLORS') %}#}
-{#                                                <option value="">{{ color }}</option>#}
-{#                                            {% endfor %}#}
-{#                                        </select>#}
-{#                                    </td>#}
-{#                                    <td class="option-button"><button type="button" class="btn btn-success btn-sm"><i class="fas fa-plus"></i></button></td>#}
-                                    <td class="option-price">+ {{ product.productOptions.name }} €</td>
+                                        <td>
+                                            <select>
+                                                {% for productOption in productOptions if productOption.product.id == product.id %}
+                                                    <option value="{{ productOption.id }}">{{ productOption.name }}</option>
+                                                {% endfor %}
+                                            </select>
+                                        </td>
+                                    <td>
+                                        <select>
+                                            {% for productOption in productOptions if productOption.product.id == product.id %}
+                                                <option value="">{{ productOption.material }}</option>
+                                            {% endfor %}
+                                        </select>
+                                    </td>
+                                    <td>
+                                        <select>
+                                            {% for productOption in productOptions if productOption.product.id == product.id %}
+                                                <option value="">{{ productOption.color }}</option>
+                                            {% endfor %}
+                                        </select>
+                                    </td>
+                                    <td class="option-price">
+                                        {% for productOption in productOptions if productOption.product.id == product.id %}
+                                            {% for price in productOption.price if price.id == size.id %}
+                                                <input type="hidden" value="{{ price.price }}" data-product-option-id="{{ productOption.id }}">
+                                            {% endfor %}
+                                        {% endfor %}
+                                    </td>
+                                    <td class="option-button"><button type="button" class="btn btn-success btn-sm"><i class="fas fa-plus"></i></button></td>
                                 </tr>
                             {% endfor %}
                         </table>
@@ -110,7 +124,7 @@
 
 {% endblock %}
 
-{#<div class="box-body option-select" data-value="{{ option.price }}" data-category="{{ option.category }}" data-id="{{ option.id }}" data-active="false">#}
+                                        {#<div class="box-body option-select" data-value="{{ option.price }}" data-category="{{ option.category }}" data-id="{{ option.id }}" data-active="false">#}
 {#    <div class="d-flex justify-content-between">#}
 {#        <p>{{ option.name }}</p>#}
 {#        <p class="option-price">{{ option.price }} €</p>#}
