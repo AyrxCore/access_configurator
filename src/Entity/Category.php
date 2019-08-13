@@ -23,9 +23,9 @@ class Category
     private $name;
 
     /**
-     * @ORM\OneToMany(targetEntity="App\Entity\Options", mappedBy="category")
+     * @ORM\OneToMany(targetEntity="App\Entity\Product", mappedBy="category")
      */
-    private $options;
+    private $product;
 
     /**
      * @return mixed
@@ -56,17 +56,17 @@ class Category
     /**
      * @return mixed
      */
-    public function getOptions()
+    public function getProduct()
     {
-        return $this->options;
+        return $this->product;
     }
 
     /**
-     * @param mixed $options
+     * @param mixed $product
      */
-    public function setOptions($options)
+    public function setProduct($product)
     {
-        $this->options = $options;
+        $this->product = $product;
     }
 
 }

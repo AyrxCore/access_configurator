@@ -2,23 +2,23 @@
 
 namespace App\Repository;
 
-use App\Entity\Options;
+use App\Entity\Product;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Symfony\Bridge\Doctrine\RegistryInterface;
 
 /**
- * @method Options|null find($id, $lockMode = null, $lockVersion = null)
- * @method Options|null findOneBy(array $criteria, array $orderBy = null)
- * @method Options[]    findAll()
- * @method Options[]    findBy(array $criteria, array $orderBy = null, $limit = null, $offset = null)
+ * @method Product|null find($id, $lockMode = null, $lockVersion = null)
+ * @method Product|null findOneBy(array $criteria, array $orderBy = null)
+ * @method Product[]    findAll()
+ * @method Product[]    findBy(array $criteria, array $orderBy = null, $limit = null, $offset = null)
  */
-class OptionsRepository extends ServiceEntityRepository
+class ProductRepository extends ServiceEntityRepository
 {
     public function __construct(RegistryInterface $registry)
     {
-        parent::__construct($registry, Options::class);
+        parent::__construct($registry, Product::class);
     }
-
+    
     // /**
     //  * @return HouseModel[] Returns an array of HouseModel objects
     //  */
@@ -35,7 +35,7 @@ class OptionsRepository extends ServiceEntityRepository
         ;
     }
     */
-
+    
     /*
     public function findOneBySomeField($value): ?HouseModel
     {
@@ -47,5 +47,5 @@ class OptionsRepository extends ServiceEntityRepository
         ;
     }
     */
-
+    
 }

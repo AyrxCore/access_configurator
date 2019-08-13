@@ -5,10 +5,10 @@ namespace App\Entity;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * @ORM\Table(name="options")
- * @ORM\Entity(repositoryClass="App\Repository\OptionsRepository")
+ * @ORM\Table(name="product_options")
+// * @ORM\Entity(repositoryClass="App\Repository\ProductOptionsRepository")
  */
-class Options
+class ProductOptions
 {
     /**
      * @ORM\Id()
@@ -23,14 +23,9 @@ class Options
     private $name;
 
     /**
-     * @ORM\ManyToOne(targetEntity="App\Entity\Category", inversedBy="options")
+     * @ORM\ManyToOne(targetEntity="App\Entity\Product", inversedBy="productOptions")
      */
-    private $category;
-
-    /**
-     * @ORM\Column(type="string", length=255, nullable=true)
-     */
-    private $price;
+    private $product;
     
     /**
      * @ORM\Column(type="string", length=255, nullable=true)
@@ -51,6 +46,11 @@ class Options
      * @ORM\Column(type="string", length=255, nullable=true)
      */
     private $material;
+    
+    /**
+     * @ORM\Column(type="json_array", length=255, nullable=true)
+     */
+    private $price;
     
     const COLORS = [
         "Blanc",
@@ -82,7 +82,7 @@ class Options
 
     /**
      * @param mixed $name
-     * @return Options
+     * @return ProductOptions
      */
     public function setName($name)
     {
@@ -93,36 +93,18 @@ class Options
     /**
      * @return string
      */
-    public function getCategory()
+    public function getProduct()
     {
-        return $this->category;
+        return $this->product;
     }
 
     /**
-     * @param string $category
-     * @return Options
+     * @param string $product
+     * @return ProductOptions
      */
-    public function setCategory($category)
+    public function setProduct($product)
     {
-        $this->category = $category;
-        return $this;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getPrice()
-    {
-        return $this->price;
-    }
-
-    /**
-     * @param mixed $price
-     * @return Options
-     */
-    public function setPrice($price)
-    {
-        $this->price = $price;
+        $this->product = $product;
         return $this;
     }
     
@@ -152,7 +134,7 @@ class Options
     
     /**
      * @param mixed $img
-     * @return Options
+     * @return ProductOptions
      */
     public function setImg($img)
     {
@@ -190,6 +172,22 @@ class Options
     public function setMaterial($material)
     {
         $this->material = $material;
+    }
+    
+    /**
+     * @return mixed
+     */
+    public function getPrice()
+    {
+        return $this->price;
+    }
+    
+    /**
+     * @param mixed $price
+     */
+    public function setPrice($price)
+    {
+        $this->price = $price;
     }
 
 }

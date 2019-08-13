@@ -38,6 +38,11 @@ class HouseModel
     private $description;
     
     /**
+     * @ORM\OneToMany(targetEntity="App\Entity\HouseSize", mappedBy="houseModel")
+     */
+    private $houseSize;
+    
+    /**
      * @return mixed
      */
     public function getId()
@@ -116,4 +121,21 @@ class HouseModel
         $this->description = $description;
         return $this;
     }
+    
+    /**
+     * @return mixed
+     */
+    public function getHouseSize()
+    {
+        return $this->houseSize;
+    }
+    
+    /**
+     * @param mixed $houseSize
+     */
+    public function setHouseSize($houseSize)
+    {
+        $this->houseSize = $houseSize;
+    }
+    
 }

@@ -5,7 +5,8 @@ namespace App\Controller;
 use App\Entity\HouseModel;
 use App\Entity\HouseSize;
 use App\Entity\Category;
-use App\Entity\Options;
+use App\Entity\Product;
+use App\Entity\ProductOptions;
 use App\Form\UserType;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Component\HttpFoundation\Request;
@@ -35,11 +36,10 @@ class HomeController extends AbstractController
     {
         $name = $request->query->get('name');
         $model = $em->getRepository(HouseModel::class)->findOneBy(array('name' => $name));
-        $sizes = $em->getRepository(HouseSize::class)->findBy(array('name' => $name));
+        $sizes = $em->getRepository(HouseSize::class)->findBy(array('houseModel' => $model));
 
         return $this->render('size.html.twig', array(
             'sizes' => $sizes,
-            'model' => $model
         ));
     }
     
@@ -55,13 +55,16 @@ class HomeController extends AbstractController
         $surface = $request->query->get('surface');
         $size = $em->getRepository(HouseSize::class)->findOneBy(array('surface' => $surface));
         $categories = $em->getRepository(Category::class)->findAll();
-        $options = $em->getRepository(Options::class)->findAll();
+        // IF nécessaire pour gérer l'exception d'un modèle sans escalier par exemple
+        $products = $em->getRepository(Product::class)->findAll();
+        $productOptions = $em->getRepository(ProductOptions::class)->findAll();
 
         return $this->render('config.html.twig', array(
             'name' => $name,
             'size' => $size,
             'categories' => $categories,
-            'options' => $options
+            'products' => $products,
+            'productOptions' => $productOptions
         ));
     }
     
@@ -76,7 +79,7 @@ class HomeController extends AbstractController
     {
         $size = $em->getRepository(HouseSize::class)->findOneBy(array('surface' => $surface));
         $categories = $em->getRepository(Category::class)->findAll();
-        $options = $em->getRepository(Options::class)->findAll();
+        $options = $em->getRepository(Product::class)->findAll();
 
         return $this->render('total.html.twig', array(
             'size' => $size,

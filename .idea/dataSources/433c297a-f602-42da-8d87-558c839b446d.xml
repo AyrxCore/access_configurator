@@ -28,6 +28,7 @@
     </schema>
     <schema id="8" parent="1" name="information_schema">
       <Collation>utf8_general_ci</Collation>
+      <Substituted>1</Substituted>
     </schema>
     <schema id="9" parent="1" name="lara_blog_review">
       <Collation>utf8_general_ci</Collation>
