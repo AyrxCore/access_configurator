@@ -12,7 +12,7 @@
     </section>
 
     <div id="total-configs" class="total-config">
-            Coût total, options incluses = <br><span class="value-config" data-value="{{ size.price }}" >{{ size.price }}</span><span> €</span>
+            Coût total, options incluses <br><span class="value-config" data-value="{{ size.price }}" >{{ size.price }}</span><span> €</span>
     </div>
 
     <div class="config-content">
@@ -49,14 +49,14 @@
                                     <td>
                                         <select>
                                             {% for productOption in productOptions if productOption.product.id == product.id %}
-                                                <option value="">{{ productOption.material }}</option>
+{#                                                <option value="">{{ productOption.material }}</option>#}
                                             {% endfor %}
                                         </select>
                                     </td>
                                     <td>
                                         <select>
                                             {% for productOption in productOptions if productOption.product.id == product.id %}
-                                                <option value="">{{ productOption.color }}</option>
+{#                                                <option value="">{{ productOption.color }}</option>#}
                                             {% endfor %}
                                         </select>
                                     </td>

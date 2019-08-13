@@ -37,7 +37,6 @@ class HomeController extends AbstractController
         $name = $request->query->get('name');
         $model = $em->getRepository(HouseModel::class)->findOneBy(array('name' => $name));
         $sizes = $em->getRepository(HouseSize::class)->findBy(array('houseModel' => $model));
-
         return $this->render('size.html.twig', array(
             'sizes' => $sizes,
         ));
