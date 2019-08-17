@@ -39,29 +39,36 @@
                             {% for product in products if product.category.id == category.id %}
                                 <tr class="option-select" {#data-value="{{ option.price }}" data-id="{{ option.id }}"#} data-active="false">
                                     <td>{{ product.name }}</td>
-                                        <td>
-                                            <select>
-                                                {% for productOption in productOptions if productOption.product.id == product.id %}
-                                                    <option value="{{ productOption.id }}">{{ productOption.name }}</option>
-                                                {% endfor %}
-                                            </select>
-                                        </td>
                                     <td>
                                         <select>
-                                            {% for productOption in productOptions if productOption.product.id == product.id %}
-{#                                                <option value="">{{ productOption.material }}</option>#}
+                                            {% for productOption in product.productOptions %}
+                                                {% if productOption.type is not null %}
+                                                    <option value="{{ productOption.id }}">{{ productOption.type }}</option>
+                                                {% endif %}
                                             {% endfor %}
                                         </select>
                                     </td>
                                     <td>
                                         <select>
-                                            {% for productOption in productOptions if productOption.product.id == product.id %}
-{#                                                <option value="">{{ productOption.color }}</option>#}
+                                            {% for productOption in product.productOptions %}
+                                                {% if productOption.material is not null %}
+                                                    <option value="{{ productOption.id }}">{{ productOption.material }}</option>
+                                                {% endif %}
+                                            {% endfor %}
+                                        </select>
+                                    </td>
+                                    <td>
+                                        <select>
+                                            {% for productOption in product.productOptions %}
+                                                {% for color in productOption.color %}
+                                                    <option value="{{ productOption.id }}">{{ color }}</option>
+                                                {% endfor %}
                                             {% endfor %}
                                         </select>
                                     </td>
                                     <td class="option-price">
-                                        {% for productOption in productOptions if productOption.product.id == product.id %}
+                                        <div class="option-price-selected"></div>
+                                        {% for productOption in product.productOptions %}
                                             {% for price in productOption.price if price.id == size.id %}
                                                 <input type="hidden" value="{{ price.price }}" data-product-option-id="{{ productOption.id }}">
                                             {% endfor %}
@@ -118,6 +125,33 @@
 
             $("#total-configs").sticky({topSpacing:-35});
 
+            // Efface les select qui ne comportent pas d'options
+            $('td').each(function() {
+                let tdWithSelect = $(this).find('select')
+                if(tdWithSelect.length !== 0) {
+                    if(tdWithSelect.find('option').length === 0) {
+                        $(this).html("/")
+                    }
+                }
+            });
+
+            // Afficher le prix de l'option sélectionné dans .option-price
+            $('select').each(function() {
+                    showPriceOptionSelected($(this));
+                $(this).on('change', function () {
+                    showPriceOptionSelected($(this));
+                })
+            });
+
+            function showPriceOptionSelected(context) {
+                let idOptionSelected = context.find('option:selected')[0].value
+                let thisOptionPrice = context.parents('.option-select').find('.option-price')
+                thisOptionPrice.find('input:hidden').each(function(index, item) {
+                    if(index+1 == idOptionSelected) {
+                        thisOptionPrice.find(".option-price-selected").html(item.value+" €")
+                    }
+                })
+            }
         });
 
     </script>

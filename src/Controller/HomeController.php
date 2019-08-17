@@ -7,13 +7,11 @@ use App\Entity\HouseSize;
 use App\Entity\Category;
 use App\Entity\Product;
 use App\Entity\ProductOptions;
-use App\Form\UserType;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
-use Symfony\Component\Security\Http\Authentication\AuthenticationUtils;
 
 class HomeController extends AbstractController
 {
@@ -56,14 +54,12 @@ class HomeController extends AbstractController
         $categories = $em->getRepository(Category::class)->findAll();
         // IF nécessaire pour gérer l'exception d'un modèle sans escalier par exemple
         $products = $em->getRepository(Product::class)->findAll();
-        $productOptions = $em->getRepository(ProductOptions::class)->findAll();
 
         return $this->render('config.html.twig', array(
             'name' => $name,
             'size' => $size,
             'categories' => $categories,
-            'products' => $products,
-            'productOptions' => $productOptions
+            'products' => $products
         ));
     }
     

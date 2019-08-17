@@ -20,7 +20,7 @@ class ProductOptions
     /**
      * @ORM\Column(type="string", length=255, nullable=true)
      */
-    private $name;
+    private $type;
 
     /**
      * @ORM\ManyToOne(targetEntity="App\Entity\Product", inversedBy="productOptions")
@@ -43,7 +43,7 @@ class ProductOptions
     private $color;
     
     /**
-     * @ORM\Column(type="json_array", length=255, nullable=true)
+     * @ORM\Column(type="string", length=255, nullable=true)
      */
     private $material;
     
@@ -51,18 +51,6 @@ class ProductOptions
      * @ORM\Column(type="json_array", length=255, nullable=true)
      */
     private $price;
-    
-    const COLORS = [
-        "Blanc",
-        "Noir",
-        "Gris"
-    ];
-
-    const MATERIALS = [
-        "Acier",
-        "Bois",
-        "Béton"
-    ];
     
     /**
      * @return mixed
@@ -75,18 +63,18 @@ class ProductOptions
     /**
      * @return mixed
      */
-    public function getName()
+    public function getType()
     {
-        return $this->name;
+        return $this->type;
     }
 
     /**
-     * @param mixed $name
+     * @param mixed $type
      * @return ProductOptions
      */
-    public function setName($name)
+    public function setType($type)
     {
-        $this->name = $name;
+        $this->type = $type;
         return $this;
     }
 
