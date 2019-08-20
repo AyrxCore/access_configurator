@@ -37,7 +37,7 @@
                                 <th>Prix</th>
                             </tr>
                             {% for product in products if product.category.id == category.id %}
-                                <tr class="option-select" {#data-value="{{ option.price }}" data-id="{{ option.id }}"#} data-active="false">
+                                <tr class="option-select" data-value="" data-id="{{ product.id }}" data-active="false">
                                     <td>{{ product.name }}</td>
                                     <td>
                                         <select>
@@ -100,7 +100,7 @@
             $(".btn-success").on('click', function() {
 
                 let id = $(this).parents(".option-select").data("id");
-                let value = $(this).parents(".option-select").data("value");
+                let value = parseInt($(this).parents(".option-select").data("value"));
 
                 if(!tabId.includes(id))
                 {
@@ -139,30 +139,37 @@
             $('select').each(function() {
                     showPriceOptionSelected($(this));
                 $(this).on('change', function () {
+                    let optionSelectPrice = $(this).parents('.option-select').find('.option-price-selected').html()
+                    let optionSelectId = $(this).parents('.option-select').attr('data-id')
+                    optionSelectPrice = optionSelectPrice.substring(0, optionSelectPrice.length - 2)
                     showPriceOptionSelected($(this));
+                    if($(this).parents('.option-select').attr('data-active') === 'true') {
+                        total = totalPrice.data("value") - optionSelectPrice;
+                        $(this).parents('.option-select').attr('data-active', 'false')
+                        tabId = jQuery.grep(tabId, function(value){
+                            return value !== parseInt(optionSelectId);
+                        });
+                        totalPrice.data("value", total);
+                        totalPrice.html(new Intl.NumberFormat().format(total));
+                    }
                 })
             });
 
             function showPriceOptionSelected(context) {
                 let idOptionSelected = context.find('option:selected')[0].value
                 let thisOptionPrice = context.parents('.option-select').find('.option-price')
+                let price = "";
                 thisOptionPrice.find('input:hidden').each(function(index, item) {
                     if(index+1 == idOptionSelected) {
                         thisOptionPrice.find(".option-price-selected").html(item.value+" €")
+                        $(this).parents(".option-select").data("value", item.value)
+                        price = item.value
                     }
-                })
+                });
+                return price;
             }
         });
 
     </script>
 
 {% endblock %}
-
-                                        {#<div class="box-body option-select" data-value="{{ option.price }}" data-category="{{ option.category }}" data-id="{{ option.id }}" data-active="false">#}
-{#    <div class="d-flex justify-content-between">#}
-{#        <p>{{ option.name }}</p>#}
-{#        <p class="option-price">{{ option.price }} €</p>#}
-{#        <div class="btn-group">#}
-{#            <button type="button" class="btn btn-success btn-sm"><i class="fas fa-plus"></i></button>#}
-{#        </div>#}
-{#    </div>#}

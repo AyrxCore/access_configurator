@@ -54,12 +54,14 @@ class HomeController extends AbstractController
         $categories = $em->getRepository(Category::class)->findAll();
         // IF nécessaire pour gérer l'exception d'un modèle sans escalier par exemple
         $products = $em->getRepository(Product::class)->findAll();
+        $productOptions = $em->getRepository(ProductOptions::class)->findAll();
 
         return $this->render('config.html.twig', array(
             'name' => $name,
             'size' => $size,
             'categories' => $categories,
-            'products' => $products
+            'products' => $products,
+            'productOptions' => $productOptions
         ));
     }
     
