@@ -132,6 +132,18 @@
                     if(tdWithSelect.find('option').length === 0) {
                         $(this).html("/")
                     }
+                    let tdWithSelectInput = tdWithSelect.parents('.option-select').find('.option-price input');
+                    tdWithSelectInput.each(function(index, input) {
+                        if(input.value == 0) {
+                            Array.from(tdWithSelect[0].options).forEach(function(option) {
+                                if(option.value == input.attributes[2].value) {
+                                    console.log(tdWithSelect[0].options[index])
+                                    tdWithSelect[0].options[index].selected = true
+                                    tdWithSelect.parents('.option-select').attr('data-active', true)
+                                }
+                            });
+                        }
+                    })
                 }
             });
 
@@ -160,7 +172,7 @@
                 let thisOptionPrice = context.parents('.option-select').find('.option-price')
                 let price = "";
                 thisOptionPrice.find('input:hidden').each(function(index, item) {
-                    if(index+1 == idOptionSelected) {
+                    if($(item).data('product-option-id') == idOptionSelected) {
                         thisOptionPrice.find(".option-price-selected").html(item.value+" €")
                         $(this).parents(".option-select").data("value", item.value)
                         price = item.value
