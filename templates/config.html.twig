@@ -67,10 +67,10 @@
                                         </select>
                                     </td>
                                     <td class="option-price">
-                                        <div class="option-price-selected"></div>
+                                        <div class="option-price-selected" data-product-option-id=""></div>
                                         {% for productOption in product.productOptions %}
                                             {% for price in productOption.price if price.id == size.id %}
-                                                <input type="hidden" value="{{ price.price }}" data-product-option-id="{{ productOption.id }}">
+                                                <input type="hidden" value="{{ price.price }}" data-product-option-id="{{ productOption.id }}" data-active="false">
                                             {% endfor %}
                                         {% endfor %}
                                     </td>
@@ -86,18 +86,24 @@
     </div>
 
     <div class="row justify-content-center">
-        <a href="{{ path('total', {'name': name, 'surface': size.surface}) }}" class="btn btn-lg btn-success submitOptions">Valider</a>
+        <a href="#" class="btn btn-lg btn-success submitOptions">Valider</a>
+    </div>
+
+    <div class="callout callout-danger">
+        Vous devez sélectionner une option pour chaque catégorie
     </div>
 
     <script>
 
         $(document).ready(function() {
 
+            $('.callout-danger').hide();
+
             let tabId = [];
             let total;
             let totalPrice = $(".value-config");
 
-            $(".btn-success").on('click', function() {
+            $(".btn-success.btn-sm").on('click', function() {
 
                 let id = $(this).parents(".option-select").data("id");
                 let value = parseInt($(this).parents(".option-select").data("value"));
@@ -107,6 +113,7 @@
                     tabId.push(id);
                     total = value + totalPrice.data("value");
                     $(this).parents(".option-select").attr("data-active", "true");
+                    $(this).parents(".option-select").attr("data-product-option-id")
                 }
                 else {
                     total = totalPrice.data("value") - value;
@@ -137,9 +144,9 @@
                         if(input.value == 0) {
                             Array.from(tdWithSelect[0].options).forEach(function(option) {
                                 if(option.value == input.attributes[2].value) {
-                                    console.log(tdWithSelect[0].options[index])
                                     tdWithSelect[0].options[index].selected = true
                                     tdWithSelect.parents('.option-select').attr('data-active', true)
+                                    tdWithSelect.parents('.option-select').find('.option-price-selected').attr('data-product-option-id', input.attributes[2].value)
                                 }
                             });
                         }
@@ -147,17 +154,17 @@
                 }
             });
 
-            // Afficher le prix de l'option sélectionné dans .option-price
+            // Afficher le prix de l'option sélectionné dans .option-price-selected
             $('select').each(function() {
                     showPriceOptionSelected($(this));
                 $(this).on('change', function () {
-                    let optionSelectPrice = $(this).parents('.option-select').find('.option-price-selected').html()
-                    let optionSelectId = $(this).parents('.option-select').attr('data-id')
-                    optionSelectPrice = optionSelectPrice.substring(0, optionSelectPrice.length - 2)
+                    let optionSelectPrice = $(this).parents('.option-select').find('.option-price-selected').html();
+                    let optionSelectId = $(this).parents('.option-select').attr('data-id');
+                    optionSelectPrice = optionSelectPrice.substring(0, optionSelectPrice.length - 2);
                     showPriceOptionSelected($(this));
                     if($(this).parents('.option-select').attr('data-active') === 'true') {
                         total = totalPrice.data("value") - optionSelectPrice;
-                        $(this).parents('.option-select').attr('data-active', 'false')
+                        $(this).parents('.option-select').attr('data-active', 'false');
                         tabId = jQuery.grep(tabId, function(value){
                             return value !== parseInt(optionSelectId);
                         });
@@ -173,6 +180,7 @@
                 let price = "";
                 thisOptionPrice.find('input:hidden').each(function(index, item) {
                     if($(item).data('product-option-id') == idOptionSelected) {
+                        thisOptionPrice.find(".option-price-selected").attr('data-product-option-id', $(item).data('product-option-id'))
                         thisOptionPrice.find(".option-price-selected").html(item.value+" €")
                         $(this).parents(".option-select").data("value", item.value)
                         price = item.value
@@ -180,6 +188,35 @@
                 });
                 return price;
             }
+
+            $('.submitOptions').on('click', function() {
+                let data = [];
+                $('.option-select').each(function(index, element) {
+                   if(element.attributes[3].value === 'true') {
+                       data.push({
+                           'id': $(element).find('.option-price-selected').data('product-option-id'),
+                           'value': $(element).find('.option-price-selected').data('value')
+                       })
+                   }
+                });
+                if(data.length < $('.option-select').length) {
+                    $('.callout-danger').show();
+                } else {
+
+                    let path = "{{ path('total', { 'name':name, 'surface':size.surface }) }}";
+
+                    $.ajax({
+                        type: "POST",
+                        url: path,
+                        data: data, // serializes the form's elements.
+                        contentType: false,
+                        processData: false,
+                        success: function(data) {
+                            document.location.href="nouvellepage.html"
+                        }
+                    })
+                }
+            });
         });
 
     </script>

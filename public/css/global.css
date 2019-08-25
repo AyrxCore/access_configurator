@@ -137,10 +137,6 @@ td,
     width: 70%;
 }
 
-.submitOptions{
-    margin-bottom: 3rem;
-}
-
 .option-select[data-active="true"]{
     background: rgba(0, 204, 102, 0.5);
 }

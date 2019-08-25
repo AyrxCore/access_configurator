@@ -19,16 +19,16 @@
                 <thead>
                 {% for categorie in categories %}
                 <tr>
-                    <th>{{ categorie.name }}</th>
-                </tr>
-                    {% for option in options if option.category == categorie.name %}
-                        <tr>
-                            <td>{{ option.name }}</td>
-                            <td>{{ option.price }}</td>
-                            <td>Couleur</td>
-                            <td>Matériel</td>
-                        </tr>
-                    {% endfor %}
+{#                    <th>{{ categorie.name }}</th>#}
+{#                </tr>#}
+{#                    {% for option in options if option.category == categorie.name %}#}
+{#                        <tr>#}
+{#                            <td>{{ option.name }}</td>#}
+{#                            <td>{{ option.price }}</td>#}
+{#                            <td>Couleur</td>#}
+{#                            <td>Matériel</td>#}
+{#                        </tr>#}
+{#                    {% endfor %}#}
                 {% endfor %}
                 </thead>
                 <tbody>
